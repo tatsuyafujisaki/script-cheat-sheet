@@ -1,0 +1,1 @@
+Set-Clipboard "john.doe@example.com"

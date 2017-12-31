@@ -1,0 +1,1 @@
+tasklist | sort | findstr /i %*

@@ -1,0 +1,1 @@
+explorer %LOCALAPPDATA%\Lxss\home\tatsuya

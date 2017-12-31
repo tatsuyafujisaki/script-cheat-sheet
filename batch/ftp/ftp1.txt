@@ -1,0 +1,5 @@
+open <server>
+<user>
+<password>
+binary
+dir
