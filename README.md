@@ -8,5 +8,6 @@
   * https://technet.microsoft.com/en-us/library/cc770297.aspx
   
 # References
+* [`for`](https://technet.microsoft.com/en-us/library/bb490909.aspx)
 * [Start a Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813.aspx)
 * [How to run Control Panel tools by typing a command](https://support.microsoft.com/en-us/help/192806/how-to-run-control-panel-tools-by-typing-a-command)
