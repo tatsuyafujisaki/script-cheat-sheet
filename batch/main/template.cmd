@@ -155,22 +155,22 @@ endlocal
 rem Timeout/wait/sleep in/for 5 seconds in Win7 or later.
 timeout 5
 
-rem Make a directory if it does not exist
+rem Create a directory if it does not exist in the top directory.
 if not exist dir1 ( md dir1 )
 
-rem Delete a file if it exists and is topmost.
+rem Delete a file if it exists in the top directory.
 if exist file1 ( del file1 )
 
-rem Delete a directory if it exists and is topmost.
+rem Delete a directory if it exists in the top directory.
 if exist dir1 ( rd /q /s dir1 )
 
-rem Delete a directory if it exists and topmost without throwing an error even if it is locked and fails to be deleted.
+rem Delete a directory if it exists in the top directory without throwing an error even if the specified directory is locked and fails to be deleted.
 rd /q /s dir1 > null 2>&1
 
 rem Delete a directory if it is a subdirectory.
 for /F "tokens=*" %%f in ('dir /b /s /ad dir1') do rd /q /s "%%f"
 
-rem Empty a directory (= Keep the topmost directory but delete everything else)
+rem Empty but not delete a directory if it exists in the top directory.
 if exist dir1 ( del /f /q /s dir1 )
 
 rem 'For' sample 1
