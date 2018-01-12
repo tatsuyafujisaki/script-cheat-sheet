@@ -158,15 +158,17 @@ timeout 5
 rem Make a directory if it does not exist
 if not exist dir1 ( md dir1 )
 
-rem Delete a file if it exists
+rem Delete a file if it exists and is topmost.
 if exist file1 ( del file1 )
 
-rem Delete a directory and subdirectories (sample 1)
+rem Delete a directory if it exists and is topmost.
 if exist dir1 ( rd /q /s dir1 )
 
-rem Delete a directory and subdirectories (sample 2)
-rem Note that the command below does not show an error even if a directory is locked and fail to be deleted.
-rd /q /s dir1 > nul 2>&1
+rem Delete a directory if it exists and topmost without throwing an error even if it is locked and fails to be deleted.
+rd /q /s dir1 > null 2>&1
+
+rem Delete a directory if it is a subdirectory.
+for /F "tokens=*" %%f in ('dir /b /s /ad dir1') do rd /q /s "%%f"
 
 rem Empty a directory (= Keep the topmost directory but delete everything else)
 if exist dir1 ( del /f /q /s dir1 )
