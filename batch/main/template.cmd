@@ -7,8 +7,8 @@ cd /d %~dp0
 rem Exit from a batch instead of cmd.exe.
 exit /b
 
-rem Open a folder with Explorer
-explorer %TEMP%
+rem Open the current folder using Explorer
+explorer .
 
 rem Open a folder in command line and stay there.
 cmd /k "cd /d %TEMP%"
