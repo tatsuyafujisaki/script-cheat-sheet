@@ -14,7 +14,7 @@ var outputPath = doubleQuote(fso.BuildPath(fso.GetParentFolderName(inputPath), f
 
 inputPath = doubleQuote(inputPath);
 
-shell = WScript.CreateObject('WScript.Shell');
+var shell = WScript.CreateObject('WScript.Shell');
 
 // Output in HTML rather than GUI because the former is color while the latter is black and white.
 shell.Run('ildasm.exe /nobar /source /html /out=' + outputPath + ' ' + inputPath, 0, true);
