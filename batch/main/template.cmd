@@ -7,8 +7,8 @@ cd /d %~dp0
 rem Exit from a batch instead of cmd.exe.
 exit /b
 
-rem Open a folder with Explorer
-explorer %TEMP%
+rem Open the current folder using Explorer
+explorer .
 
 rem Open a folder in command line and stay there.
 cmd /k "cd /d %TEMP%"
@@ -146,54 +146,56 @@ rem Replace a pattern in a file
 copy /y nul replaced.txt > nul
 setlocal enabledelayedexpansion
 rem "tokens=*" is to read a line to the end even if the line contains a space in the middle.
-for /f "tokens=*" %%l in (original.txt) do (
+for /F "tokens=*" %%l in (original.txt) do (
     set line=%%l
     echo !line:before=after! >> replaced.txt
 )
 endlocal
 
-rem Timeout/wait/sleep in/for 5 seconds in Win7 or later.
+rem Wait for 5 seconds
 timeout 5
 
-rem Make a directory if it does not exist
+rem Create a directory if it does not exist in the top directory.
 if not exist dir1 ( md dir1 )
 
-rem Delete a file if it exists
+rem Delete a file if it exists in the top directory.
 if exist file1 ( del file1 )
 
-rem Delete a directory and subdirectories (sample 1)
+rem Delete a directory if it exists in the top directory.
 if exist dir1 ( rd /q /s dir1 )
 
-rem Delete a directory and subdirectories (sample 2)
-rem Note that the command below does not show an error even if a directory is locked and fail to be deleted.
-rd /q /s dir1 > nul 2>&1
+rem Delete a directory if it exists in the top directory without throwing an error even if the specified directory is locked and fails to be deleted.
+rd /q /s dir1 > null 2>&1
 
-rem Empty a directory (= Keep the topmost directory but delete everything else)
+rem Delete a directory if it is a subdirectory.
+for /F "tokens=*" %%f in ('dir /b /s /ad dir1') do rd /q /s "%%f"
+
+rem Empty but not delete a directory if it exists in the top directory.
 if exist dir1 ( del /f /q /s dir1 )
 
-rem 'For' sample 1
+rem Example 1 of 'for'
 rem "tokens=*" is to read a line to the end even if the line contains a space in the middle.
-for /f "tokens=*" %%l in (foo.txt) do (
+for /F "tokens=*" %%l in (foo.txt) do (
     echo %%l
 )
 
-rem 'For' sample 2
-rem Result -> a c %k
-for /f "tokens=1,3" %%i in ("a b c d e") do (
+rem Example 2 of 'for'
+rem Result ... a c %k
+for /F "tokens=1,3" %%i in ("a b c d e") do (
     echo %%i %%j %%k
 )
 
-rem 'For' sample 3
-rem Result -> a c d e (Comma before '*' can be omitted.)
-for /f "tokens=1,3,*" %%i in ("a b c d e") do (
+rem Example 3 of 'for'
+rem Result ... a c d e (Comma before '*' can be omitted.)
+for /F "tokens=1,3,*" %%i in ("a b c d e") do (
     echo %%i %%j %%k
 )
 
-rem Get desktop 1
+rem Example 1 of getting a path to desktop
 echo %USERPROFILE%\Desktop
 
-rem Get desktop 2
-for /f "tokens=3" %%1 in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Desktop') do (
+rem Example 2 of getting a path to desktop
+for /F "tokens=3" %%1 in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v Desktop') do (
     set desktop=%%1
 )
 echo %desktop%
