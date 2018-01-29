@@ -1,7 +1,7 @@
 # Delete whitespace lines
 sed -e '/^[[:blank:]]*$/d' input.txt
 
-# Delete zero-length lines
+# Delete blank lines
 sed -e '/^$/d' input.txt
 
 # Extract double-slash comments
