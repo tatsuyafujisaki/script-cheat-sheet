@@ -16,7 +16,7 @@ set query="SET NOCOUNT ON; SELECT * FROM Table1 LIKE '%%foo%%'"
 <table>
   <tr>
     <td colspan="2" />
-    <td colspan="3">Code page of `*.sql`</td>
+    <td colspan="3">Code page of *.sql</td>
   </tr>
   <tr>
     <td colspan="2" />
@@ -25,20 +25,20 @@ set query="SET NOCOUNT ON; SELECT * FROM Table1 LIKE '%%foo%%'"
     <td>UTF-8 with BOM</td>
   </tr>
   <tr>
-    <td rowspan="3">`-f` of sqlcmd</td>
+    <td rowspan="3">-f of sqlcmd</td>
     <td>(-f is not used)</td>
     <td>Mojibake</td>
     <td>Mojibake</td>
     <td>OK</td>
   </tr>
     <tr>
-    <td>`-f 932`</td>
+    <td>-f 932</td>
     <td>OK</td>
     <td>Mojibake</td>
     <td>OK</td>
   </tr>
     <tr>
-    <td>`-f 65002`</td>
+    <td>-f 65002</td>
     <td>Mojibake</td>
     <td>OK</td>
     <td>OK</td>
