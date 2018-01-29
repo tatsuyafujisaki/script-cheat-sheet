@@ -4,7 +4,7 @@
 * Use `bcp` with `-d %database%` in SQL Server 2008 R2 or higher.
 * In `bcp` or `sqlcmd`, enclose schema names or table names, which contains a hyphen, in brackets (`[]`) or an error occurs.
 * In `sqlcmd`, the number of characters of each field is limited to 256 by default.
-  * `-y` can change the limit but cannot be used with `-W` that is a must.
+  * `-y` can change the limit but unfortunately cannot be used with `-W`, which is a must.
 * Unlike bcp-out-binary, bcp-in-binary is impossible in DOS if SQL Server and its client are on differnt machines.
 * Prepend `SET NOCOUNT ON;` to a SELECT query.
 ```batch
