@@ -6,7 +6,7 @@
 # Note
 * `start` command regards the first double-quoted string as a title.
   * https://technet.microsoft.com/en-us/library/cc770297.aspx
-* Don't end a then-clause of `if` with a closing parenthesis (`)`) because when a process reaches the then-clause, the process fall through to an else-clause too.
+* Don't end a then-clause of `if` with a closing parenthesis (`)`) because when a process reaches the then-clause, the process falls through to an else-clause too.
 ```batch
 if %db% == production (
   set /p answer=Do you wish to continue with production database (y/N)
