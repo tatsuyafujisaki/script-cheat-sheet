@@ -26,7 +26,7 @@ if %db% == production (
 * Typing "TEMP" opens %TEMP% with Explorer
   * Typing "%TEMP%" has the same effect
 
-# VSTO
+# VSTO (Visual Studio Tools for Office)
 Install a VSTO application. (Adding "/s" does not install the app with a trust prompt.)
 ```batch
 "C:\Program Files\Common Files\microsoft shared\VSTO\10.0\VSTOInstaller.exe" /i Foo.vsto
