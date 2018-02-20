@@ -1,6 +1,6 @@
 @echo off
 
-title %~df0
+rem Open Excel without splash screen (/e), speadsheets (/e), and add-ins (/s).
+start excel /e /s
 
-rem Open Excel without the splash screen and spreadsheets.
-start excel /e
+rem https://support.office.com/en-us/article/command-line-switches-for-microsoft-office-products-079164cd-4ef5-4178-b235-441737deb3a6

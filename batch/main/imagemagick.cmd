@@ -1,7 +1,5 @@
 @echo off
 
-title %~df0
-
 rem Convert png to ico
 magick foo.png foo.ico
 

@@ -1,1 +1,3 @@
+@echo off
+
 explorer .

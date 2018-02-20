@@ -1,1 +1,3 @@
-explorer %LOCALAPPDATA%\Lxss\home\tatsuya
+@echo off
+
+explorer %LOCALAPPDATA%\Lxss\home\tatsuya.fujisaki

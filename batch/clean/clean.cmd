@@ -1,7 +1,5 @@
 @echo off
 
-title %~df0
-
 echo off | clip
 
 javaws -uninstall

@@ -1,3 +1,5 @@
+@echo off
+
 wmic product list brief | sort > products.txt
 wmic service list brief | sort > services.txt
 wmic process list brief | sort > processes.txt

@@ -41,5 +41,3 @@ echo %~t0
 
 rem Filesize in kilobytes
 echo %~z0
-
-pause

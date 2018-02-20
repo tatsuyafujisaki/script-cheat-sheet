@@ -1,9 +1,6 @@
 @echo off
 
-title %~df0
-
-rem List all DLLs in the global assembly cache.
+rem Print all DLLs in the global assembly cache.
 gacutil /l
 
-rem Gacutil.exe (Global Assembly Cache Tool)
-rem https://msdn.microsoft.com/en-us/library/ex0ss12c.aspx
+rem https://docs.microsoft.com/en-us/dotnet/framework/tools/gacutil-exe-gac-tool

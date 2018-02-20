@@ -7,7 +7,7 @@ cd /d %~dp0
 rem Exit from a batch instead of cmd.exe.
 exit /b
 
-rem Open the current folder using Explorer
+rem Open the current folder using Explorer.
 explorer .
 
 rem Open a folder in command line and stay there.
