@@ -21,6 +21,11 @@ if %db% == production (
 2. Type `cmd`
 3. Ctrl + Shift + Enter
 
+# Special commands to open special folders
+* Typing "." opens %USERPROFILE% with Explorer
+* Typing "TEMP" opens %TEMP% with Explorer
+  * Typing "%TEMP%" has the same effect
+
 # References
 * [`for`](https://technet.microsoft.com/en-us/library/bb490909.aspx)
 * [`if`](https://technet.microsoft.com/en-us/library/bb490920.aspx)
