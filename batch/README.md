@@ -1,8 +1,3 @@
-# Start a command prompt as an administrator
-1. Press Windows key
-2. Type `cmd`
-3. Ctrl + Shift + Enter
-
 # Note
 * `start` command regards the first double-quoted string as a title.
   * https://technet.microsoft.com/en-us/library/cc770297.aspx
@@ -15,6 +10,16 @@ if %db% == production (
   set /p answer=Do you wish to continue with database %db% (y/N)
 )
 ```
+
+# Best practices
+* Add `@echo off` to any batch file.
+* Add `title %~df0` to a batch file if it requires any user interaction to close the console.
+* Add `cd /d %~dp0` to a batch file if it uses its parent directory.
+
+# How to start a command prompt as an administrator
+1. Press Windows key
+2. Type `cmd`
+3. Ctrl + Shift + Enter
 
 # References
 * [`for`](https://technet.microsoft.com/en-us/library/bb490909.aspx)
