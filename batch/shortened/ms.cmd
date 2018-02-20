@@ -1,1 +1,0 @@
-start mspaint.exe

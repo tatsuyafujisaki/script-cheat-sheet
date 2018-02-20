@@ -1,3 +1,5 @@
+@echo off
+
 rem If the following leaves the command prompt open ...
 call code.cmd %*
 

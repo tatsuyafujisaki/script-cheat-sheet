@@ -1,0 +1,3 @@
+@echo off
+
+main.cpl
