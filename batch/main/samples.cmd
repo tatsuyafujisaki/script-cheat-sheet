@@ -170,7 +170,7 @@ rd /q /s dir1 > null 2>&1
 rem Delete a directory if it is a subdirectory.
 for /F "tokens=*" %%f in ('dir /b /s /ad dir1') do rd /q /s "%%f"
 
-rem Empty but not delete a directory if it exists in the top directory.
+rem Empty a directory.
 if exist dir1 ( del /f /q /s dir1 )
 
 rem Example 1 of 'for'
