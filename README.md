@@ -1,2 +1,5 @@
 # Markdowns
-[batch/README.md](batch/README.md)
+* [bash/README.md](bash/README.md)
+* [batch/README.md](batch/README.md)
+* [jscript/README.md](batch/README.md)
+* [powershell/README.md](powershell/README.md)
