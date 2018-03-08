@@ -7,6 +7,9 @@ cd /d %~dp0
 rem Exit from a batch instead of cmd.exe.
 exit /b
 
+rem Print a blank line.
+echo.
+
 rem Open the current directory using Explorer.
 explorer .
 
