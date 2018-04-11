@@ -168,7 +168,7 @@ rem Delete a directory if it exists in the top directory.
 if exist dir1 ( rd /q /s dir1 )
 
 rem Delete a directory if it exists in the top directory without throwing an error even if the specified directory is locked and fails to be deleted.
-rd /q /s dir1 > null 2>&1
+rd /q /s dir1 > nul 2>&1
 
 rem Delete a directory if it is a subdirectory.
 for /F "tokens=*" %%f in ('dir /b /s /ad dir1') do rd /q /s "%%f"
