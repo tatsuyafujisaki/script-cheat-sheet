@@ -11,4 +11,6 @@ set ClickOnceProductName=Product1
 
 msbuild Project1\Project1.csproj "/p:Configuration=Release;AssemblyName=%AssemblyName%;ProductName=%ClickOnceProductName%;ApplicationVersion=%ClickOncePublishVersion%" /t:publish /v:m /m /nologo
 
+explorer Project1\bin\Release\app.publish
+
 pause
