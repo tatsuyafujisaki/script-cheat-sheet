@@ -2,7 +2,7 @@
 
 echo off | clip
 
-javaws -uninstall
+javaws.exe -uninstall
 
 rem Empty %TEMP%
 del /f /q /s %TEMP% > nul 2>&1
