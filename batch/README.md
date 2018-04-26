@@ -15,6 +15,8 @@ if %db% == production (
 * Add `@echo off` to any batch file.
 * Add `title %~df0` to a batch file if it requires any user interaction to close the console.
 * Add `cd /d %~dp0` to a batch file if it uses its parent directory.
+* Specify extensions of executables such as `*.exe` or `*.cmd`.
+* Be case-sensitive in folder and file names for clarity.
 
 # How to start a command prompt as an administrator
 1. Press Windows key
