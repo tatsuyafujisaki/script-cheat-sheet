@@ -132,7 +132,7 @@ function ConvertMultipleSpacesToSingleSpace()
             while ($s.Contains('  ')){ $s = $s -replace '  ', ' ' }
             Set-Content -Encoding String $file $s
             # Use "Set-Content -Encoding String" to avoid mojibake
-            # http://technet.microsoft.com/en-us/library/hh847827.aspx            
+            # https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/set-content
         }
     }
 }

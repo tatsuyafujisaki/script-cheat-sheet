@@ -1,6 +1,6 @@
 @echo off
 
-netstat -abfo
+NETSTAT.EXE -abfo
 
 rem -a ... shows listening ports
 rem -b ... shows process names

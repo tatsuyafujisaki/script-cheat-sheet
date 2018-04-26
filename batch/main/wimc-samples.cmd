@@ -1,10 +1,10 @@
 @echo off
 
-wmic /output:products.txt product list brief
-wmic /output:services.txt service list brief
-wmic /output:processes.txt process list brief
-wmic /output:startups.txt startup list brief
-wmic /output:updates.txt qfe list brief
+WMIC.exe /OUTPUT:products.txt PRODUCT LIST BRIEF
+WMIC.exe /OUTPUT:services.txt SERVICE LIST BRIEF
+WMIC.exe /OUTPUT:processes.txt PROcESS LIST BRIEF
+WMIC.exe /OUTPUT:startups.txt STARTUP LIST BRIEF
+WMIC.exe /OUTPUT:updates.txt QFE LIST BRIEF
 
 rem Set priority to the lowest
-wmic process where name="foo.exe" call setpriority idle
+WMIC.exe process where name="foo.exe" call setpriority idle

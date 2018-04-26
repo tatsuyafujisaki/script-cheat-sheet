@@ -11,7 +11,7 @@ rem Print a blank line. (Note that "." follows echo.)
 echo.
 
 rem Open the current directory using Explorer.
-explorer .
+explorer.exe .
 
 rem Open a directory in command line and stay there.
 cmd /k "cd /d %TEMP%"
@@ -204,7 +204,7 @@ for /F "tokens=3" %%1 in ('reg query "HKCU\Software\Microsoft\Windows\CurrentVer
 echo %desktop%
 
 rem Copy a whole directory
-xcopy C:\from C:\to /e /i /y
+xcopy.exe C:\from C:\to /e /i /y
 
 rem Copy a file
 copy /b /y file1.txt file2.txt

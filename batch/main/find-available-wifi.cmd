@@ -2,6 +2,6 @@
 
 title %~df0
 
-netsh wlan show network
+netsh.exe wlan show network
 
 pause

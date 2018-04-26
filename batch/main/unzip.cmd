@@ -2,4 +2,4 @@
 
 cd /d %~dp0
 
-7z e -y *.zip
+7z.exe e -y *.zip
