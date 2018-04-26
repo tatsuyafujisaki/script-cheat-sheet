@@ -1,3 +1,3 @@
 @echo off
 
-explorer %USERPROFILE%\x\apps
+explorer.exe %USERPROFILE%\x\apps
