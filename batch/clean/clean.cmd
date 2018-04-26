@@ -35,12 +35,12 @@ rd /q /s "%LOCALAPPDATA%\Microsoft\VsGraphics" > nul 2>&1
 rd /q /s "%LOCALAPPDATA%\Microsoft\WebsiteCache" > nul 2>&1
 
 rem Clear "Find" history in Visual Studio 2013
-reg delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\12.0\Find /f > nul 2>&1
+reg.exe delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\12.0\Find /f > nul 2>&1
 
 rem Clear "Find" history in Visual Studio 2015
-reg delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\14.0\Find /f > nul 2>&1
+reg.exe delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\14.0\Find /f > nul 2>&1
 
 rem Don't use "/sageset" as it changes registry.
-cleanmgr /d c:
+cleanmgr.exe /d c:
 
-defrag /C /H /M /X
+Defrag.exe /C /H /M /X
