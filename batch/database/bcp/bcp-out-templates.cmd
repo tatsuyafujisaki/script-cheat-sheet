@@ -16,7 +16,7 @@ set query2=SELECT Binary FROM %database%.%schema%.%table% WHERE Group + '.' + Na
 
 set tmpfile="%temp%\%random%.tmp"
 
-bcp %query1% queryout %tmpfile% -c -S %server% -U %user% -P %password%
+bcp.exe %query1% queryout %tmpfile% -c -S %server% -U %user% -P %password%
 
 rem Enter the file storage type of field val1 [varbinary(max)]: (Enter)
 rem Enter prefix-length of field val1 [8]: 0
@@ -27,11 +27,11 @@ rem Host filename [bcp.fmt]: (Enter)
 
 if exist bcp.fmt (
   for /f "tokens=*" %%l in (%tmpfile%) do (
-    bcp "%query2%%%l" queryout "%%l" -S %server% -U %user% -P %password% -f bcp.fmt
+    bcp.exe "%query2%%%l" queryout "%%l" -S %server% -U %user% -P %password% -f bcp.fmt
   )
 ) else (
   for /f "tokens=*" %%l in (%tmpfile%) do (
-    bcp "%query2%%%l" queryout "%%l" -S %server% -U %user% -P %password%
+    bcp.exe "%query2%%%l" queryout "%%l" -S %server% -U %user% -P %password%
   )
 )
 

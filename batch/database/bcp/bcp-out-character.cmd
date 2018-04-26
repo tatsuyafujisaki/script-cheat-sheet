@@ -29,4 +29,4 @@ set delimiter="|"
 set /p answer=Do you wish to continue with %database% on %server% ? (y/N):
 if /i not %answer% == y exit /b
 
-bcp %database%.%schema%.%table% out %output% -w -t %delimiter% -S %server% -U %user% -P %password%
+bcp.exe %database%.%schema%.%table% out %output% -w -t %delimiter% -S %server% -U %user% -P %password%

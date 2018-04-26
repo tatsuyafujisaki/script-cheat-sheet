@@ -31,7 +31,7 @@ if not exist %input% (
 set /p answer=Do you wish to continue with %database% on %server% ? (y/N):
 if /i not %answer% == y exit /b
 
-sqlcmd -S %server% -d %database% -U %user% -P %password% -Q "TRUNCATE TABLE %schema%.%table%"
+SQLCMD.EXE -S %server% -d %database% -U %user% -P %password% -Q "TRUNCATE TABLE %schema%.%table%"
 
 rem -E is only in bcp-in
-bcp %database%.%schema%.%table% in %input% -n -E -S %server% -U %user% -P %password%
+bcp.exe %database%.%schema%.%table% in %input% -n -E -S %server% -U %user% -P %password%

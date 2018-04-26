@@ -31,9 +31,9 @@ set /p answer=Do you wish to continue with %database% on %server% ? (y/N):
 if /i not %answer% == y exit
 
 if exist %format% (
-  bcp %query% queryout %output% -S %server% -U %user% -P %password% -f %format%
+  bcp.exe %query% queryout %output% -S %server% -U %user% -P %password% -f %format%
 ) else (
-  bcp %query% queryout %output% -S %server% -U %user% -P %password%
+  bcp.exe %query% queryout %output% -S %server% -U %user% -P %password%
   rem How to answer prompts
   rem Enter the file storage type of field val1 [varbinary(max)]: (Enter)
   rem Enter prefix-length of field val1 [8]: 0
