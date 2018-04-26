@@ -3,7 +3,7 @@
 rem Place this batch file in a folder where a solution file exists or nuget throws an error.
 nuget.exe restore
 
-call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsMSBuildCmd.bat"
+call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\LaunchDevCmd.bat"
 
 set Project=Project1
 set AssemblyName=Assembly1
