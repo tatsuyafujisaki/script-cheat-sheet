@@ -24,4 +24,4 @@ set SQLCMDCOLSEP=^|
 set /p answer=Do you wish to continue with %SQLCMDDBNAME% on %SQLCMDSERVER% ? (y/N):
 if /i not %answer% == y exit
 
-sqlcmd -W -f 932 -i %~n0.sql -o %~n0.csv
+SQLCMD.EXE -W -f 932 -i %~n0.sql -o %~n0.csv
