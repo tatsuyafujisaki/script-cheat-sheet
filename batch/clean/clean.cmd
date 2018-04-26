@@ -43,4 +43,4 @@ reg.exe delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\14.0\Find /f > 
 rem Don't use "/sageset" as it changes registry.
 cleanmgr.exe /d c:
 
-Defrag.exe /C /H /M /X
+defrag.exe /C /H /M /X
