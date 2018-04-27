@@ -1,3 +1,3 @@
 @echo off
 
-tasklist | sort | findstr /i %*
+tasklist.exe | sort.exe | findstr.exe /i %*

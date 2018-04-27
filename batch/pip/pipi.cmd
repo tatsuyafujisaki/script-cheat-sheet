@@ -1,3 +1,3 @@
 @echo off
 
-pip install --upgrade %*
+pip.exe install --upgrade %*

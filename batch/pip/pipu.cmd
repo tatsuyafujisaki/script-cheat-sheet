@@ -1,3 +1,3 @@
 @echo off
 
-pip uninstall -y %*
+pip.exe uninstall -y %*

@@ -1,3 +1,3 @@
 @echo off
 
-tasklist /m "mscor*"
+tasklist.exe /m "mscor*"

@@ -1,3 +1,3 @@
 @echo off
 
-mvn install -DskipTests
+mvn.exe install -DskipTests

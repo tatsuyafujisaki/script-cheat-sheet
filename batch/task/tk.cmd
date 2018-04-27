@@ -1,3 +1,3 @@
 @echo off
 
-taskkill /f /im %* 2> nul
+taskkill.exe /f /im %* 2> nul

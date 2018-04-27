@@ -1,3 +1,3 @@
 @echo off
 
-tasklist | sort
+tasklist.exe | sort.exe

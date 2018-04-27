@@ -1,3 +1,3 @@
 @echo off
 
-explorer %USERPROFILE%\x\scripts
+explorer.exe %USERPROFILE%\x\scripts

@@ -4,4 +4,4 @@ cd /d %~dp0
 
 call clean.cmd
 
-shutdown /f /r /t 0
+shutdown.exe /f /r /t 0

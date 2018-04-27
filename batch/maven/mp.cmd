@@ -1,3 +1,3 @@
 @echo off
 
-mvn process-resources
+mvn.exe process-resources
