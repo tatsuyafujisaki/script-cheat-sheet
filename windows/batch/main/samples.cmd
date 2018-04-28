@@ -162,7 +162,7 @@ rem Create a directory if it does not exist in the top directory.
 if not exist dir1 ( md dir1 )
 
 rem Delete a file if it exists in the top directory.
-if exist file1 ( del file1 )
+if exist file1 ( del /f /q file1 )
 
 rem Delete a directory if it exists in the top directory.
 if exist dir1 ( rd /q /s dir1 )
