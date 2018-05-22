@@ -1,6 +1,6 @@
 @echo off
 
-taskkill.exe /f ^
+taskkill /f ^
 /im Code.exe ^
 /im EXCEL.EXE ^
 /im MSBuild.exe ^

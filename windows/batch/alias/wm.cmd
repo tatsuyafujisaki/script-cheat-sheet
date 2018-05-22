@@ -1,3 +1,3 @@
 @echo off
 
-start WinMergeU.exe
+start winmergeu

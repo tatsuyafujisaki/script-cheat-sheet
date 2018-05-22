@@ -17,7 +17,7 @@ inputPath = doubleQuote(inputPath);
 var shell = WScript.CreateObject('WScript.Shell');
 
 // Output in HTML rather than GUI because the former is color while the latter is black and white.
-shell.Run('ildasm.exe /nobar /source /html /out=' + outputPath + ' ' + inputPath, 0, true);
+shell.Run('ildasm /nobar /source /html /out=' + outputPath + ' ' + inputPath, 0, true);
 
 // Open with the default browser.
 shell.Run(outputPath);

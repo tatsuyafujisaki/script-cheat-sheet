@@ -1,3 +1,3 @@
 @echo off
 
-explorer.exe %APPDATA%
+explorer %APPDATA%

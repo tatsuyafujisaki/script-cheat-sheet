@@ -1,3 +1,3 @@
 @echo off
 
-start iexplore.exe
+start iexplore

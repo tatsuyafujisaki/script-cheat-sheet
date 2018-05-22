@@ -25,4 +25,4 @@ set output=%table%.bcp
 set /p answer=Do you wish to continue with %database% on %server% ? (y/N):
 if /i not %answer% == y exit /b
 
-bcp.exe %database%.%schema%.%table% out %output% -n -S %server% -U %user% -P %password%
+bcp %database%.%schema%.%table% out %output% -n -S %server% -U %user% -P %password%

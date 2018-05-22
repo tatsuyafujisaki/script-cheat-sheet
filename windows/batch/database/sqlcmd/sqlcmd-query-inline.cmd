@@ -24,4 +24,4 @@ set SQLCMDCOLSEP=^|
 set /p answer=Do you wish to continue with %SQLCMDDBNAME% on %SQLCMDSERVER% ? (y/N):
 if /i not %answer% == y exit
 
-SQLCMD.EXE -W -f 932 -Q "SET NOCOUNT ON; SELECT * FROM Table1" -o Table1.csv
+sqlcmd -W -f 932 -Q "SET NOCOUNT ON; SELECT * FROM Table1" -o Table1.csv

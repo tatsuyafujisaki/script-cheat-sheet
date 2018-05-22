@@ -2,7 +2,7 @@
 
 echo off | clip
 
-javaws.exe -uninstall
+javaws -uninstall
 
 rem Empty %TEMP%
 del /f /q /s %TEMP% > nul 2>&1
@@ -35,12 +35,12 @@ rd /q /s "%LOCALAPPDATA%\Microsoft\VsGraphics" > nul 2>&1
 rd /q /s "%LOCALAPPDATA%\Microsoft\WebsiteCache" > nul 2>&1
 
 rem Clear "Find" history in Visual Studio 2013
-reg.exe delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\12.0\Find /f > nul 2>&1
+reg delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\12.0\Find /f > nul 2>&1
 
 rem Clear "Find" history in Visual Studio 2015
-reg.exe delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\14.0\Find /f > nul 2>&1
+reg delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\VisualStudio\14.0\Find /f > nul 2>&1
 
 rem Don't use "/sageset" as it changes registry.
-cleanmgr.exe /d c:
+cleanmgr /d c:
 
-Defrag.exe /C /H /M /X
+defrag /C /H /M /X

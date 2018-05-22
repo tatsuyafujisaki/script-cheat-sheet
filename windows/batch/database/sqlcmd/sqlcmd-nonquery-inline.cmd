@@ -22,4 +22,4 @@ set SQLCMDPASSWORD=password1
 set /p answer=Do you wish to continue with %SQLCMDDBNAME% on %SQLCMDSERVER% ? (y/N):
 if /i not %answer% == y exit
 
-SQLCMD.EXE -f 932 -Q "TRUNCATE TABLE Table1"
+sqlcmd -f 932 -Q "TRUNCATE TABLE Table1"
