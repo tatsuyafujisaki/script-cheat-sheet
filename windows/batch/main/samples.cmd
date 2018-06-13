@@ -209,6 +209,9 @@ xcopy C:\from C:\to /e /i /y
 rem Copy a file
 copy /b /y file1.txt file2.txt
 
+rem Concatenate files
+copy foo.txt + bar.txt foobar.txt
+
 pause
 exit /b
 
