@@ -1,7 +1,4 @@
 @echo off
 
-rem If the following leaves the command prompt open ...
+rem If the following leaves the command prompt open, specify the extension as "code.cmd"
 call code %*
-
-rem use the following instead.
-rem start "" "C:\Program Files\Microsoft VS Code\code.exe" %*
