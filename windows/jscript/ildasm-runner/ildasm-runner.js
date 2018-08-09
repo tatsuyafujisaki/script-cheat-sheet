@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
 function doubleQuote(s) {
-    return '\'' + s + '\'';
+  return '"' + s + '"';
 }
 
 if (WScript.Arguments.length !== 1) {
-    WScript.Echo('please drop a PE file.');
-    WScript.Quit();
+  WScript.Echo('Please drop an execution file or a DLL file.');
+  WScript.Quit();
 }
 
 var fso = WScript.CreateObject('Scripting.FileSystemObject');
