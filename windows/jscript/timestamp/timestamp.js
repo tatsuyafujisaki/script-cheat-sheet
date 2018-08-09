@@ -1,3 +1,5 @@
+"use strict";
+
 Date.prototype.yyyymmdd = function () {
     var yyyy = this.getFullYear();
     var mm = this.getMonth() + 1;
@@ -10,7 +12,7 @@ if (WScript.Arguments.length !== 1) {
     WScript.Quit();
 }
 
-var path = WScript.Arguments.Item(0);
+var path = WScript.Arguments(0);
 var fso = new ActiveXObject('Scripting.FileSystemObject');
 
 if (fso.FolderExists(path)) {

@@ -1,3 +1,5 @@
+"use strict";
+
 function doubleQuote(s) {
     return '\'' + s + '\'';
 }
@@ -9,7 +11,7 @@ if (WScript.Arguments.length !== 1) {
 
 var fso = WScript.CreateObject('Scripting.FileSystemObject');
 
-var inputPath = WScript.Arguments.Item(0);
+var inputPath = WScript.Arguments(0);
 var outputPath = doubleQuote(fso.BuildPath(fso.GetParentFolderName(inputPath), fso.GetBaseName(inputPath) + '.html'));
 
 inputPath = doubleQuote(inputPath);
