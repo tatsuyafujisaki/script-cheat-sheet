@@ -1,46 +1,56 @@
+# How to update npm
+```bash
+sudo npm install npm -g
+```
+
 # How to list configurations
 ```bash
 npm config list
 ```
 
-# How to print`node_modules` folder
+# How to print `node_modules` folder
 ```bash
-npm root
+# global
 npm root -g
+
+# local
+npm root
 ```
 
-# How to list packages
+# How to list installed packages
 ```bash
-# Bash
-npm ls --depth 0 2> /dev/null
-npm ls --depth 0 -g 2> /dev/null
+# global
+npm ls --depth 0 -g
 
-# Windows Command Prompt
-npm ls --depth 0 2> nul
-npm ls --depth 0 -g 2> nul
+# local
+npm ls --depth 0
 ```
 
-# How to update npm itself
+# How to update installed packages
 ```bash
-npm install npm -g
-```
-
-# How to update global packages
-```bash
-npm update
+# global
 npm update -g
+
+# local
+npm update
 ```
 
 # How to install a package
 ```bash
-npm install <package>
+# global
 npm install <package> -g
+
+# local
+npm install <package>
 ```
 
 # How to uninstall a package
 ```bash
-npm uninstall <package>
+# global
 npm uninstall <package> -g
+
+# local
+npm uninstall <package>
 ```
 
 # How to install a scoped package
