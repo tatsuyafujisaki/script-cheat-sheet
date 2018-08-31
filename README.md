@@ -9,4 +9,5 @@
 * [npm](markdown/npm.md)
 * [pip](markdown/pip.md)
 * [PowerShell](markdown/powershell.md)
-* [Shortcuts](markdown/shortcuts.md)
+* [Linux apt command](markdown/linux-apt-command.md)
+* [Windows shortcuts](markdown/windows-shortcuts.md)
