@@ -1,6 +1,5 @@
-# Run built-in executables
-
-whoami
+# How to run built-in executables
+## whoami
 ```batch
 rem Print <userdomain>/<usename>
 whoami
@@ -9,13 +8,13 @@ rem Print my account's CN (Common Name) of LDAP in FQDN format
 whoami /fqdn
 ```
 
-net user
+## net user
 ```batch
 rem Print the detail of a user
 net user <username> /domain
 ```
 
-netstat
+## netstat
 ```batch
 rem -a ... shows listening ports
 rem -b ... shows process names
@@ -28,7 +27,7 @@ rem Find open ports. Note that open UDP ports are displayed with "*:*"
 netstat  -an | findstr "ESTABLISHED LISTENING *:*" | sort
 ```
 
-wmic
+## wmic
 ```batch
 wmic /output:products.txt product list brief
 wmic /output:services.txt service list brief
@@ -40,39 +39,14 @@ rem Set priority to the lowest
 wmic process where name="foo.exe" call setpriority idle
 ```
 
-gpresult
+## gpresult
 ```batch
 rem Print RSoP (Resultant Set of Policy) summary data. In other words, it is a list of policies applied to this user.
 gpresult /r
 ```
 
-Run a batch file in a UNC path
-```batch
-rem Pushd %~dp0 rather than %cd% because %cd% defaults to C:\Windows when the script is on a UNC path.
-rem Here, %~dp0 and %cd% are as follows.
-rem %~dp0 = \\Foo\Bar
-rem %cd% = C:\Windows
-pushd %~dp0
-
-rem After this line, use %cd% rather than %~dp0 here because %cd is the real path.
-rem Here, %~dp0 and %cd% are as follows.
-rem %~dp0 = \\Foo\Bar
-rem %cd% = Z:\\Bar
-```
-
-Reproduce a file
-```batch
-copy /b /y file1.txt.origin file1.txt
-```
-
-Find available Wi-Fi
-```batch
-netsh wlan show network
-```
-
-# Run Visual Studio CLI tools
-
-nuget
+# How to run .NET tools
+## nuget
 ```batch
 rem Place this batch file in a folder where a solution file exists or nuget throws an error.
 nuget restore
@@ -98,7 +72,7 @@ rem Print PublicKeyToken of a DLL
 sn -T Foo.dll
 ```
 
-dumpbin
+## dumpbin
 ```batch
 rem Install "VC++ ... tools" from a Visual Studio installer as it contains dumpbin.exe
 
@@ -107,7 +81,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tool
 dumpbin /headers *.exe | findstr /i .pdb
 ```
 
-gacutil
+## gacutil
 ```batch
 call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\LaunchDevCmd.bat"
 
@@ -115,7 +89,7 @@ rem Print all DLLs in the global assembly cache.
 gacutil /l
 ```
 
-ildasm
+## ildasm
 ```batch
 call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\LaunchDevCmd.bat"
 
@@ -125,9 +99,7 @@ ildasm /nobar /source /html /out=%~n1.html %1
 start %~n1.html
 ```
 
-# Run third-party executables
-
-imagemagick
+# How to run ImageMagick
 ```batch
 rem Convert .png to .ico
 magick foo.png foo.ico
@@ -141,4 +113,28 @@ magick convert -append top.jpg bottom.jpg result.jpg
 rem Merge three images
 magick convert +append upper-left.jpg upper-right.jpg temp.jpg
 magick convert -append temp.jpg lower-left.jpg result.jpg
+```
+
+# How to run a batch file in a UNC path
+```batch
+rem Pushd %~dp0 rather than %cd% because %cd% defaults to C:\Windows when the script is on a UNC path.
+rem Here, %~dp0 and %cd% are as follows.
+rem %~dp0 = \\Foo\Bar
+rem %cd% = C:\Windows
+pushd %~dp0
+
+rem After this line, use %cd% rather than %~dp0 here because %cd is the real path.
+rem Here, %~dp0 and %cd% are as follows.
+rem %~dp0 = \\Foo\Bar
+rem %cd% = Z:\\Bar
+```
+
+# How to reproduce a file
+```batch
+copy /b /y file1.txt.origin file1.txt
+```
+
+# How to find available Wi-Fi
+```batch
+netsh wlan show network
 ```
