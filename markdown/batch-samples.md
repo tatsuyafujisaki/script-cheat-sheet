@@ -115,7 +115,7 @@ magick convert +append upper-left.jpg upper-right.jpg temp.jpg
 magick convert -append temp.jpg lower-left.jpg result.jpg
 ```
 
-# How to run a batch file in a UNC path
+# How to run a batch file from a UNC path
 ```batch
 rem Pushd %~dp0 rather than %cd% because %cd% defaults to C:\Windows when the script is on a UNC path.
 rem Here, %~dp0 and %cd% are as follows.
