@@ -129,12 +129,13 @@ rem %~dp0 = \\Foo\Bar
 rem %cd% = Z:\\Bar
 ```
 
-# How to reproduce a file
-```batch
-copy /b /y file1.txt.origin file1.txt
-```
-
 # How to find available Wi-Fi
 ```batch
 netsh wlan show network
+```
+
+# How to reproduce a file
+This is useful when you need to repeat making a destructive change to a file.
+```batch
+copy /b /y file1.txt.origin file1.txt
 ```
