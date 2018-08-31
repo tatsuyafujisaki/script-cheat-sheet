@@ -11,3 +11,4 @@
 * [pip](markdown/pip.md)
 * [PowerShell](markdown/powershell.md)
 * [Windows shortcuts](markdown/windows-shortcuts.md)
+* [WSL (Windows Subsystem for Linux)](markdown/wsl.md)
