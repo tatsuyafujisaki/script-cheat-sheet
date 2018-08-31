@@ -1,4 +1,5 @@
 # Markdowns
+* [apt](markdown/apt.md)
 * [Bash](markdown/bash.md)
 * [Batch](markdown/batch.md)
 * [Batch samples](markdown/batch-samples.md)
@@ -9,5 +10,4 @@
 * [npm](markdown/npm.md)
 * [pip](markdown/pip.md)
 * [PowerShell](markdown/powershell.md)
-* [Linux apt command](markdown/linux-apt-command.md)
 * [Windows shortcuts](markdown/windows-shortcuts.md)
