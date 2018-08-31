@@ -9,4 +9,4 @@ $PSVersionTable.PSVersion
 ```
 powershell -Command "& 'C:/foo.ps1'"
 ```
-3. Set Run to "Minimized".
+3. Set Run to `Minimized`.
