@@ -1,15 +1,15 @@
-How to list configurations
+# How to list configurations
 ```bash
 npm config list
 ```
 
-How to print`node_modules` folder
+# How to print`node_modules` folder
 ```bash
 npm root
 npm root -g
 ```
 
-How to list packages
+# How to list packages
 ```bash
 # Bash
 npm ls --depth 0 2> /dev/null
@@ -20,41 +20,41 @@ npm ls --depth 0 2> nul
 npm ls --depth 0 -g 2> nul
 ```
 
-How to update npm itself
+# How to update npm itself
 ```bash
 npm install npm -g
 ```
 
-How to update global packages
+# How to update global packages
 ```bash
 npm update
 npm update -g
 ```
 
-How to install a package
+# How to install a package
 ```bash
 npm install <package>
 npm install <package> -g
 ```
 
-How to uninstall a package
+# How to uninstall a package
 ```bash
 npm uninstall <package>
 npm uninstall <package> -g
 ```
 
-Install a scoped package
+# How to install a scoped package
 ```bash
 npm install @scope/project
 ```
 https://docs.npmjs.com/getting-started/scoped-packages
 
-Run a local package
+# How to run a local package
 ```bash
 npx <package>
 ```
 
-Locally and globally
+# Comparison between local and global
 
 Operation|Locally|Globally
 ---|---|---

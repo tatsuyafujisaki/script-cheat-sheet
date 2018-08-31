@@ -1,12 +1,11 @@
 # How to upgrade pip
 ```bash
-# Run command prompt as administrator in Windows instead of prepending `sudo`
 sudo python -m pip install --upgrade pip
 ```
 
 # How to install a package
 ```bash
-# --user is to install a package deep under %USERPROFILE% so does not require administrative rights
+# Pakcages will be installed deep under %USERPROFILE%
 pip install --user --upgrade <package>
 ```
 
