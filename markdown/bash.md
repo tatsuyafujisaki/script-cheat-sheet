@@ -3,17 +3,14 @@
 $ cat foo.txt 
 aaa
 bbb
-ccc
 
 $ cat bar.txt 
 xxx
 yyy
-zzz
 
 $ paste -d, foo.txt bar.txt
 aaa,xxx
 bbb,yyy
-ccc,zzz
 ```
 
 # How to horizontally concatenate files without using a matching column excluding unmatched rows
@@ -24,17 +21,16 @@ ccc,zzz
 $ cat foo.txt
 1,aaa
 2,bbb
-3,ccc
+4,ccc
 
 $ cat bar.txt
 1,xxx
 2,yyy
-3,zzz
+5,zzz
 
 $ join -t, -1 1 -2 2 foo.txt bar.txt
 1,aaa,xxx
 2,bbb,yyy
-3,ccc,zzz
 ````
 
 # Comparison among `xxd`, `hexdump`, and `od`
