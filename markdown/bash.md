@@ -1,3 +1,14 @@
+# How to convert multiple lines to a single line
+```bash
+$ cat input.txt 
+aaa
+bbb
+ccc
+
+$ paste -s -d, input.txt 
+aaa,bbb,ccc
+```
+
 # How to horizontally concatenate files without using a matching column
 ```bash
 $ cat foo.txt 
