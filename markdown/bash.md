@@ -1,22 +1,40 @@
-# How to use `join`
+# How to horizontally concatenate files without using a matching column
+```bash
+$ cat foo.txt 
+aaa
+bbb
+ccc
+
+$ cat bar.txt 
+xxx
+yyy
+zzz
+
+$ paste -d, foo.txt bar.txt
+aaa,xxx
+bbb,yyy
+ccc,zzz
+```
+
+# How to horizontally concatenate files without using a matching column excluding unmatched rows
 * `-t` is a separator
 * `-1` is the one-based index of a matching column from a first input file.
 * `-2` is the one-based index of a matching column from a second input file.
 ```bash
 $ cat foo.txt
-aaa,1,xxx
-bbb,2,yyy
-ccc,3,zzz
+1,aaa
+2,bbb
+3,ccc
 
 $ cat bar.txt
-1,AAA,XXX
-2,BBB,YYY
-3,CCC,ZZZ
+1,xxx
+2,yyy
+3,zzz
 
-$ join -t, -1 2 -2 1 foo.txt bar.txt
-1,aaa,xxx,AAA,XXX
-2,bbb,yyy,BBB,YYY
-3,ccc,zzz,CCC,ZZZ
+$ join -t, -1 1 -2 2 foo.txt bar.txt
+1,aaa,xxx
+2,bbb,yyy
+3,ccc,zzz
 ````
 
 # Comparison among `xxd`, `hexdump`, and `od`
