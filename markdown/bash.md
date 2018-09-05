@@ -1,12 +1,12 @@
 # How to copy a folder to another folder as a subfolder
 ```bash
-# Note "src/", not "src"
-rsync -a src/ dst
+# Note "src", not "/src"
+rsync -a src dst
 ```
 
 # How to copy only the content of a folder to another folder
 ```bash
-# Note "src", not "/src"
+# Note "src/", not "src"
 rsync -a src dst
 ```
 
