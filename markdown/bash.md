@@ -1,3 +1,12 @@
+# How to iterate through an array
+```bash
+xs=('foo' 'bar' 'baz')
+for x in "${xs[@]}"
+do
+  echo ${x}
+done
+```
+
 # How to copy a folder to another folder as a subfolder
 ```bash
 # Note "src", not "/src"
