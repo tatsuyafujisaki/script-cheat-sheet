@@ -1,6 +1,15 @@
+# How to define an array
+```bash
+xs1=(foo bar baz)
+
+xs2=(foo
+bar
+baz
+)
+```
 # How to iterate through an array
 ```bash
-xs=('foo' 'bar' 'baz')
+xs=(foo bar baz)
 for x in "${xs[@]}"
 do
   echo ${x}
