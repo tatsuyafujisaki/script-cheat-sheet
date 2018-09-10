@@ -32,26 +32,25 @@ rsync -a src dst
 ```bash
 sed 's/^/prefix/' input.txt > output.txt
 
-# In-place replacement
-sed 's/^/prefix/' -i replaced.txt
+# In-place
+sed -i 's/^/prefix/' input.txt
 ```
 
 # How to suffix lines
 ```bash
 sed "s/$/suffix/" input.txt > output.txt
 
-# In-place replacement
-sed "s/$/suffix/" -i replaced.txt
+# In-place
+sed -i "s/$/suffix/" input.txt
 ```
 
 # How to replace strings
 ```bash
-sed "s/$/suffix/" input.txt > output.txt
+sed "s/old/new/g" input.txt > output.txt
 
 # In-place replacement
-sed "s/$/suffix/" -i replaced.txt
+sed -i "s/old/new/g" input.txt
 ```
-
 
 # How to convert multiple lines to a single line
 ```bash
