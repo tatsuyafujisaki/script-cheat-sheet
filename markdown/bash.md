@@ -39,22 +39,26 @@ $ paste -s -d, input.txt
 aaa,bbb,ccc
 ```
 
-# How to horizontally concatenate files without using a matching column
+# How to concatenate files horizontally without using a matching column
 ```bash
-$ cat foo.txt 
+$ cat left.txt 
 aaa
 bbb
 
-$ cat bar.txt 
+$ cat right.txt 
 xxx
 yyy
 
-$ paste -d, foo.txt bar.txt
+$ paste -d, left.txt right.txt
 aaa,xxx
 bbb,yyy
+
+$ paste -d'\0' left.txt right.txt
+aaaxxx
+bbbyyy
 ```
 
-# How to horizontally concatenate files without using a matching column excluding unmatched rows
+# How to concatenate files horizontally excluding unmatched rows without using a matching column
 * `-t` is a separator
 * `-1` is the one-based index of a matching column from a first input file.
 * `-2` is the one-based index of a matching column from a second input file.
