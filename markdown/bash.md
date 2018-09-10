@@ -114,13 +114,13 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 
 (*1) Performance comparison
 ```bash
-$ gtime -f '%e' cat /bin/sh | xxd -g1 > /dev/null
+$ time -f '%e' cat /bin/sh | xxd -g1 > /dev/null
 0.03
 
-$ gtime -f '%e' cat /bin/sh | hexdump -C > /dev/null
+$ time -f '%e' cat /bin/sh | hexdump -C > /dev/null
 0.17
 
-$ gtime -f '%e' cat /bin/sh | od -Ax -tx1 > /dev/null
+$ time -f '%e' cat /bin/sh | od -Ax -tx1 > /dev/null
 0.07
 ```
 
