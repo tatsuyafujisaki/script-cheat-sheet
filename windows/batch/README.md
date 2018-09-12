@@ -30,6 +30,11 @@ if %db% == production (
 * `.` command opens `%USERPROFILE%` in Explorer
 * `temp` command opens `%TEMP%` in Explorer
 
+# How to clear the clipboard
+```batch
+echo off | clip
+```
+
 # VSTO (Visual Studio Tools for Office)
 ## How to install a VSTO application. Note that adding `/s` fails to install apps that try to show a trust prompt.
 ```batch
