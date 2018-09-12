@@ -31,7 +31,7 @@ if %db% == production (
 * `temp` command opens `%TEMP%` in Explorer
 
 # VSTO (Visual Studio Tools for Office)
-## How to install a VSTO application. Note that adding `/s` fails to install apps that require a trust prompt.
+## How to install a VSTO application. Note that adding `/s` fails to install apps that try to show a trust prompt.
 ```batch
 "C:\Program Files\Common Files\microsoft shared\VSTO\10.0\VSTOInstaller.exe" /i Foo.vsto
 ```
