@@ -15,10 +15,10 @@ rem There has been no programmatic way to clear "Find" history since Visual Stud
 rem https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/examine_registry.md
 rem https://visualstudio.uservoice.com/forums/121579-visual-studio-ide/suggestions/19961509-able-to-clear-find-replace-history-list
 
-rem Administrator privileges is NOT required to show admin-only items in sageset
+rem Administrator privileges is NOT required to include admin-only items in sageset
 rem cleanmgr /sageset:0
 
-rem Administrator privileges is required to show admin-only items in sagerun
+rem Administrator privileges is required to include admin-only items in sagerun
 cleanmgr /sagerun:0
 
 defrag /C /M /X
