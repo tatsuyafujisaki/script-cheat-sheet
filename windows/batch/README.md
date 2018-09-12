@@ -46,8 +46,9 @@ shutdown /f /r /t 0
 ```
 
 # VSTO (Visual Studio Tools for Office)
-## How to install a VSTO application. Note that adding `/s` fails to install apps that try to show a trust prompt.
+## How to install a VSTO application
 ```batch
+rem Adding `/s` fails to install apps that try to show a trust prompt
 "C:\Program Files\Common Files\microsoft shared\VSTO\10.0\VSTOInstaller.exe" /i Foo.vsto
 ```
 
