@@ -35,6 +35,11 @@ if %db% == production (
 echo off | clip
 ```
 
+# How to open the startup folder
+```batch
+shell:startup
+```
+
 # How to shut down a computer
 ```batch
 shutdown /f /p
