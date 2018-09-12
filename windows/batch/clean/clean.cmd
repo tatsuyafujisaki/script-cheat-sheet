@@ -2,10 +2,8 @@
 
 javaws -uninstall
 
-rem Empty %TEMP%
 del /f /q /s %TEMP% > nul 2>&1
 
-rem Removing the backslash from C:\ invalidates "cd /d C:\".
 cd /d C:\
 del *.log /f /q /s > nul 2>&1
 
