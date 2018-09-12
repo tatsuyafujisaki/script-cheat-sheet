@@ -12,4 +12,4 @@ wsl ls
 ```
 
 # References
-* [WSL Command Reference](https://docs.microsoft.com/en-us/windows/wsl/reference)
+[WSL Command Reference](https://docs.microsoft.com/en-us/windows/wsl/reference)
