@@ -35,6 +35,16 @@ if %db% == production (
 echo off | clip
 ```
 
+# How to shut down a computer
+```batch
+shutdown /f /p
+```
+
+# How to restart a computer
+```batch
+shutdown /f /r /t 0
+```
+
 # VSTO (Visual Studio Tools for Office)
 ## How to install a VSTO application. Note that adding `/s` fails to install apps that try to show a trust prompt.
 ```batch
