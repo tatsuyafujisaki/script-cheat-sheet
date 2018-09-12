@@ -1,11 +1,18 @@
-# Markdowns
-* [apt](markdown/apt.md)
-* [Bash](markdown/bash.md)
-* [Batch](batch/README.md)
-* [ClickOnce](markdown/clickonce.md)
-* [JScript, VBScript, WSH](markdown/jscript-vbscript-wsh.md)
-* [npm](markdown/npm.md)
-* [pip](markdown/pip.md)
-* [PowerShell](markdown/powershell.md)
-* [Windows shortcuts](markdown/windows-shortcuts.md)
-* [WSL (Windows Subsystem for Linux)](markdown/wsl.md)
+# Cross-platform
+* [npm](cross-platform/npm/README.md)
+* [pip](cross-platform/pip/README.md)
+
+# Unix
+* [Bash](unix/bash/README.md)
+
+## Linux
+* [apt](unix/linux/apt/README.md)
+
+# Windows
+* [Batch](windows/batch/README.md)
+* [ClickOnce](windows/clickonce/README.md)
+* [JScript](windows/jscript/README.md)
+* [PowerShell](windows/powershell/README.md)
+* [VBScript](windows/vbscript/README.md)
+* [Windows Script Host](windows/wsh/README.md)
+* [Windows Subsystem for Linux](windows/wsl/README.md)
