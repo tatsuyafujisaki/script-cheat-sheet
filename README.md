@@ -1,10 +1,7 @@
 # Markdowns
 * [apt](markdown/apt.md)
 * [Bash](markdown/bash.md)
-* [Batch](markdown/batch.md)
-* [Batch samples](markdown/batch-samples.md)
-* [Batch path samples](markdown/batch-path-samples.md)
-* [Batch time samples](markdown/batch-time-samples.md)
+* [Batch](batch/README.md)
 * [ClickOnce](markdown/clickonce.md)
 * [JScript, VBScript, WSH](markdown/jscript-vbscript-wsh.md)
 * [npm](markdown/npm.md)
