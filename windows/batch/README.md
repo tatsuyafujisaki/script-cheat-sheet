@@ -9,11 +9,10 @@ cd /d "%~dp0"
 
 # Note
 * `%RANDOM%` outputs a random number between 0 and 32767.
+* If the extensions of executables are in `%PATHEXT%`, they are omissible.
 * `start` command regards the first double-quoted string as a title.
-  * https://technet.microsoft.com/en-us/library/cc770297.aspx
 * `start <file>` opens `<file>` with the default program.
-* Extensions of executables included `%PATHEXT%` are omissible.
-* Don't end a then-clause of `if` with a closing parenthesis (`)`) because when a process reaches the then-clause, the process falls through to an else-clause too.
+* Don't end a then-clause of `if` with a closing parenthesis `)` because when a process reaches the then-clause, the process falls through to an else-clause too.
 ```batch
 if %db% == production (
   set /p answer=Do you wish to continue with production database (y/N)
@@ -27,18 +26,17 @@ if %db% == production (
 2. Type `cmd`
 3. Ctrl + Shift + Enter
 
-# Special commands to open special folders
-* Typing "." opens %USERPROFILE% with Explorer
-* Typing "TEMP" opens %TEMP% with Explorer
-  * Typing "%TEMP%" has the same effect
+# Special commands to open special folders in Explorer
+* `.` command opens `%USERPROFILE%` in Explorer
+* `temp` command opens `%TEMP%` in Explorer
 
 # VSTO (Visual Studio Tools for Office)
-Install a VSTO application. (Adding "/s" does not install the app with a trust prompt.)
+## How to install a VSTO application. Note that adding `/s` fails to install apps that require a trust prompt.
 ```batch
 "C:\Program Files\Common Files\microsoft shared\VSTO\10.0\VSTOInstaller.exe" /i Foo.vsto
 ```
 
-Uninstall a VSTO application
+## How to uninstall a VSTO application
 ```batch
 "C:\Program Files\Common Files\microsoft shared\VSTO\10.0\VSTOInstaller.exe" /s /u Foo.vsto
 ```
