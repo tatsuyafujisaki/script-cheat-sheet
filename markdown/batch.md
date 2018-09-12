@@ -22,12 +22,6 @@ if %db% == production (
 )
 ```
 
-# Best practices
-* Add `@echo off` to any batch file.
-* Add `title %~df0` to a batch file if it requires any user interaction to close the console.
-* Add `cd /d %~dp0` to a batch file if it uses its parent directory.
-* Be case-sensitive in folder names, file names and command-line switches for clarity.
-
 # How to start a command prompt as an administrator
 1. Press Windows key
 2. Type `cmd`
@@ -51,6 +45,77 @@ Uninstall a VSTO application
 
 ## References
 [Create a custom installer](https://docs.microsoft.com/en-us/visualstudio/vsto/deploying-an-office-solution-by-using-clickonce#Custom)
+
+# Path
+Absolute path to current directory
+```batch
+echo %cd%
+```
+
+Absolute or relative path to script with double quotes
+```batch
+echo %0
+```
+
+Absolute or relative path to script without double quotes
+```batch
+echo %~0
+```
+
+Absolute path to script
+```batch
+echo %~f0
+```
+
+Shortened absolute path to script using tildes
+```batch
+echo %~s0
+```
+
+Absolute path to script without extension
+```batch
+echo %~dp0%~n0
+```
+
+Drive
+```batch
+echo %~d0
+```
+
+Absolute path to parent directory of script without drive
+```batch
+echo %~p0
+```
+
+Absolute path to parent directory of script
+```batch
+echo %~dp0
+```
+
+File name without extension
+```batch
+echo %~n0
+```
+
+Extension
+```batch
+echo %~x0
+```
+
+Attributes
+```batch
+echo %~a0
+```
+
+Modified datetime
+```batch
+echo %~t0
+```
+
+Filesize in kilobytes
+```batch
+echo %~z0
+```
 
 # References
 * [`for`](https://technet.microsoft.com/en-us/library/bb490909.aspx)
