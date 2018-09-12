@@ -1,4 +1,4 @@
-# Wiki
+# Markdowns
 * [apt](markdown/apt.md)
 * [Bash](markdown/bash.md)
 * [Batch](markdown/batch.md)
