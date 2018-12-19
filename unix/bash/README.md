@@ -1,3 +1,8 @@
+# What is `--` in Bash?
+> Unless otherwise noted, each builtin command documented as accepting options preceded by ‘-’ accepts ‘--’ to signify the end of the options. The :, true, false, and test builtins do not accept options and do not treat ‘--’ specially.
+
+https://www.gnu.org/software/bash/manual/bash.html#Shell-Builtin-Commands
+
 # How to create a file with content
 ```bash
 cat << EOF > helloworld.sh
