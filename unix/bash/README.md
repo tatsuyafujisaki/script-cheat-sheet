@@ -1,5 +1,11 @@
-# Best practices
-https://google.github.io/styleguide/shell.xml
+# How to create a file with content
+```bash
+cat << EOF > helloworld.sh
+#! /bin/bash
+echo Hello
+echo World
+EOF
+```
 
 # How to define an array
 ```bash
@@ -127,6 +133,6 @@ $ time -f '%e' cat /bin/sh | od -Ax -tx1 > /dev/null
 ```
 
 # References
-* [bash reference](http://tldp.org/LDP/abs/html/refcards.html)
-* [arrays](http://tldp.org/LDP/abs/html/arrays.html)
+* [Google Shell Style Guide](https://google.github.io/styleguide/shell.xml)
+* [GNU Bash Reference](https://www.gnu.org/software/bash/manual/bash.html)
 * [Deprecated Linux networking commands and their replacements](https://dougvitale.wordpress.com/2011/12/21/deprecated-linux-networking-commands-and-their-replacements)
