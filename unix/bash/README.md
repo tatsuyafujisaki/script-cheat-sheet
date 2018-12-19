@@ -140,4 +140,6 @@ $ time -f '%e' cat /bin/sh | od -Ax -tx1 > /dev/null
 # References
 * [Google Shell Style Guide](https://google.github.io/styleguide/shell.xml)
 * [GNU Bash Reference](https://www.gnu.org/software/bash/manual/bash.html)
+* [GNU sed reference](https://www.gnu.org/software/sed/manual/sed.html)
+* [GNU awk reference](https://www.gnu.org/software/gawk/manual/gawk.html)
 * [Deprecated Linux networking commands and their replacements](https://dougvitale.wordpress.com/2011/12/21/deprecated-linux-networking-commands-and-their-replacements)
