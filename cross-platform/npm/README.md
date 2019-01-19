@@ -74,3 +74,7 @@ npx <package>
 # Note
 * `--save` has been the default behavior since npm 5.
   * https://blog.npmjs.org/post/161081169345/v500
+* A package preceded by an @ symbol such as `@username/package` is a scoped package.
+  * A scope allows you to create a package with the same name as a package created by another user or organization, which is conventionally called "Org" in Node.js, without conflict.
+  * https://docs.npmjs.com/about-scopes
+  * https://docs.npmjs.com/misc/scope
