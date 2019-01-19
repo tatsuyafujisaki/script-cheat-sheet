@@ -70,4 +70,5 @@ npx <package>
 ```
 
 # Note
-`--save` has been the default behavior since npm 5.
+* `--save` has been the default behavior since npm 5.
+  * https://blog.npmjs.org/post/161081169345/v500
