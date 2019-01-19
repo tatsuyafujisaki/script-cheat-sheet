@@ -66,9 +66,10 @@ https://docs.npmjs.com/getting-started/scoped-packages
 npm init -y
 ```
 
-# How to run a local package
+# How to run an executable in a local package
 ```bash
-npx <package>
+npx <executable>
+# e.g. npx tsc foo.ts
 ```
 
 # Note
