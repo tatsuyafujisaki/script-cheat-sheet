@@ -43,6 +43,8 @@ sudo npm install <package> -D -g
 # local
 npm install <package> -D 
 ```
+* `devDependencies` is for developers and not for users.
+* Packages in `devDependencies` will not be installed when a user does `npm install <package>`.
 
 # How to uninstall a package removing it from `devDependencies`
 ```bash
