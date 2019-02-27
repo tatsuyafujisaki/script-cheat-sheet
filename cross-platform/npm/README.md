@@ -75,6 +75,16 @@ npx <executable>
 # e.g. npx tsc foo.ts
 ```
 
+# How to create an environment for Node.js to work with Visual Studio Code
+1. `npm init -y`
+2. `npm install eslint eslint-config-google -D`
+3. `code .`
+
+# How to create an environment for Node.js & Puppeteer to work with Visual Studio Code
+1. `npm init -y`
+2. `npm install eslint eslint-config-google puppeteer -D`
+3. `code .`
+
 # Note
 * `--save` has been the default behavior since npm 5.
   * https://blog.npmjs.org/post/161081169345/v500
