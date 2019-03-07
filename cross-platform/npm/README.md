@@ -75,12 +75,12 @@ npx <executable>
 # e.g. npx tsc foo.ts
 ```
 
-# How to create an environment for Node.js to work with Visual Studio Code
+# How to prepare a development environment for Node.js to work with Visual Studio Code
 1. `npm init -y`
 2. `npm install eslint eslint-config-google -D`
 3. `code .`
 
-# How to create an environment for Node.js & Puppeteer to work with Visual Studio Code
+# How to prepare a development environment for Node.js & Puppeteer to work with Visual Studio Code
 1. `npm init -y`
 2. `npm install eslint eslint-config-google puppeteer -D`
 3. `code .`
