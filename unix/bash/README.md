@@ -69,31 +69,31 @@ sed -i "s/old/new/g" input.txt
 # How to convert multiple lines to a single line
 ```bash
 $ cat input.txt 
-aaa
-bbb
-ccc
+aa
+bb
+cc
 
 $ paste -s -d, input.txt 
-aaa,bbb,ccc
+aa,bb,cc
 ```
 
 # How to concatenate files horizontally without using a matching column
 ```bash
 $ cat left.txt 
-aaa
-bbb
+aa
+bb
 
 $ cat right.txt 
-xxx
-yyy
+xx
+yy
 
 $ paste -d, left.txt right.txt
-aaa,xxx
-bbb,yyy
+aa,xx
+bb,yy
 
 $ paste -d'\0' left.txt right.txt
-aaaxxx
-bbbyyy
+aaxx
+bbyy
 ```
 
 # How to concatenate files horizontally excluding unmatched rows without using a matching column
@@ -102,18 +102,18 @@ bbbyyy
 * `-2` is the one-based index of a matching column from a second input file.
 ```bash
 $ cat foo.txt
-1,aaa
-2,bbb
-4,ccc
+1,aa
+2,bb
+4,cc
 
 $ cat bar.txt
-1,xxx
-2,yyy
-5,zzz
+1,xx
+2,yy
+5,zz
 
 $ join -t, -1 1 -2 2 foo.txt bar.txt
-1,aaa,xxx
-2,bbb,yyy
+1,aa,xx
+2,bb,yy
 ````
 
 # Comparison among `xxd`, `hexdump`, and `od`
