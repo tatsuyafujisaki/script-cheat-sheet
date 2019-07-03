@@ -116,6 +116,19 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 2,bb,yy
 ````
 
+# Base 64
+## How to encode a string in base64
+```bash
+echo password1 | base64
+# Result: cGFzc3dvcmQxCg==
+```
+
+## How to decode a string in base64
+```bash
+echo cGFzc3dvcmQxCg== | base64 -d
+# Result: password1 
+```
+
 # Comparison among `xxd`, `hexdump`, and `od`
 ||`xxd -g1`|`hexdump -C`|`od -Ax -tx1`
 |---|---|---|---
