@@ -14,16 +14,16 @@ EOF
 
 # How to define an array
 ```bash
-xs1=(foo bar baz)
+xs1=(aa bb cc)
 
-xs2=(foo
-bar
-baz
+xs2=(aa
+bb
+cc
 )
 ```
 # How to iterate through an array
 ```bash
-xs=(foo bar baz)
+xs=(aa bb cc)
 for x in "${xs[@]}"
 do
   echo ${x}
