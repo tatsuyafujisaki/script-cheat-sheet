@@ -1,11 +1,9 @@
 # Cross-platform
+* [bash](cross-platform/bash)
 * [npm](cross-platform/npm)
 * [pip](cross-platform/pip)
 
-# Unix
-* [Bash](unix/bash)
-
-## Linux
+# Linux
 * [apt](unix/linux/apt)
 
 # Windows
