@@ -28,7 +28,7 @@ curl -i -X OPTIONS https://example.com
 curl -s -o /dev/null -w "%{http_code}\n" https://example.com
 ```
 
-# How to upload a file to https://example.com
+# How to upload a file to a URL
 ```bash
 curl -X PUT -T sample.txt https://example.com
 ```
