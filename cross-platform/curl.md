@@ -28,5 +28,10 @@ curl -i -X OPTIONS https://example.com
 curl -s -o /dev/null -w "%{http_code}\n" https://example.com
 ```
 
+# How to upload a file to https://example.com
+```bash
+curl -X PUT -T sample.txt https://example.com
+```
+
 # References
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
