@@ -28,6 +28,16 @@ curl -i -X OPTIONS https://example.com
 curl -s -o /dev/null -w "%{http_code}\n" https://example.com
 ```
 
+# How to download a file and does not change the file name.
+```bash
+curl -O https://example.com/sample.txt
+```
+
+# How to download a file and change the file name.
+```bash
+curl -o my-favorite-name.txt https://example.com/sample.txt
+```
+
 # How to upload a file to a URL
 ```bash
 curl -X PUT -T sample.txt https://example.com
