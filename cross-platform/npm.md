@@ -1,4 +1,4 @@
-# How to update npm
+# How to update npm itself
 ```bash
 sudo npm install npm -g
 ```
@@ -8,7 +8,7 @@ sudo npm install npm -g
 npm config list
 ```
 
-# How to print `node_modules` folder
+# How to show `node_modules` folder
 ```bash
 # global
 npm root -g
@@ -35,24 +35,17 @@ sudo npm update -g
 npm update
 ```
 
-# How to install a package adding it to `devDependencies`
+# How to install a package locally and add it to `devDependencies`
 ```bash
-# global
-sudo npm install <package> -D -g
-
-# local
-npm install <package> -D 
+npm install <package> --save-dev 
 ```
 * `devDependencies` is for developers and not for users.
-* Packages in `devDependencies` will not be installed when a user does `npm install <package>`.
+* Packages in `devDependencies` will not be installed when users do `npm install <package>`.
+* You cannot install a package globally and add it to `devDependencies`
 
-# How to uninstall a package removing it from `devDependencies`
+# How to uninstall a local package and remove it from `devDependencies`
 ```bash
-# global
-sudo npm uninstall <package> -D -g
-
-# local
-npm uninstall <package> -D
+npm uninstall <package> --save-dev
 ```
 
 # How to install a scoped package
@@ -77,12 +70,12 @@ npx <executable>
 
 # How to prepare a development environment for Node.js to work with Visual Studio Code
 1. `npm init -y`
-2. `npm install eslint eslint-config-google -D`
+2. `npm install eslint eslint-config-google --save-dev`
 3. `code .`
 
 # How to prepare a development environment for Node.js & Puppeteer to work with Visual Studio Code
 1. `npm init -y`
-2. `npm install eslint eslint-config-google puppeteer -D`
+2. `npm install eslint eslint-config-google puppeteer --save-dev`
 3. `code .`
 
 # Note
