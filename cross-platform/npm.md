@@ -1,6 +1,6 @@
 # How to update npm itself
 ```bash
-sudo npm install npm -g
+npm install npm@latest -g
 ```
 
 # How to list configurations
@@ -29,7 +29,7 @@ npm ls --depth 0
 # How to update installed packages
 ```bash
 # global
-sudo npm update -g
+npm update -g
 
 # local
 npm update
@@ -50,7 +50,7 @@ npm uninstall <package> --save-dev
 
 # How to install a scoped package
 ```bash
-sudo npm install @scope/project
+npm install @scope/project
 ```
 * A package preceded by an @ symbol such as `@username/package` is a scoped package.
   * A scope allows you to create a package with the same name as a package created by another user or organization, which is conventionally called "Org" in Node.js, without conflict.
@@ -64,9 +64,11 @@ npm init -y
 
 # How to run an executable in a local package
 ```bash
-npx <executable>
-# e.g. npx tsc foo.ts
+npx <executable> # e.g. npx tsc foo.ts
 ```
+
+> Tip: If you are using npm 5.2 or higher, we recommend using npx to run packages globally.
+https://docs.npmjs.com/downloading-and-installing-packages-globally
 
 # How to prepare a development environment for Node.js to work with Visual Studio Code
 1. `npm init -y`
