@@ -1,4 +1,4 @@
-# How to update npm itself
+# How to upgrade npm
 ```bash
 npm install npm@latest -g
 ```
