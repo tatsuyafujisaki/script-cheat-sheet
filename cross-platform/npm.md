@@ -70,12 +70,12 @@ npx <executable> # e.g. npx tsc foo.ts
 > Tip: If you are using npm 5.2 or higher, we recommend using npx to run packages globally.
 https://docs.npmjs.com/downloading-and-installing-packages-globally
 
-# How to prepare a development environment for Node.js to work with Visual Studio Code
+# How to work with ESLint in Visual Studio Code
 1. `npm init -y`
 2. `npm install eslint eslint-config-google --save-dev`
 3. `code .`
 
-# How to prepare a development environment for Node.js & Puppeteer to work with Visual Studio Code
+# How to work with Puppeteer in Visual Studio Code
 1. `npm init -y`
 2. `npm install eslint eslint-config-google puppeteer --save-dev`
 3. `code .`
