@@ -40,7 +40,7 @@ curl -o my-favorite-name.txt https://example.com/sample.txt
 
 # How to upload a file to a URL
 ```bash
-curl -X PUT -T sample.jpg https://example.com
+curl -T sample.jpg https://example.com
 ```
 
 # References
