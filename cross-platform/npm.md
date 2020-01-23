@@ -43,6 +43,11 @@ npm install <package> --save-dev
 * Packages in `devDependencies` will not be installed when users do `npm install <package>`.
 * You cannot install a package globally and add it to `devDependencies`
 
+# How to uninstall a global package
+```bash
+npm uninstall <package> -g
+```
+
 # How to uninstall a local package and remove it from `devDependencies`
 ```bash
 npm uninstall <package> --save-dev
