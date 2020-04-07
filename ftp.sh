@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 FTP_HOSTNAME=example.com
 FTP_USER=user
 FTP_PASSWORD=passowrd

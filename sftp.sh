@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 SSH_HOSTNAME=hostname
 SSH_USER=user
 SSH_PRIVATE=~/.ssh/id_dsa

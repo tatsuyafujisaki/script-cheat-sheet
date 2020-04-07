@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # yyyymmdd
 date '+%Y%m%d'
 

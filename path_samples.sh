@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-s=/a.a/b.b/c.c.txt 
+s=/a.a/b.b/c.c.txt
 
 echo 'original:' ${s}
 

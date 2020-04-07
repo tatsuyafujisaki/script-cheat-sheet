@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 #kill found processes
 ps aux | grep "my_process_name" | awk '{ print $2 }' | xargs kill
 

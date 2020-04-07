@@ -1,10 +1,20 @@
+# How to launch Chrome from Terminal on macOS using basic access authentication.
+
+```shell
+open -a 'Google Chrome' https://username:password@example.com/foo/
+```
+
+## Note
+* Since Chrome 59, URLs with an embedded credential for subresources (e.g. `https://username:password@example.com/foo/` or `https://username:password@example.com/bar.jpg`) have been unavailable while URLs with an embedded credential for main resources (e.g. `https://username:password@example.com`) are still available. But still, URLs with an embedded credential for subresources are available if launched from Terminal.
+  * https://www.chromestatus.com/feature/5669008342777856
+
 # What is `--` in Bash?
 > Unless otherwise noted, each builtin command documented as accepting options preceded by ‘-’ accepts ‘--’ to signify the end of the options. The :, true, false, and test builtins do not accept options and do not treat ‘--’ specially.
 
 https://www.gnu.org/software/bash/manual/bash.html#Shell-Builtin-Commands
 
 # How to create a file with content
-```bash
+```shell
 cat << EOF > helloworld.sh
 #! /bin/bash
 echo Hello
@@ -13,7 +23,7 @@ EOF
 ```
 
 # How to define an array
-```bash
+```shell
 xs1=(aa bb cc)
 
 xs2=(aa
@@ -22,7 +32,7 @@ cc
 )
 ```
 # How to iterate through an array
-```bash
+```shell
 xs=(aa bb cc)
 for x in "${xs[@]}"
 do
@@ -31,19 +41,19 @@ done
 ```
 
 # How to copy a folder to another folder as a subfolder
-```bash
+```shell
 # Note "src", not "/src"
 rsync -a src dst
 ```
 
 # How to copy only the content of a folder to another folder
-```bash
+```shell
 # Note "src/", not "src"
 rsync -a src dst
 ```
 
 # How to prefix lines
-```bash
+```shell
 sed 's/^/prefix/' input.txt > output.txt
 
 # In-place
@@ -51,7 +61,7 @@ sed -i 's/^/prefix/' input.txt
 ```
 
 # How to suffix lines
-```bash
+```shell
 sed "s/$/suffix/" input.txt > output.txt
 
 # In-place
@@ -59,7 +69,7 @@ sed -i "s/$/suffix/" input.txt
 ```
 
 # How to replace strings
-```bash
+```shell
 sed "s/old/new/g" input.txt > output.txt
 
 # In-place replacement
@@ -67,23 +77,23 @@ sed -i "s/old/new/g" input.txt
 ```
 
 # How to convert multiple lines to a single line
-```bash
-$ cat input.txt 
+```shell
+$ cat input.txt
 aa
 bb
 cc
 
-$ paste -s -d, input.txt 
+$ paste -s -d, input.txt
 aa,bb,cc
 ```
 
 # How to concatenate files horizontally without using a matching column
-```bash
-$ cat left.txt 
+```shell
+$ cat left.txt
 aa
 bb
 
-$ cat right.txt 
+$ cat right.txt
 xx
 yy
 
@@ -100,7 +110,7 @@ bbyy
 * `-t` is a separator
 * `-1` is the one-based index of a matching column from a first input file.
 * `-2` is the one-based index of a matching column from a second input file.
-```bash
+```shell
 $ cat foo.txt
 1,aa
 2,bb
@@ -118,15 +128,15 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 
 # Base 64
 ## How to encode a string in base64
-```bash
+```shell
 echo password1 | base64
 # Result: cGFzc3dvcmQxCg==
 ```
 
 ## How to decode a string in base64
-```bash
+```shell
 echo cGFzc3dvcmQxCg== | base64 -d
-# Result: password1 
+# Result: password1
 ```
 
 # Comparison among `xxd`, `hexdump`, and `od`
@@ -139,7 +149,7 @@ echo cGFzc3dvcmQxCg== | base64 -d
 |Meaning of arguments|`-g1` is to separate hex separating each byte.|`-C` is to display ASCII to the right of hex.|`-Ax` is to display address in hex. `-tx1` is to display hex separating each byte.
 
 (*1) Performance comparison
-```bash
+```shell
 $ time -f '%e' cat /bin/sh | xxd -g1 > /dev/null
 0.03
 
@@ -148,6 +158,31 @@ $ time -f '%e' cat /bin/sh | hexdump -C > /dev/null
 
 $ time -f '%e' cat /bin/sh | od -Ax -tx1 > /dev/null
 0.07
+```
+
+# apt
+
+## How to initialize packages
+```shell
+sudo apt update
+sudo apt full-upgrade -y
+sudo apt autoremove -y
+sudo apt clean
+```
+
+## How to list installed packages
+```shell
+apt list --installed
+```
+
+## How to show a package
+```shell
+sudo apt show <package>
+```
+
+## How to purge a package
+```shell
+sudo apt purge -y <package>
 ```
 
 # References
