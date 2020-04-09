@@ -1,3 +1,7 @@
+# Other markdowns
+- [apt.md](apt.md)
+- [imagemagick.md](imagemagick.md)
+
 # How to launch Chrome from Terminal on macOS using basic access authentication.
 
 ```shell
@@ -158,31 +162,6 @@ $ time -f '%e' cat /bin/sh | hexdump -C > /dev/null
 
 $ time -f '%e' cat /bin/sh | od -Ax -tx1 > /dev/null
 0.07
-```
-
-# apt
-
-## How to initialize packages
-```shell
-sudo apt update
-sudo apt full-upgrade -y
-sudo apt autoremove -y
-sudo apt clean
-```
-
-## How to list installed packages
-```shell
-apt list --installed
-```
-
-## How to show a package
-```shell
-sudo apt show <package>
-```
-
-## How to purge a package
-```shell
-sudo apt purge -y <package>
 ```
 
 # References
