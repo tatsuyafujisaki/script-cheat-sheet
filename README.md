@@ -1,5 +1,6 @@
 # Other markdowns
 - [apt.md](apt.md)
+- [base64.md](base64.md)
 - [imagemagick.md](imagemagick.md)
 
 # How to launch Chrome from Terminal on macOS using basic access authentication.
@@ -129,19 +130,6 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 1,aa,xx
 2,bb,yy
 ````
-
-# Base 64
-## How to encode a string in base64
-```shell
-echo password1 | base64
-# Result: cGFzc3dvcmQxCg==
-```
-
-## How to decode a string in base64
-```shell
-echo cGFzc3dvcmQxCg== | base64 -d
-# Result: password1
-```
 
 # Comparison among `xxd`, `hexdump`, and `od`
 ||`xxd -g1`|`hexdump -C`|`od -Ax -tx1`
