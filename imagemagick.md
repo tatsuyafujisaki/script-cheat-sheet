@@ -1,4 +1,11 @@
-# How to resize a image to the fixed width 320px
+# How to resize an image to the fixed width 320px
 ```shell
-convert -resize 320x input.jpg output.jpg
+convert -resize 320x input.png output.png
+```
+# How to concatenate images side by side
+```shell
+convert +append *.png output.png
+
+# Alternatively
+convert +append input1.png input2.png input3.png output.png
 ```
