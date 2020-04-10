@@ -15,11 +15,3 @@ convert +append *.png output.png
 # Alternatively
 convert +append input1.png input2.png input3.png output.png
 ```
-
-# How to merge images horizontally side by side
-```shell
-convert +append *.png output.png
-
-# Alternatively
-convert +append input1.png input2.png input3.png output.png
-```
