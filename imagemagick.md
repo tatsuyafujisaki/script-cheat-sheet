@@ -8,7 +8,7 @@ convert -resize 320x input.png output.png
 convert input.png -border 8 -bordercolor black output.png
 ```
 
-# How to merge images horizontally side by side
+# How to merge images horizontally (side by side)
 ```shell
 convert +append *.png output.png
 
