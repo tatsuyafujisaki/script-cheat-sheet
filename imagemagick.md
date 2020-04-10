@@ -3,9 +3,9 @@
 convert input.png -resize 320x output.png
 ```
 
-# How to add a black border of the width 8x8 to an image
+# How to add a border of the width 8 to an image
 ```shell
-convert input.png -border 8 -bordercolor black output.png
+convert input.png -border 8 output.png
 ```
 
 # How to merge images horizontally (side by side)
