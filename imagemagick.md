@@ -3,7 +3,7 @@
 convert input.png -resize 320x output.png
 ```
 
-# How to add a border of the width 8 to an image
+# How to add a border of the width 8px to an image
 ```shell
 convert input.png -border 8 output.png
 ```
