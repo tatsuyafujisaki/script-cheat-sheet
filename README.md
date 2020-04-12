@@ -111,6 +111,25 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 [[ ${digits} =~ ^[[:digit:]]+$ ]] && echo "matched" || echo "unmatched"
 ```
 
+# GNU Privacy Guard (GPG) cheat sheet
+```shell
+gpg --full-gen-key
+
+gpg --list-secret-keys
+gpg --list-keys
+
+gpg --delete-secret-keys "John Doe"
+gpg --delete-keys "John Doe"
+
+gpg -a --export-secret-keys > secret.key
+gpg -a --export > public.key
+
+gpg --import public.key
+gpg --import secret.key
+
+gpg -a -r "John Doe" --encrypt foo.txt
+```
+
 # References
-* [Google Shell Style Guide](https://google.github.io/styleguide/shell.xml)
+* [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
 * [Deprecated Linux networking commands and their replacements](https://www.tecmint.com/deprecated-linux-networking-commands-and-their-replacements)
