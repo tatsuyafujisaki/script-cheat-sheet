@@ -1,5 +1,6 @@
-# Other markdowns
+# Markdowns
 - [apt.md](apt.md)
+- [awk.md](awk.md)
 - [base64.md](base64.md)
 - [curl.md](curl.md)
 - [imagemagick.md](imagemagick.md)
@@ -23,6 +24,7 @@ bb
 cc
 )
 ```
+
 # How to iterate through an array
 ```shell
 xs=(aa bb cc)
