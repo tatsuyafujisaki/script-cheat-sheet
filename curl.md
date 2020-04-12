@@ -28,9 +28,12 @@ curl -i -X OPTIONS https://example.com
 curl -s -o /dev/null -w "%{http_code}\n" https://example.com
 ```
 
-# How to download a file and does not change the file name.
+# How to download a file to a specific directory
 ```bash
-curl -O https://example.com/sample.txt
+cd <dir> && { curl -O https://example.com/sample.txt; cd -; }
+
+# Alternatively using a subshell
+(cd <dir> && curl -O https://example.com/sample.txt )
 ```
 
 # How to download a file and change the file name.
