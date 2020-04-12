@@ -4,15 +4,6 @@
 - [curl.md](curl.md)
 - [imagemagick.md](imagemagick.md)
 
-# How to launch Chrome from Terminal on macOS using basic access authentication.
-```shell
-open -a 'Google Chrome' https://username:password@example.com/foo/
-```
-
-## Note
-* Since Chrome 59, URLs with an embedded credential for subresources (e.g. `https://username:password@example.com/foo/` or `https://username:password@example.com/bar.jpg`) have been unavailable while URLs with an embedded credential for main resources (e.g. `https://username:password@example.com`) are still available. But still, URLs with an embedded credential for subresources are available if launched from Terminal.
-  * https://www.chromestatus.com/feature/5669008342777856
-
 # What is `--` in Bash?
 > Unless otherwise noted, each builtin command documented as accepting options preceded by ‘-’ accepts ‘--’ to signify the end of the options. The :, true, false, and test builtins do not accept options and do not treat ‘--’ specially.
 
@@ -92,7 +83,7 @@ $ paste -s -d, input.txt
 aa,bb,cc
 ```
 
-# How to concatenate files horizontally without using a matching column
+# How to merge files horizontally without using a matching column
 ```shell
 $ cat left.txt
 aa
