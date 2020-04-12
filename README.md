@@ -3,6 +3,7 @@
 - [base64.md](base64.md)
 - [curl.md](curl.md)
 - [imagemagick.md](imagemagick.md)
+- [sed.md](sed.md)
 
 # How to create a file with content
 ```shell
@@ -41,30 +42,6 @@ rsync -a src dst
 ```shell
 # Note "src/", not "src"
 rsync -a src dst
-```
-
-# How to add a prefix to lines
-```shell
-sed 's/^/prefix/' input.txt > output.txt
-
-# In-place
-sed -i 's/^/prefix/' input.txt
-```
-
-# How to add a suffix to lines
-```shell
-sed "s/$/suffix/" input.txt > output.txt
-
-# In-place
-sed -i "s/$/suffix/" input.txt
-```
-
-# How to replace strings
-```shell
-sed "s/old/new/g" input.txt > output.txt
-
-# In-place replacement
-sed -i "s/old/new/g" input.txt
 ```
 
 # How to convert multiple lines to a single line
