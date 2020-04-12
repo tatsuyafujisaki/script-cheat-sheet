@@ -1,10 +1,12 @@
 # Markdowns
-- [apt.md](apt.md)
-- [awk.md](awk.md)
-- [base64.md](base64.md)
-- [curl.md](curl.md)
-- [imagemagick.md](imagemagick.md)
-- [sed.md](sed.md)
+* [apt.md](apt.md)
+* [awk.md](awk.md)
+* [base64.md](base64.md)
+* [curl.md](curl.md)
+* [imagemagick.md](imagemagick.md)
+* [pip.md](pip.md)
+* [npm.md](npm.md)
+* [sed.md](sed.md)
 
 # How to create a file with content
 ```shell
