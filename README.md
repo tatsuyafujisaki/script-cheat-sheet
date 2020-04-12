@@ -57,7 +57,7 @@ rsync -a src dst
 rsync -a src dst
 ```
 
-# How to prefix lines
+# How to add a prefix to lines
 ```shell
 sed 's/^/prefix/' input.txt > output.txt
 
@@ -65,7 +65,7 @@ sed 's/^/prefix/' input.txt > output.txt
 sed -i 's/^/prefix/' input.txt
 ```
 
-# How to suffix lines
+# How to add a suffix to lines
 ```shell
 sed "s/$/suffix/" input.txt > output.txt
 
