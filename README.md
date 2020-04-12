@@ -1,10 +1,10 @@
 # Other markdowns
 - [apt.md](apt.md)
 - [base64.md](base64.md)
+- [curl.md](curl.md)
 - [imagemagick.md](imagemagick.md)
 
 # How to launch Chrome from Terminal on macOS using basic access authentication.
-
 ```shell
 open -a 'Google Chrome' https://username:password@example.com/foo/
 ```
