@@ -2,9 +2,6 @@
 ## `--create-dirs`
 Create local directories if necessary
 
-## `-f`
-Not print error HTMLs returned from failing HTTP servers
-
 ## `-L`
 Follow redirections
 
@@ -41,9 +38,31 @@ cd <dir> && { curl -O https://example.com/sample.txt; cd -; }
 curl -o my-favorite-name.txt https://example.com/sample.txt
 ```
 
-# How to upload a file to a URL
-```bash
+# How to PUT a file to a URL
+```shell
 curl -T sample.jpg https://example.com
+```
+
+# How to POST JSON to a URL (How to send a message of Firebase Cloud Messaging (FCM))
+```shell
+curl 'https://fcm.googleapis.com/fcm/send' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: key=<server key a.k.a. API key>' \
+--data-raw '{
+  "priority": 2,
+  "registration_ids": [
+    "<firebase token>"
+  ],
+  "data": {
+    "foo": "<fill me>",
+    "bar": "<fill me>",
+  },
+  "notification": {
+    "title": "<fill me>",
+    "body": "<fill me>",
+    "click_action": "<fill me>"
+  }
+}'
 ```
 
 # References
