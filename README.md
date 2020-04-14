@@ -5,7 +5,7 @@
 * [base64.md](base64.md)
 * [curl.md](curl.md)
 * [imagemagick.md](imagemagick.md)
-* [markdown.md)(markdown.md)
+* [markdown.md](markdown.md)
 * [npm.md](npm.md)
 * [pip.md](pip.md)
 * [sed.md](sed.md)
