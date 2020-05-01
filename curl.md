@@ -1,10 +1,3 @@
-# Options
-## `--create-dirs`
-Create local directories if necessary
-
-## `-L`
-Follow redirections
-
 # How to use the HTTP HEAD method
 ```bash
 curl --head https://example.com
@@ -63,6 +56,11 @@ curl 'https://fcm.googleapis.com/fcm/send' \
     "click_action": "<fill me>"
   }
 }'
+```
+
+# How to compress PNG or JPG using TinyPNG/TinyJPG
+```shell
+curl -i -u api:<api-key> --data-binary @input.png https://api.tinify.com/shrink
 ```
 
 # References
