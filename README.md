@@ -18,9 +18,9 @@ realpath <file-or-directory>
 # How to create a file with content
 ```shell
 cat << EOF > sample.txt
-un
-deux
-trois
+aa
+bb
+cc
 EOF
 ```
 
