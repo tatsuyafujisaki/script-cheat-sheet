@@ -17,10 +17,10 @@ realpath <file-or-directory>
 
 # How to create a file with content
 ```shell
-cat << EOF > helloworld.sh
-#! /bin/bash
-echo Hello
-echo World
+cat << EOF > sample.txt
+un
+deux
+trois
 EOF
 ```
 
