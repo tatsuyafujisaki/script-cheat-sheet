@@ -10,6 +10,14 @@
 * [pip.md](pip.md)
 * [sed.md](sed.md)
 
+# How to redirect stdout and/or stderr
+```shell
+echo hello &> /dev/null # redirects both stdout and stderr. "&>" and ">&" are equivalent.
+```
+
+## References
+http://zsh.sourceforge.net/Doc/Release/Redirection.html
+
 # How to resolve a relative path to an absolute path
 ```shell
 realpath <file-or-directory>
