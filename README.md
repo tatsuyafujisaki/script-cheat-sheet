@@ -12,7 +12,7 @@
 
 # How to resolve a relative path to an absolute path
 ```shell
-realpath <file>
+realpath <file-or-directory>
 ```
 
 # How to create a file with content
