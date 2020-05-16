@@ -10,6 +10,11 @@
 * [pip.md](pip.md)
 * [sed.md](sed.md)
 
+# How to resolve a relative path to an absolute path
+```shell
+realpath <file>
+```
+
 # How to create a file with content
 ```shell
 cat << EOF > helloworld.sh
