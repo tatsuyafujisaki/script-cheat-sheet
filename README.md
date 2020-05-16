@@ -10,20 +10,22 @@
 * [pip.md](pip.md)
 * [sed.md](sed.md)
 
-# How to redirect stdout and/or stderr
+# How to redirect stdout and/or stderr in Zsh/Bash
 ```shell
-echo hello &> /dev/null # redirects both stdout and stderr. "&>" and ">&" are equivalent.
+echo hello > /dev/null # redirects stdout only.
+echo hello 2> /dev/null # redirects stderr only.
+echo hello &> /dev/null # redirects both stdout and stderr.
 ```
 
 ## References
 http://zsh.sourceforge.net/Doc/Release/Redirection.html
 
-# How to resolve a relative path to an absolute path
+# How to resolve a relative path to an absolute path in Zsh/Bash
 ```shell
-realpath <file-or-directory>
+realpath <file-or-folder>
 ```
 
-# How to create a file with content
+# How to create a file with content in Zsh/Bash
 ```shell
 cat << EOF > sample.txt
 aa
@@ -32,7 +34,7 @@ cc
 EOF
 ```
 
-# How to define an array
+# How to define an array in Zsh/Bash
 ```shell
 xs1=(aa bb cc)
 
@@ -42,7 +44,7 @@ cc
 )
 ```
 
-# How to iterate through an array
+# How to iterate through an array in Zsh/Bash
 ```shell
 xs=(aa bb cc)
 for x in "${xs[@]}"
