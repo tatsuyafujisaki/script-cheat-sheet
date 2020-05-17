@@ -1,6 +1,6 @@
-# How to remove leading and trailing white spaces
+# How to delete leading and trailing whitespaces
 ```shell
-echo ' foo ' | awk '{$1=$1};1'
+awk '{$1=$1};1' < input.txt > output.txt
 ```
 
 # How to show the first, second, and third fields if the second field is foo or bar
