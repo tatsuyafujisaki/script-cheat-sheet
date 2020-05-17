@@ -1,7 +1,7 @@
 # Note
 * `OFS` is ignored when using `{ print }` instead of `{ print $1,$2,$3... }`.
 
-# How to trim leading and trailing whitespace
+# How to trim leading and trailing whitespace in each line
 ```shell
 awk '{$1=$1};1' < input.txt > output.txt
 ```
