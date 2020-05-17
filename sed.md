@@ -1,3 +1,27 @@
+# Note
+* `-i` is to edit a file in-place instead of printing to standard output.
+* `g` is to replace all the occurrences.
+
+# How to replace strings in-place in a file
+```shell
+sed -i 's/unwanted-string/wanted-string/g' file.txt
+```
+
+# How to delete strings in-place in a file
+```shell
+sed -i "s/unwanted-string//g" file.txt
+```
+
+# How to add a leading string to each line in-place in a file
+```shell
+sed -i "s/^/leading-string/g" file.txt
+```
+
+# How to add a trailing string to each line in-place in a file
+```shell
+sed -i "s/$/trailing-string/g" file.txt
+```
+
 # How to delete whitespace lines
 ```shell
 sed -e '/^[[:blank:]]*$/d' input.txt
