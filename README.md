@@ -1,15 +1,3 @@
-# Markdowns
-* [apt.md](apt.md)
-* [awk.md](awk.md)
-* [binary.md](binary.md)
-* [base64.md](base64.md)
-* [curl.md](curl.md)
-* [imagemagick.md](imagemagick.md)
-* [markdown.md](markdown.md)
-* [npm.md](npm.md)
-* [pip.md](pip.md)
-* [sed.md](sed.md)
-
 # How to redirect stdout and/or stderr in Zsh/Bash
 ```shell
 echo hello > /dev/null # redirects stdout only.
