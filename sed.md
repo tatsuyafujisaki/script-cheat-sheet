@@ -10,7 +10,7 @@ sed "s/old/new/g" input.txt > output.txt
 sed -i "s/old/new/g" file.txt
 ```
 
-# How to delete blank lines and whiltespace-only lines
+# How to delete blank lines and whitespace-only lines
 ```shell
 sed -e '/^[[:blank:]]*$/d' input.txt > output.txt
 
