@@ -1,6 +1,6 @@
 # Note
 * `-i` is to edit a file in-place instead of printing to standard output.
-* `g` is to replace all the occurrences.
+* `g` is to enable more than one replacement in each line.
 
 # How to replace strings
 ```shell
@@ -12,7 +12,7 @@ sed -i "s/old/new/g" input.txt
 
 # How to delete strings in a file
 ```shell
-sed -i "s/unwanted//g" input.txt > output.txt
+sed "s/unwanted//g" input.txt > output.txt
 
 # in-place
 sed -i "s/unwanted//g" file.txt
