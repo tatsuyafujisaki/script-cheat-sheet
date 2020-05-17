@@ -6,7 +6,7 @@
 gawk '{$1=$1};1' < input.txt > output.txt
 
 # in-place
-gawk '{$1=$1};1' file.txt
+gawk -i inplace '{$1=$1};1' file.txt
 ```
 
 # How to show the first, second, and third fields if the second field is foo or bar
