@@ -10,6 +10,14 @@ sed "s/old/new/g" input.txt > output.txt
 sed -i "s/old/new/g" input.txt
 ```
 
+# How to delete blank lines
+```shell
+sed -e '/^$/d' input.txt > output.txt
+
+# in-place
+sed -i -e '/^$/d' input.txt
+```
+
 # How to delete strings in a file
 ```shell
 sed "s/unwanted//g" input.txt > output.txt
@@ -34,15 +42,9 @@ sed "s/$/suffix/" input.txt > output.txt
 sed -i "s/$/suffix/" file.txt
 ```
 
-
 # How to delete whitespace lines
 ```shell
 sed -e '/^[[:blank:]]*$/d' input.txt
-```
-
-# How to delete blank lines
-```shell
-sed -e '/^$/d' input.txt
 ```
 
 # How to extract 8 digits such as yyyymmdd
