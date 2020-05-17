@@ -10,20 +10,20 @@ sed "s/old/new/g" input.txt > output.txt
 sed -i "s/old/new/g" file.txt
 ```
 
-# How to delete blank lines but not whitespace-only lines
-```shell
-sed -e '/^$/d' input.txt > output.txt
-
-# in-place
-sed -i -e '/^$/d' file.txt
-```
-
 # How to delete blank lines and whiltespace-only lines
 ```shell
 sed -e '/^[[:blank:]]*$/d' input.txt > output.txt
 
 # in-place
 sed -i -e '/^[[:blank:]]*$/d' file.txt
+```
+
+## How to delete blank lines but not whitespace-only lines
+```shell
+sed -e '/^$/d' input.txt > output.txt
+
+# in-place
+sed -i -e '/^$/d' file.txt
 ```
 
 # How to delete strings in a file
