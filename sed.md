@@ -7,15 +7,23 @@
 sed "s/old/new/g" input.txt > output.txt
 
 # in-place
-sed -i "s/old/new/g" input.txt
+sed -i "s/old/new/g" file.txt
 ```
 
-# How to delete blank lines
+# How to delete blank lines but not whitespace-only lines
 ```shell
 sed -e '/^$/d' input.txt > output.txt
 
 # in-place
-sed -i -e '/^$/d' input.txt
+sed -i -e '/^$/d' file.txt
+```
+
+# How to delete blank lines and whiltespace-only lines
+```shell
+sed -e '/^[[:blank:]]*$/d' input.txt > output.txt
+
+# in-place
+sed -i -e '/^[[:blank:]]*$/d' file.txt
 ```
 
 # How to delete strings in a file
@@ -42,17 +50,12 @@ sed "s/$/suffix/" input.txt > output.txt
 sed -i "s/$/suffix/" file.txt
 ```
 
-# How to delete whitespace lines
-```shell
-sed -e '/^[[:blank:]]*$/d' input.txt
-```
-
-# How to extract 8 digits such as yyyymmdd
+# How to show 8 digits such as yyyymmdd
 ```shell
 sed -e 's/.*\([[:digit:]]\{8\}\).*/\1/g' input.txt
 ```
 
-# How to extract double-slash comments
+# How to show double-slash comments
 ```shell
 sed -e "s/.*\/\/[[:blank:]]*\([^[:blank:]]*\)[[:blank:]]*/\1/g" input.txt
 ```
