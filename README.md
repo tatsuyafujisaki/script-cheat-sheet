@@ -12,7 +12,7 @@ echo ${S/old} # deletes the first "old" and shows "_and_old".
 echo ${S//old} # deletes all the "old" and shows "_and_".
 echo ${S/old/new} # replace the first "old" and shows "new_and_old".
 echo ${S//old/new} # replace all the "old" and shows "new_and_new".
-```shell
+```
 
 # How to create a file with content in Bash/Zsh
 ```shell
