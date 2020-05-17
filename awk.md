@@ -1,3 +1,6 @@
+# Note
+* `OFS` is ignored when using `{ print }` instead of `{ print $1,$2,$3... }`.
+
 # How to trim leading and trailing whitespace
 ```shell
 awk '{$1=$1};1' < input.txt > output.txt
@@ -7,6 +10,3 @@ awk '{$1=$1};1' < input.txt > output.txt
 ```shell
 awk -F',' '($2 == "foo") || ($2 == "bar") { OFS=","; print $1,$2,$3 }' input.txt
 ```
-
-# Note
-* OFS is ignored when using { print } instead of { print $1,$2,$3... }.
