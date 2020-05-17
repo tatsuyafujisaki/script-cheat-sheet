@@ -1,4 +1,4 @@
-# How to trim leading and trailing whitespaces
+# How to trim leading and trailing whitespace
 ```shell
 awk '{$1=$1};1' < input.txt > output.txt
 ```
