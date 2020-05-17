@@ -1,19 +1,20 @@
-# How to redirect stdout and/or stderr in Zsh/Bash
+# How to redirect stdout and/or stderr in Bash/Zsh
 ```shell
 echo hello > /dev/null # redirects stdout only.
 echo hello 2> /dev/null # redirects stderr only.
 echo hello &> /dev/null # redirects both stdout and stderr.
 ```
 
-## References
-http://zsh.sourceforge.net/Doc/Release/Redirection.html
-
-# How to resolve a relative path to an absolute path in Zsh/Bash
+# How to replace or delete substring(s) in Bash/Zsh
 ```shell
-realpath <file-or-folder>
-```
+S=old_and_old
+echo ${S/old} # deletes the first "old" and shows "_and_old".
+echo ${S//old} # deletes all the "old" and shows "_and_".
+echo ${S/old/new} # replace the first "old" and shows "new_and_old".
+echo ${S//old/new} # replace all the "old" and shows "new_and_new".
+```shell
 
-# How to create a file with content in Zsh/Bash
+# How to create a file with content in Bash/Zsh
 ```shell
 cat << EOF > sample.txt
 aa
@@ -22,7 +23,7 @@ cc
 EOF
 ```
 
-# How to define an array in Zsh/Bash
+# How to define an array in Bash/Zsh
 ```shell
 xs1=(aa bb cc)
 
@@ -32,7 +33,7 @@ cc
 )
 ```
 
-# How to iterate through an array in Zsh/Bash
+# How to iterate through an array in Bash/Zsh
 ```shell
 xs=(aa bb cc)
 for x in "${xs[@]}"
@@ -41,10 +42,14 @@ do
 done
 ```
 
+# How to resolve a relative path to an absolute path in Zsh/Bash
+```shell
+realpath <file-or-folder>
+```
+
 # How to copy a folder to another folder as a subfolder
 ```shell
-# Note "src", not "/src"
-rsync -a src dst
+rsync -a src dst # Note that it's not "/src" but "src"
 ```
 
 # How to copy only the content of a folder to another folder
