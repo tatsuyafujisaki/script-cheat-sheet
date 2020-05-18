@@ -47,6 +47,11 @@ done
 realpath <file-or-folder>
 ```
 
+# How to find the encoding of a file on both Mac/Linux
+```shell
+file --mime sample.txt
+```
+
 # How to copy a folder to another folder as a subfolder
 ```shell
 rsync -a src dst # Note that it's not "/src" but "src"
