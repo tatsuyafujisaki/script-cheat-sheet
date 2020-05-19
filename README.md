@@ -49,7 +49,7 @@ realpath <file-or-folder>
 
 # How to detect the encoding of a file on both Mac/Linux
 ```shell
-file --mime sample.txt
+file -b sample.txt
 ```
 
 # How to copy a folder to another folder as a subfolder
