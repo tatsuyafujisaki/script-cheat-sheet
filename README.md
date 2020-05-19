@@ -47,7 +47,7 @@ done
 realpath <file-or-folder>
 ```
 
-# How to find the encoding of a file on both Mac/Linux
+# How to detect the encoding of a file on both Mac/Linux
 ```shell
 file --mime sample.txt
 ```
