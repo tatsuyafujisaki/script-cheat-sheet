@@ -4,7 +4,7 @@
 
 # How to replace strings
 ```shell
-sed "s/old/new/g" input.txt > output.txt
+sed "s/old/new/g" input.txt
 
 # in-place
 sed -i "s/old/new/g" file.txt
@@ -12,7 +12,7 @@ sed -i "s/old/new/g" file.txt
 
 # How to delete blank lines including whitespace-only lines
 ```shell
-sed -e '/^[[:blank:]]*$/d' input.txt > output.txt
+sed -e '/^[[:blank:]]*$/d' input.txt
 
 # in-place
 sed -i -e '/^[[:blank:]]*$/d' file.txt
@@ -20,7 +20,7 @@ sed -i -e '/^[[:blank:]]*$/d' file.txt
 
 ## How to delete blank lines but not whitespace-only lines
 ```shell
-sed -e '/^$/d' input.txt > output.txt
+sed -e '/^$/d' input.txt
 
 # in-place
 sed -i -e '/^$/d' file.txt
@@ -28,7 +28,7 @@ sed -i -e '/^$/d' file.txt
 
 # How to delete strings in a file
 ```shell
-sed "s/unwanted//g" input.txt > output.txt
+sed "s/unwanted//g" input.txt
 
 # in-place
 sed -i "s/unwanted//g" file.txt
@@ -36,7 +36,7 @@ sed -i "s/unwanted//g" file.txt
 
 # How to prefix lines
 ```shell
-sed 's/^/prefix/' input.txt > output.txt
+sed 's/^/prefix/' input.txt
 
 # in-place
 sed -i 's/^/prefix/' file.txt
@@ -44,7 +44,7 @@ sed -i 's/^/prefix/' file.txt
 
 # How to suffix lines
 ```shell
-sed "s/$/suffix/" input.txt > output.txt
+sed "s/$/suffix/" input.txt
 
 # in-place
 sed -i "s/$/suffix/" file.txt
