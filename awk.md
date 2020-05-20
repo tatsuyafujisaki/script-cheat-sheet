@@ -3,7 +3,7 @@
 
 # How to trim leading and trailing whitespace in each line
 ```shell
-gawk '{$1=$1};1' < input.txt > output.txt
+gawk '{$1=$1};1' < input.txt
 
 # in-place
 gawk -i inplace '{$1=$1};1' file.txt
