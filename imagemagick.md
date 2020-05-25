@@ -8,7 +8,7 @@ convert input.png -resize 320x output.png
 convert input.png -border 8 output.png
 ```
 
-# How to convert transperency to white
+# How to convert transparency to white
 ```shell
 convert -flatten input.png output.png
 ```
