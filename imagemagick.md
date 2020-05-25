@@ -10,5 +10,6 @@ convert input.png -border 8 output.png
 
 # How to merge images horizontally (side by side)
 ```shell
-convert input1.png input2.png input3.png +append output.png
+# "-gravity center" vertically center input images.
+convert input1.png input2.png input3.png -gravity center +append output.png
 ```
