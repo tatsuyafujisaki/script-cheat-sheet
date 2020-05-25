@@ -8,6 +8,11 @@ convert input.png -resize 320x output.png
 convert input.png -border 8 output.png
 ```
 
+# How to convert transperency to white
+```shell
+convert -flatten input.png output.png
+```
+
 # How to merge images horizontally (side by side)
 ```shell
 # "-gravity center" vertically center input images.
