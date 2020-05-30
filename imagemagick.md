@@ -10,7 +10,12 @@ convert input.png -border 8 output.png
 
 # How to convert transparency to white
 ```shell
-convert -flatten input.png output.png
+convert input.png -flatten output.png
+```
+
+# How to convert an image to grayscale
+```shell
+convert input.png -type grayscale output.png
 ```
 
 # How to merge images horizontally (side by side)
