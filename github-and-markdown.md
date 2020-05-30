@@ -7,3 +7,9 @@ https://github.com/search?type=Code&q=repo:<organization>/<repository>+in:file+<
 ```html
 <img src="https://example.com/sample.png" width="320" />
 ```
+
+# How to show before/after images in a pull request
+Before|After
+--|--
+A comment comes here.|A comment comes here.
+![before](https://picsum.photos/200)|![after](https://picsum.photos/200)
