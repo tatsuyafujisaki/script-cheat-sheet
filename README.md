@@ -1,24 +1,25 @@
-# How to remove the first or the last character from a variable
+# Bash/Zsh
+## How to remove the first or the last character from a variable
 ```shell
 s=abc
 echo ${s#?} # bc
 echo ${s%?} # ab
 ```
 
-# How to create a directory if it does not exist in Bash/Zsh.
+## How to create a folder if it does not exist
 ```shell
 folder1=~/foo
 [ -e ${folder} ] || mkdir -p ${folder}
 ```
 
-# How to redirect stdout and/or stderr in Bash/Zsh
+## How to redirect stdout and/or stderr
 ```shell
 echo hello > /dev/null # redirects stdout only.
 echo hello 2> /dev/null # redirects stderr only.
 echo hello &> /dev/null # redirects both stdout and stderr.
 ```
 
-# How to replace or delete substring(s) in Bash/Zsh
+## How to replace or delete substring(s)
 ```shell
 S=old_and_old
 echo ${S/old} # deletes the first "old" and shows "_and_old".
@@ -27,7 +28,7 @@ echo ${S/old/new} # replace the first "old" and shows "new_and_old".
 echo ${S//old/new} # replace all the "old" and shows "new_and_new".
 ```
 
-# How to create a file with content in Bash/Zsh
+## How to create a file with content
 ```shell
 cat << EOF > sample.txt
 aa
@@ -36,7 +37,7 @@ cc
 EOF
 ```
 
-# How to define an array in Bash/Zsh
+## How to define an array
 ```shell
 xs1=(aa bb cc)
 
@@ -46,7 +47,7 @@ cc
 )
 ```
 
-# How to iterate through an array in Bash/Zsh
+## How to iterate through an array
 ```shell
 xs=(aa bb cc)
 for x in "${xs[@]}"
@@ -55,12 +56,12 @@ do
 done
 ```
 
-# How to resolve a relative path to an absolute path in Zsh/Bash
+## How to resolve a relative path to the absolute path
 ```shell
 realpath <file-or-folder>
 ```
 
-# How to detect the encoding of a file on both Mac/Linux
+## How to detect the encoding of a file on both Mac/Linux
 ```shell
 file -b sample.txt
 ```
@@ -138,17 +139,11 @@ command -v foo > /dev/null 2>&1 || echo 'command not found.'
 true && { echo 'true1'; echo 'true2'; } || { echo 'false1'; echo 'false2'; }
 false && { echo 'true1'; echo 'true2'; } || { echo 'false1'; echo 'false2'; }
 
-#change timestamp
+# change timestamp
 touch -d '2011/03/11' foo.txt
 
-#tee both stdout and stderr
+# tee both stdout and stderr
 ./foo.sh 2>&1 | tee -a foo.log
-
-#delete first char
-${VAR1#?}
-
-#delete last char
-${VAR1%?}
 
 # set JAVA_HOME if not set
 [ -z ${JAVA_HOME} ] && export JAVA_HOME=/path/to/javahome
