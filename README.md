@@ -1,3 +1,9 @@
+# How to create a directory if it does not exist.
+```shell
+folder1=~/foo
+[ -e ${folder} ] || mkdir -p ${folder}
+```
+
 # How to redirect stdout and/or stderr in Bash/Zsh
 ```shell
 echo hello > /dev/null # redirects stdout only.
