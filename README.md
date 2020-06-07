@@ -1,4 +1,11 @@
-# How to create a directory if it does not exist.
+# How to remove the first or the last character from a variable
+```shell
+s=abc
+echo ${s#?} # bc
+echo ${s%?} # ab
+```
+
+# How to create a directory if it does not exist in Bash/Zsh.
 ```shell
 folder1=~/foo
 [ -e ${folder} ] || mkdir -p ${folder}
@@ -150,29 +157,12 @@ ${VAR1%?}
 DEFAULT_JAVA_HOME=/path/to/javahome
 ${JAVA_HOME=${DEFAULT_JAVA_HOME}} yourclassfile
 
-#create folder if not found
-[ -e ${FOLDER1} ] || mkdir -p ${FOLDER1}
-
 #get timstamp in yyyyymmdd
 stat -c %y ${FILE1} | awk '{print $1}' | tr -d '-'
 
-#Get alphabetically-first *.txt
-ls /path/to/*.txt | head -1
-
-#Get alphabetically-last *.txt
-ls /path/to/*.txt | tail -1
-
-#Get first-modified *.txt
-ls -t /path/to/*.txt | tail -1
-
-#Get last-modified *.txt
-ls -t /path/to/*.txt | head -1
 
 #Extract file from targz
 tar fvxz foo.tar.gz -C /path/to/destination file_in_targz > /dev/null
-
-#Get current shell name
-echo $0
 ```
 
 # Regex
@@ -203,25 +193,6 @@ echo 'fullpath: ' $(readlink -f ./../relative/path/to/foo.txt)
 
 echo 'script dir as relative path: ' ${0%/*}
 echo 'script dir as absolute path: ' $(cd ${0%/*} && pwd && cd - > /dev/null)
-```
-
-# GNU Privacy Guard (GPG) cheat sheet
-```shell
-gpg --full-gen-key
-
-gpg --list-secret-keys
-gpg --list-keys
-
-gpg --delete-secret-keys "John Doe"
-gpg --delete-keys "John Doe"
-
-gpg -a --export-secret-keys > secret.key
-gpg -a --export > public.key
-
-gpg --import public.key
-gpg --import secret.key
-
-gpg -a -r "John Doe" --encrypt foo.txt
 ```
 
 # References
