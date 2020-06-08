@@ -12,4 +12,4 @@ https://github.com/search?type=Code&q=repo:<organization>/<repository>+in:file+<
 Before|After
 --|--
 A comment comes here.|A comment comes here.
-![before](https://picsum.photos/200)|![after](https://picsum.photos/200)
+![before](https://picsum.photos/800)|![after](https://picsum.photos/800)
