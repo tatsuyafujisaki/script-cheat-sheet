@@ -4,6 +4,11 @@
 * https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 
 # Bash/Zsh
+## How to print date and time in yyyymmdd-hhmmss
+```shell
+date +%Y%m%d-%H%M%S
+```
+
 ## How to remove the first or the last character from a variable
 ```shell
 s=abc
