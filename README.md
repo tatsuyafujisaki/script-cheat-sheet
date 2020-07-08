@@ -4,6 +4,11 @@
 * https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 
 # Bash/Zsh
+## How to show the definition of an alias
+```shell
+alias <alias-name>
+```
+
 ## How to print date and time in yyyymmdd-hhmmss
 ```shell
 date +%Y%m%d-%H%M%S
