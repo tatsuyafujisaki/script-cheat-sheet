@@ -4,6 +4,11 @@
 * https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 
 # Bash/Zsh
+## How to restart the shell
+```shell
+exec -l $SHELL
+```
+
 ## How to show the definition of an alias
 ```shell
 alias <alias-name>
