@@ -11,7 +11,9 @@ A comment comes here.|A comment comes here.
 
 # Template
 ## 3x3 table
-&nbsp;|a|b
+```
+&nbsp;||
 --|--|--
-c|d|e
-f|g|h
+||
+||
+```
