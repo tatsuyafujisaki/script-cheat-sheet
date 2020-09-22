@@ -1,6 +1,7 @@
 # How to upgrade npm
 ```bash
-npm install npm@latest -g
+# It does not work without sudo.
+sudo npm install npm@latest -g
 ```
 
 # How to list configurations
