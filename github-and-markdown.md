@@ -9,6 +9,12 @@ Before|After
 A comment comes here.|A comment comes here.
 ![before](https://picsum.photos/1080)|![after](https://picsum.photos/1080)
 
+# How to show three images side by side
+a|b|c
+--|--|--
+A comment comes here.|A comment comes here.|A comment comes here.
+![a](https://picsum.photos/1080)|![b](https://picsum.photos/1080)|![c](https://picsum.photos/1080)
+
 # Template
 ## 3x3 table
 &nbsp;|a|b
