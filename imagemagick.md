@@ -1,4 +1,4 @@
-# How to resize an image to a fixed width
+# How to resize the width of an image
 ```shell
 convert input.png -resize 320x output.png
 ```
