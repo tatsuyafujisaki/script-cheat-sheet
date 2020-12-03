@@ -87,7 +87,7 @@ file -b sample.txt
 ```
 
 # Zsh
-## How to keep a background job running even after Terminal is closed
+## How to keep a background job running even after Zsh is closed
 ```shell
 <command> &|
 ```
