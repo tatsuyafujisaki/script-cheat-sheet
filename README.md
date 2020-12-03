@@ -86,6 +86,13 @@ realpath <file-or-folder>
 file -b sample.txt
 ```
 
+# Zsh
+## How to keep a background job running even after Terminal is closed
+```shell
+<command> &|
+```
+http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
+
 # How to copy a folder to another folder as a subfolder
 ```shell
 rsync -a src dst # Note that it's not "/src" but "src"
