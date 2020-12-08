@@ -59,7 +59,7 @@ npm uninstall <package> --save-dev
 npm install @scope/project
 ```
 * A package preceded by an @ symbol such as `@username/package` is a scoped package.
-  * A scope allows you to create a package with the same name as a package created by another user or organization, which is conventionally called "Org" in Node.js, without conflict.
+  * A scope lets you create a package with the same name as a package created by another user or organization, which is conventionally called "Org" in Node.js, without conflict.
   * https://docs.npmjs.com/about-scopes
   * https://docs.npmjs.com/misc/scope
 
