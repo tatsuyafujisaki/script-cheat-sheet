@@ -1,11 +1,11 @@
 # How to upgrade npm
 ```bash
-npm install npm -g
+npm install npm -g --force
 ```
 
 # How to upgrade node
 ```bash
-npm install node -g
+npm install node -g --force
 ```
 
 # How to list configurations
