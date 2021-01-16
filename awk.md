@@ -9,7 +9,15 @@ gawk '{$1=$1};1' input.txt
 gawk -i inplace '{$1=$1};1' file.txt
 ```
 
-# How to show the first, second, and third fields if the second field is foo or bar
+# How to show lines that contains a substring
 ```shell
-awk -F',' '($2 == "foo") || ($2 == "bar") { OFS=","; print $1,$2,$3 }' input.txt
+# The following shows:
+# apple
+# pineapple
+echo "apple\norange\npineapple" | awk '/apple/ { print $0 }'
+```
+
+# How to get the last element
+```shell
+echo aa,bb,cc | awk -F, '{print $NF}'
 ```
