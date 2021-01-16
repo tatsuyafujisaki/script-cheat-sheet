@@ -19,5 +19,5 @@ echo "apple\norange\npineapple" | awk '/apple/ { print $0 }'
 
 # How to get the last element
 ```shell
-echo aa,bb,cc | awk -F, '{print $NF}'
+echo aa,bb,cc | awk -F, '{print $NF}' # cc
 ```
