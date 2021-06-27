@@ -166,9 +166,6 @@ command -v foo > /dev/null 2>&1 || echo 'command not found.'
 true && { echo 'true1'; echo 'true2'; } || { echo 'false1'; echo 'false2'; }
 false && { echo 'true1'; echo 'true2'; } || { echo 'false1'; echo 'false2'; }
 
-# change timestamp
-touch -d '2011/03/11' foo.txt
-
 # tee both stdout and stderr
 ./foo.sh 2>&1 | tee -a foo.log
 
@@ -181,7 +178,6 @@ ${JAVA_HOME=${DEFAULT_JAVA_HOME}} yourclassfile
 
 #get timstamp in yyyyymmdd
 stat -c %y ${FILE1} | awk '{print $1}' | tr -d '-'
-
 
 #Extract file from targz
 tar fvxz foo.tar.gz -C /path/to/destination file_in_targz > /dev/null
