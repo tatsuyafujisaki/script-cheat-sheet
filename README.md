@@ -87,6 +87,14 @@ file -b sample.txt
 ```
 
 # Zsh
+## How to get a basename and an extension
+```shell
+s=sample.txt
+
+echo Basename: $s:r # sample
+echo Extension: $s:e # txt
+```
+
 ## How to keep a background job running even after Zsh is closed
 ```shell
 <command> &|
