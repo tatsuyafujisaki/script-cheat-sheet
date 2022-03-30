@@ -23,3 +23,8 @@ magick input.png -type grayscale output.png
 # "-gravity center" vertically center input images.
 magick input1.png input2.png input3.png -gravity center +append output.png
 ```
+
+# How to split a long image into A4 PDFs
+```shell
+magick input.png -resize 2480x -crop 2480x3508 +repage output.pdf
+```
