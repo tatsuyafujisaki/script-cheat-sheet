@@ -7,6 +7,6 @@ cut -d '"' -f2 -s input.txt
 ```
 # How to exclude a specific column
 ```shell
-# -f is to extract a second field.
+# -f is to extract a field.
 cut -f2 --complement input.txt
 ```
