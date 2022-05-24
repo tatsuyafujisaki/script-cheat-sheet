@@ -17,7 +17,7 @@ gawk -i inplace '{$1=$1};1' file.txt
 echo "apple\norange\npineapple" | awk '/apple/ { print $0 }'
 ```
 
-# How to get the last element
+# How to get the last column
 ```shell
-echo aa,bb,cc | awk -F, '{print $NF}' # cc
+awk -F, '{print $NF}' input.txt
 ```
