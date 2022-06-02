@@ -99,7 +99,7 @@ echo Extension: $s:e # txt
 ```shell
 <command> &|
 ```
-http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
+https://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html
 
 # How to copy a folder to another folder as a subfolder
 ```shell
