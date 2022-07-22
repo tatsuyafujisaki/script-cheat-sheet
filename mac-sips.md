@@ -10,3 +10,8 @@ sips -g sips -g pixelWidth -g pixelHeight input.png
 ```shell
 sips --resampleWidth 1024 input.png
 ```
+
+# How to convert a PDF to a PNG
+```shell
+sips -s format png input.pdf --out output.png
+```
