@@ -22,7 +22,6 @@ magick input.png -type grayscale output.png
 ```
 magick -density 600 input.pdf -trim -type grayscale output.png
 magick -density 600 input.pdf -trim -type grayscale output.jpg
-
 ```
 
 # How to merge images horizontally (side by side)
