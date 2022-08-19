@@ -18,7 +18,7 @@ magick input.png -flatten output.png
 magick input.png -type grayscale output.png
 ```
 
-# How to convert a PDF to a PNG/JPG
+# How to convert a PDF to a PNG/JPEG
 ```
 magick -density 600 input.pdf -trim -type grayscale output.png
 magick -density 600 input.pdf -trim -type grayscale output.jpg
