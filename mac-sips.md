@@ -15,3 +15,8 @@ sips --resampleWidth 1024 input.png
 ```shell
 sips -s format png input.pdf --out output.png
 ```
+
+# How to convert a PDF to a PNG
+```shell
+sips -s format jpeg input.pdf --out output.jpg
+```
