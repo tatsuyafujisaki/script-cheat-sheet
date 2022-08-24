@@ -4,6 +4,33 @@
 * https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 
 # Bash/Zsh
+## Sample function that requires two arguments
+```
+my_function() {
+  if [ $# -lt 2 ]
+  then
+    echo "Usage: $funcstack[1] <first-argument> <second-argument>"
+    return
+  fi
+
+  echo "First argument: $1"
+  echo "Second argument: $2"
+}
+```
+
+Usage
+```shell
+$ my_function
+Usage: my_function <first-argument> <second-argument>
+
+$ my_function foo
+Usage: my_function <first-argument> <second-argument>
+
+$ my_function foo bar
+First argument: foo
+Second argument: bar
+```
+
 ## How to restart the shell
 ```shell
 exec -l $SHELL
