@@ -32,5 +32,8 @@ magick input1.png input2.png input3.png -gravity center +append output.png
 
 # How to split a long image into A4 PDFs
 ```shell
-magick input.png -resize 2480x -crop 2480x3508 +repage output.pdf
+# 2480px is the width of the A4 paper size when the PPI (pixels per inch) is 300.
+# 3508px is the height of the A4 paper size  when the PPI (pixels per inch) is 300.
+# https://imagemagick.org/script/command-line-processing.php#geometry
+magick input.png -resize 2480 -crop 2480x3508 +repage output.pdf
 ```
