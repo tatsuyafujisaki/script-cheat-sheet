@@ -7,7 +7,7 @@ ffmpeg -i input.m4a -q:a 1 output.m4a
 
 # How to change the sample rate of an m4a file.
 ```shell
-# -ar stands for audio (sampling) rate in hertz.
+# -ar stands for audio sample rate in hertz.
 # https://trac.ffmpeg.org/wiki/Encode/AAC
 ffmpeg -i input.m4a -ar 44100 output.m4a
 ```
