@@ -14,7 +14,7 @@ awk '{$1=$1};1' input.txt
 echo "apple\norange\npineapple" | awk '/apple/ { print $0 }'
 ```
 
-# How to get the last column
+# How to show the last column
 ```shell
 awk -F, '{print $NF}' input.txt
 ```
