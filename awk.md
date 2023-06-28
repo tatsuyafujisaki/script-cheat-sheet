@@ -1,5 +1,5 @@
 # Note
-* `OFS` is ignored when using `{ print }` instead of `{ print $1,$2,$3... }`.
+`OFS` (Output Field Separator) is ignored when using `{ print }` instead of `{ print $1,$2,$3... }`.
 
 # How to trim leading and trailing whitespace in each line
 ```shell
