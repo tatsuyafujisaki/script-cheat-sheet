@@ -3,10 +3,7 @@
 
 # How to trim leading and trailing whitespace in each line
 ```shell
-gawk '{$1=$1};1' input.txt
-
-# in-place
-gawk -i inplace '{$1=$1};1' file.txt
+awk '{$1=$1};1' input.txt
 ```
 
 # How to show lines that contains a substring
