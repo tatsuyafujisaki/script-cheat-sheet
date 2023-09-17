@@ -1,3 +1,4 @@
+# MP4
 # How to remove audio from an mp4 file
 ```shell
 # -c:v stands for code:video.
@@ -5,6 +6,13 @@
 ffmpeg -i input.mp4 -c:v copy -an output.mp4
 ```
 
+# How to rotate an mp4 file by 90 degrees clockwise
+```shell
+# -vf stands for video filter.
+ffmpeg -i input.mp4 -vf "transpose=1" output.mp4
+```
+
+# M4A
 # How to change the bitrate of an m4a file
 ```shell
 # -q:a stands for quality:audio, which takes 0, 1, or 2.
