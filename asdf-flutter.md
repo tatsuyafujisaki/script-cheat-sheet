@@ -50,15 +50,21 @@ asdf list flutter
 ls ~/.asdf/installs/flutter/
 ```
 
-## How to show the versions of the installed plugins in the current folder
+## How to show the versions of the installed plugins selected in the current folder
 ```shell
 asdf current
 ```
 
-## How to show the version of the Flutter plugin in the current folder
+## How to show the version of the Flutter plugin selected in the current folder
 ```shell
 asdf current flutter
 
 # Alternatively
 flutter --version
+```
+
+## How to show the installed folder of the Flutter plugin selected in the current folder
+```shell
+asdf where flutter
+asdf which flutter
 ```
