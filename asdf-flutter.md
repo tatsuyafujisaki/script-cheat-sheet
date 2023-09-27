@@ -1,37 +1,64 @@
-# Flutter version management using [asdf](https://github.com/asdf-vm/asdf)
+# Not read-only
 ## How to install asdf
-The official website recommends installing asdf using `git clone` rather than Homebrew or Pacman.
+https://asdf-vm.com/guide/getting-started.html
 
 > We highly recommend using the official git method.
 
-https://asdf-vm.com/guide/getting-started.html
+The official website prefers `git clone` to Homebrew or Pacman.
 
 ## How to add the Flutter plugin (which allows you to install versions of Flutter)
 ```shell
 asdf plugin add flutter
 ```
 
-## How to list the installable versions of Flutter
-```shell
-asdf list all flutter
-```
-
-## How to list the installed versions of Flutter
-```shell
-asdf list flutter
-```
-Alternatively
-```shell
-ls ~/.asdf/installs/flutter/
-```
-
-## How to install a version of Flutter
+## How to install a version of the Flutter plugin
 ```shell
 asdf install flutter 3.0.0-stable
 ```
 
-## How to select a version of Flutter to use in the current folder
+## How to select a version of the Flutter plugin to use in the current folder
 ```shell
 asdf local flutter 3.0.0-stable # creates .tool-versions
-flutter --version # to confirm the version of Flutter in the current folder
+```
+
+## How to update asdf
+```shell
+asdf update
+```
+
+## How to update all the plugins (including the Flutter plugin, needless to say)
+```shell
+asdf plugin update --all
+```
+
+# Read-only
+## How to list the installable versions of the Flutter plugin
+```shell
+asdf list all flutter
+```
+
+## How to list the installed versions of the installed plugins
+```shell
+asdf list
+```
+
+## How to list the installed versions of the Flutter plugins
+```shell
+asdf list flutter
+
+# Alternatively
+ls ~/.asdf/installs/flutter/
+```
+
+## How to show the versions of the installed plugins in the current folder
+```shell
+asdf current
+```
+
+## How to show the version of the Flutter plugin in the current folder
+```shell
+asdf current flutter
+
+# Alternatively
+flutter --version
 ```
