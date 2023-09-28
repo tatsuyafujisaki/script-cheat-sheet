@@ -1,4 +1,4 @@
-# Not read-only
+# One-off
 ## How to install asdf
 https://asdf-vm.com/guide/getting-started.html
 
@@ -9,26 +9,6 @@ The official website prefers `git clone` to Homebrew or Pacman.
 ## How to add the Flutter plugin (which allows you to install versions of Flutter)
 ```shell
 asdf plugin add flutter
-```
-
-## How to install a version of the Flutter plugin
-```shell
-asdf install flutter 3.0.0-stable
-```
-
-## How to select a version of the Flutter plugin to use in the current folder
-```shell
-asdf local flutter 3.0.0-stable # creates .tool-versions
-```
-
-## How to update asdf
-```shell
-asdf update
-```
-
-## How to update all the plugins (including the Flutter plugin, needless to say)
-```shell
-asdf plugin update --all
 ```
 
 # Read-only
@@ -67,4 +47,25 @@ flutter --version
 ```shell
 asdf where flutter
 asdf which flutter
+```
+
+# Not read-only
+## How to install a version of the Flutter plugin
+```shell
+asdf install flutter 3.0.0-stable
+```
+
+## How to select a version of the Flutter plugin to use in the current folder
+```shell
+asdf local flutter 3.0.0-stable # creates .tool-versions
+```
+
+## How to update asdf
+```shell
+asdf update
+```
+
+## How to update all the plugins (including the Flutter plugin, needless to say)
+```shell
+asdf plugin update --all
 ```
