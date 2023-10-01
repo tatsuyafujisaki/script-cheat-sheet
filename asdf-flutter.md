@@ -65,7 +65,7 @@ asdf local flutter 3.0.0-stable # creates .tool-versions
 asdf update
 ```
 
-## How to update all the plugins (including the Flutter plugin, needless to say)
+## How to update all the plugins (including the Flutter plugin)
 ```shell
 asdf plugin update --all
 ```
