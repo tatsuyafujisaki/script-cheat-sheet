@@ -12,14 +12,12 @@ asdf plugin add flutter
 ```
 
 # Read-only
-## How to list the installable versions of the Flutter plugin
-```shell
-asdf list all flutter
-```
-
-## How to list the installed versions of the installed plugins
+## How to list the installable versions of the installed plugins
 ```shell
 asdf list
+
+# Flutter plugin only
+asdf list all flutter
 ```
 
 ## How to list the installed versions of the Flutter plugins
@@ -33,10 +31,8 @@ ls ~/.asdf/installs/flutter/
 ## How to show the versions of the installed plugins selected in the current folder
 ```shell
 asdf current
-```
 
-## How to show the version of the Flutter plugin selected in the current folder
-```shell
+# Flutter plugin only
 asdf current flutter
 
 # Alternatively
