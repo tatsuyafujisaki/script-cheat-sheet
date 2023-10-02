@@ -54,10 +54,11 @@ asdf install flutter 3.0.0-stable # alternatively
 
 ## How to select a version of the Flutter plugin to use in the current folder
 ```shell
+# global
 asdf global flutter latest # creates ~/.tool-versions
 asdf global flutter 3.0.0-stable # alternatively
 
-# or
+# local
 asdf local flutter latest # creates .tool-versions
 asdf local flutter 3.0.0-stable # alternatively
 ```
