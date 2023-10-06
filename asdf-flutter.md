@@ -17,7 +17,7 @@ asdf plugin add flutter
 asdf list all flutter
 ```
 
-## How to list the installed versions of the Flutter plugins
+## How to list the installed versions of the Flutter plugin
 ```shell
 asdf list flutter
 
