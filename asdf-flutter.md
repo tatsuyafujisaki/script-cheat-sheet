@@ -12,11 +12,8 @@ asdf plugin add flutter
 ```
 
 # Read-only
-## How to list the installable versions of the installed plugins
+## How to list the installable versions of the Flutter plugins
 ```shell
-asdf list
-
-# Flutter plugin only
 asdf list all flutter
 ```
 
@@ -50,6 +47,7 @@ asdf which flutter
 ```shell
 asdf install flutter latest
 asdf install flutter 3.3.10-stable # alternatively
+asdf install flutter 3.7.11-stable # alternatively
 ```
 
 ## How to select a version of the Flutter plugin to use in the current folder
@@ -57,10 +55,12 @@ asdf install flutter 3.3.10-stable # alternatively
 # global
 asdf global flutter latest # creates ~/.tool-versions
 asdf global flutter 3.3.10-stable # alternatively
+asdf global flutter 3.7.11-stable
 
 # local
 asdf local flutter latest # creates .tool-versions
 asdf local flutter 3.3.10-stable # alternatively
+asdf local flutter 3.7.11-stable # alternatively
 ```
 
 ## How to update asdf
