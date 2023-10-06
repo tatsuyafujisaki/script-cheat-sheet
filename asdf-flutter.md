@@ -12,7 +12,7 @@ asdf plugin add flutter
 ```
 
 # Read-only
-## How to list the installable versions of the Flutter plugins
+## How to list the installable versions of the Flutter plugin
 ```shell
 asdf list all flutter
 ```
