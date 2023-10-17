@@ -50,12 +50,19 @@ asdf install flutter 3.3.10-stable # alternatively
 asdf install flutter 3.7.12-stable # alternatively
 ```
 
+## How to uninstall a version of the Flutter plugin
+```shell
+asdf uninstall flutter latest
+asdf uninstall flutter 3.3.10-stable # alternatively
+asdf uninstall flutter 3.7.12-stable # alternatively
+```
+
 ## How to select a version of the Flutter plugin to use in the current folder
 ```shell
 # global
 asdf global flutter latest # creates ~/.tool-versions
 asdf global flutter 3.3.10-stable # alternatively
-asdf global flutter 3.7.12-stable
+asdf global flutter 3.7.12-stable # alternatively
 
 # local
 asdf local flutter latest # creates .tool-versions
