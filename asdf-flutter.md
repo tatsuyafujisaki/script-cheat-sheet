@@ -60,7 +60,7 @@ asdf uninstall flutter latest
 asdf uninstall flutter <version>
 ```
 
-## How to select a version of the Flutter plugin and create `~/.tools-versions`
+## How to select a version of the Flutter plugin and write it in `~/.tools-versions`
 ```shell
 asdf global flutter latest
 ```
@@ -68,7 +68,7 @@ asdf global flutter latest
 asdf global flutter <version>
 ```
 
-## How to select a version of the Flutter plugin and create `.tools-versions`
+## How to select a version of the Flutter plugin and write it in `.tools-versions`
 ```shell
 asdf local flutter latest
 ```
