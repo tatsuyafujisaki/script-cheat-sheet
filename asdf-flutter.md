@@ -1,5 +1,4 @@
-# One-off
-## How to install asdf
+# How to install asdf
 https://asdf-vm.com/guide/getting-started.html
 
 > We highly recommend using the official git method.
@@ -20,25 +19,27 @@ asdf list all flutter
 ## How to list the installed versions of the Flutter plugin
 ```shell
 asdf list flutter
-
-# Alternatively
+```
+```shell
 ls ~/.asdf/installs/flutter/
 ```
 
-## How to show the versions of the installed plugins selected in the current folder
+## How to show the versions of the installed plugins
 ```shell
 asdf current
-
-# Flutter plugin only
-asdf current flutter
-
-# Alternatively
+```
+```shell
+asdf current flutter # flutter only
+```
+```shell
 flutter --version
 ```
 
 ## How to show the installed folder of the Flutter plugin selected in the current folder
 ```shell
 asdf where flutter
+```
+```shell
 asdf which flutter
 ```
 
@@ -46,28 +47,33 @@ asdf which flutter
 ## How to install a version of the Flutter plugin
 ```shell
 asdf install flutter latest
-asdf install flutter 3.7.12-stable # alternatively
-asdf install flutter 3.10.6-stable # alternatively
+```
+```shell
+asdf install flutter <version>
 ```
 
 ## How to uninstall a version of the Flutter plugin
 ```shell
 asdf uninstall flutter latest
-asdf uninstall flutter 3.7.12-stable # alternatively
-asdf uninstall flutter 3.10.6-stable # alternatively
+```
+```shell
+asdf uninstall flutter <version>
 ```
 
-## How to select a version of the Flutter plugin to use in the current folder
+## How to select a version of the Flutter plugin and create `~/.tools-versions`
 ```shell
-# global
-asdf global flutter latest # creates ~/.tool-versions
-asdf global flutter 3.7.12-stable # alternatively
-asdf global flutter 3.10.6-stable # alternatively
+asdf global flutter latest
+```
+```shell
+asdf global flutter <version>
+```
 
-# local
-asdf local flutter latest # creates .tool-versions
-asdf local flutter 3.7.12-stable # alternatively
-asdf local flutter 3.10.6-stable # alternatively
+## How to select a version of the Flutter plugin and create `.tools-versions`
+```shell
+asdf local flutter latest
+```
+```shell
+asdf local flutter <version>
 ```
 
 ## How to update asdf
