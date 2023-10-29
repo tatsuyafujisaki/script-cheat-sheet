@@ -31,14 +31,13 @@ asdf current
 ```shell
 asdf current flutter # flutter only
 ```
-```shell
-flutter --version
-```
 
-## How to show the installed folder of the Flutter plugin selected in the current folder
+## How to show the folder where Flutter is installed
 ```shell
 asdf where flutter
 ```
+
+## How to show the path to Flutter
 ```shell
 asdf which flutter
 ```
