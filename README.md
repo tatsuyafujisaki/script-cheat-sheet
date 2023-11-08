@@ -96,6 +96,12 @@ cc
 
 ## How to iterate through an array
 ```shell
+for x in aa bb cc
+do
+  echo ${x}
+done
+```
+```shell
 xs=(aa bb cc)
 for x in "${xs[@]}"
 do
