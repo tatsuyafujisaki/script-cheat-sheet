@@ -216,11 +216,11 @@ echo 'script dir as relative path: ' ${0%/*}
 echo 'script dir as absolute path: ' $(cd ${0%/*} && pwd && cd - > /dev/null)
 ```
 
-# Directory
-[directory.md](shell/markdown/directory.md)
-
 # Array
 [array.md](shell/markdown/array.md)
+
+# Directory
+[directory.md](shell/markdown/directory.md)
 
 # Regex
 [regex.md](shell/markdown/regex.md)
