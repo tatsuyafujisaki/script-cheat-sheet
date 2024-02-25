@@ -85,31 +85,6 @@ cc
 EOF
 ```
 
-## How to define an array
-```shell
-xs1=(aa bb cc)
-
-xs2=(aa
-bb
-cc
-)
-```
-
-## How to iterate through an array
-```shell
-for x in aa bb cc
-do
-  echo ${x}
-done
-```
-```shell
-xs=(aa bb cc)
-for x in "${xs[@]}"
-do
-  echo ${x}
-done
-```
-
 ## How to resolve a relative path to the absolute path
 ```shell
 realpath <file-or-folder>
@@ -240,6 +215,9 @@ echo 'fullpath: ' $(readlink -f ./../relative/path/to/foo.txt)
 echo 'script dir as relative path: ' ${0%/*}
 echo 'script dir as absolute path: ' $(cd ${0%/*} && pwd && cd - > /dev/null)
 ```
+
+# Array
+[array.md](markdown/array.md)
 
 # Regex
 [regex.md](markdown/regex.md)
