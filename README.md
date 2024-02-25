@@ -42,9 +42,9 @@ exec -l $SHELL
 alias <alias-name>
 ```
 
-## How to print date and time in yyyymmdd-hhmmss
+## How to print date and time in yyyy-mm-dd_hh-mm-ss
 ```shell
-date +%Y%m%d-%H%M%S
+date +%Y-%m-%d_%H-%M-%S
 ```
 
 ## How to remove the first or the last character from a variable
@@ -54,10 +54,10 @@ echo ${s#?} # bc
 echo ${s%?} # ab
 ```
 
-## How to create a folder if it does not exist
+## How to create a directory if it does not exist
 ```shell
-folder1=~/foo
-[ -e ${folder} ] || mkdir -p ${folder}
+directory=~/foo
+[ -e ${directory} ] || mkdir -p ${directory}
 ```
 
 ## How to redirect stdout and/or stderr
