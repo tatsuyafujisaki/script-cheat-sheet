@@ -217,7 +217,7 @@ echo 'script dir as absolute path: ' $(cd ${0%/*} && pwd && cd - > /dev/null)
 ```
 
 # Array
-[array.md](markdown/array.md)
+[array.md](shell/markdown/array.md)
 
 # Regex
-[regex.md](markdown/regex.md)
+[regex.md](shell/markdown/regex.md)
