@@ -225,36 +225,21 @@ stat -c %y ${FILE1} | awk '{print $1}' | tr -d '-'
 tar fvxz foo.tar.gz -C /path/to/destination file_in_targz > /dev/null
 ```
 
-# Regex
-## How to check if `${s}` matches `${regex}`
-```shell
-## '=~' is to enable regex in 'if' statement. http://tldp.org/LDP/abs/html/special-chars.html
-[[ ${s} =~ ${regex} ]] && echo "matched" || echo "unmatched"
-```
-
-## How to check if `${digits}` is digits.
-```shell
-[[ ${digits} =~ ^[[:digit:]]+$ ]] && echo "matched" || echo "unmatched"
-```
-
 # Path cheat sheet
 ```shell
-echo 'original:' ${s}
+s=/path/to/foo.txt
 
-echo 'dirname (#1) :' ${s%/*}
-echo 'dirname (#2) :' $(dirname ${s})
-echo 'filename without dir (#1) :' ${s##*/}
-echo 'filename without dir (#2) :' $(basename ${s})
+echo 'directories (#1) :' ${s%/*}
+echo 'directories (#2) :' $(dirname ${s})
+echo 'filename without directories (#1) :' ${s##*/}
+echo 'filename without directories (#2) :' $(basename ${s})
 echo 'filename without extension :' $(basename ${s} .${s##*.})
 echo 'fullpath without extension :' ${s%.*}
-echo 'extname: ' ${s##*.}
-
+echo 'extension: ' ${s##*.}
 echo 'fullpath: ' $(readlink -f ./../relative/path/to/foo.txt)
-
 echo 'script dir as relative path: ' ${0%/*}
 echo 'script dir as absolute path: ' $(cd ${0%/*} && pwd && cd - > /dev/null)
 ```
 
-# References
-* [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
-* [Deprecated Linux networking commands and their replacements](https://www.tecmint.com/deprecated-linux-networking-commands-and-their-replacements)
+# Regex
+[regex.md](markdown/regex.md)
