@@ -15,10 +15,10 @@ Sub ConvertToZenkaku()
 End Sub
 
 Sub SetHangingIndent()
-    Dim numberOfCharacters As Integer
-    numberOfCharacters = 1 ' The unit is 字.
+    Dim ji As Integer ' The number of characters: https://www.kanjipedia.jp/kanji/0002843100
+    ji = 1
     
     Selection.WholeStory
 
-    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * numberOfCharacters
+    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * ji
 End Sub
