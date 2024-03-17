@@ -1,5 +1,11 @@
 Option Explicit
 
+Sub Reformat()
+    SetMincho12
+    ConvertToZenkaku
+    SetHangingIndent
+End Sub
+
 Sub SetMincho12()
     Selection.WholeStory
         
@@ -9,16 +15,14 @@ Sub SetMincho12()
     End With
 End Sub
 
-Sub ConvertToZenkaku()
+Sub ConvertHankakuToZenkaku()
     Selection.WholeStory
     Selection.Range.CharacterWidth = wdWidthFullWidth
 End Sub
 
-Sub SetHangingIndent()
-    Dim ji As Integer ' The number of characters: https://www.kanjipedia.jp/kanji/0002843100
-    ji = 1
-    
+' "ji" is the number of characters in Japanese
+' https://www.kanjipedia.jp/kanji/0002843100
+Sub SetHangingIndent(Optional ji As Integer = 1)
     Selection.WholeStory
-
     Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * ji
 End Sub
