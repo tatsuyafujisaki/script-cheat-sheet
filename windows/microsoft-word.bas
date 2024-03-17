@@ -3,7 +3,11 @@ Option Explicit
 Private Sub Reformat()
     SetMincho12
     ConvertHankakuToZenkaku
-    SetHangingIndent
+    SetHangingIndent 1
+End Sub
+
+Private Sub ReformatSelection()
+    SetHangingIndentOnSelection 5
 End Sub
 
 Private Sub SetMincho12()
@@ -24,5 +28,9 @@ End Sub
 ' https://www.kanjipedia.jp/kanji/0002843100
 Private Sub SetHangingIndent(Optional ji As Integer = 1)
     Selection.WholeStory
+    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * ji
+End Sub
+
+Private Sub SetHangingIndentOnSelection(Optional ji As Integer = 1)
     Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * ji
 End Sub
