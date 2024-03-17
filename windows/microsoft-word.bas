@@ -19,8 +19,6 @@ Sub SetHangingIndent()
     numberOfCharacters = 1 ' The unit is 字.
     
     Selection.WholeStory
-    
-    With Selection.ParagraphFormat
-        .CharacterUnitFirstLineIndent = -1 * numberOfCharacters
-    End With
+
+    Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * numberOfCharacters
 End Sub
