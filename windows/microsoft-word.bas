@@ -1,6 +1,6 @@
 Option Explicit
 
-Sub SetFontToMincho12()
+Sub SetMincho12()
     Selection.WholeStory
         
     With Selection.Font
@@ -9,7 +9,18 @@ Sub SetFontToMincho12()
     End With
 End Sub
 
-Sub ConvertTextToZenkaku()
+Sub ConvertToZenkaku()
     Selection.WholeStory
     Selection.Range.CharacterWidth = wdWidthFullWidth
+End Sub
+
+Sub SetHangingIndent()
+    Dim numberOfCharacters As Integer
+    numberOfCharacters = 1 ' The unit is 字.
+    
+    Selection.WholeStory
+    
+    With Selection.ParagraphFormat
+        .CharacterUnitFirstLineIndent = -1 * numberOfCharacters
+    End With
 End Sub
