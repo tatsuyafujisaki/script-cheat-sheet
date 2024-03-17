@@ -6,8 +6,16 @@ Private Sub Reformat()
     SetHangingIndent 1
 End Sub
 
-Private Sub ReformatSelection()
-    SetHangingIndentOnSelection 1
+Private Sub SetHangingIndentOnSelection2()
+    SetHangingIndentOnSelection 2
+End Sub
+
+Private Sub SetHangingIndentOnSelection5()
+    SetHangingIndentOnSelection 5
+End Sub
+
+Private Sub SetHangingIndentOnSelection6()
+    SetHangingIndentOnSelection 6
 End Sub
 
 Private Sub SetMincho12()
@@ -26,11 +34,11 @@ End Sub
 
 ' "ji" is the number of characters in Japanese
 ' https://www.kanjipedia.jp/kanji/0002843100
-Private Sub SetHangingIndent(Optional ji As Integer = 1)
+Private Sub SetHangingIndent(Optional ji As Integer = 2)
     Selection.WholeStory
     Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * ji
 End Sub
 
-Private Sub SetHangingIndentOnSelection(Optional ji As Integer = 1)
+Private Sub SetHangingIndentOnSelection(Optional ji As Integer = 2)
     Selection.ParagraphFormat.CharacterUnitFirstLineIndent = -1 * ji
 End Sub
