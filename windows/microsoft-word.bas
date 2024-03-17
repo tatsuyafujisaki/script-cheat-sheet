@@ -2,7 +2,7 @@ Option Explicit
 
 Private Sub Reformat()
     SetMincho12
-    ConvertToZenkaku
+    ConvertHankakuToZenkaku
     SetHangingIndent
 End Sub
 
