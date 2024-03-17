@@ -7,7 +7,7 @@ Private Sub Reformat()
 End Sub
 
 Private Sub ReformatSelection()
-    SetHangingIndentOnSelection 5
+    SetHangingIndentOnSelection 1
 End Sub
 
 Private Sub SetMincho12()
