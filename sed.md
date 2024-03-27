@@ -6,8 +6,8 @@
 ```shell
 sed "s/old/new/g" input.txt
 
-# in-place
-sed -i "s/old/new/g" file.txt
+# in-place (works only for sed of macOS)
+sed -i '' "s/old/new/g" file.txt
 ```
 
 # How to delete blank lines, including lines that contain only whitespace
