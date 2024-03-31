@@ -1,45 +1,95 @@
-# Note
-* `-i` is to edit a file in-place instead of printing to standard output.
-* `g` is to enable more than one replacement in each line.
-
 # How to replace strings
 ```shell
-sed "s/old/new/g" input.txt
+> echo '🍎\n🍊\n🍎' > foo.txt && cat foo.txt
+🍎
+🍊
+🍎
 
-# in-place (works only for sed of macOS)
-sed -i '' "s/old/new/g" file.txt
-```
-
-# How to delete blank lines, including lines that contain only whitespace
-```shell
-sed -e '/^[[:blank:]]*$/d' input.txt
-
-# in-place
-sed -i -e '/^[[:blank:]]*$/d' file.txt
-```
-
-## How to delete blank lines, excluding lines that contain only whitespace
-```shell
-sed -e '/^$/d' input.txt
+> sed 's/🍎/🍌/' foo.txt
+🍌
+🍊
+🍌
 
 # in-place
-sed -i -e '/^$/d' file.txt
+# NB: BSD sed requires '' after -i, while GNU sed does not.
+> sed -i '' 's/🍎/🍌/' foo.txt && cat foo.txt
+🍌
+🍊
+🍌
+```
+
+# How to delete blank lines, including whitespace-only lines
+```shell
+> echo '🍎\n\n  \n🍎' > foo.txt && cat foo.txt
+🍎
+(blank line)
+  (two spaces)
+🍎
+
+> sed -e '/^[[:blank:]]*$/d' foo.txt
+🍎
+🍎
+
+# in-place
+> sed -i -e '/^[[:blank:]]*$/d' foo.txt && cat foo.txt
+🍎
+🍎
+```
+
+# How to delete blank lines, excluding whitespace-only lines
+```shell
+> echo '🍎\n\n  \n🍎' > foo.txt && cat foo.txt
+🍎
+(blank line)
+  (two spaces)
+🍎
+
+> sed -e '/^$/d' foo.txt
+🍎
+  (two spaces)
+🍎
+
+# in-place
+# NB: BSD sed requires '' after -i, while GNU sed does not.
+> sed -i -e '/^$/d' foo.txt && cat foo.txt
+🍎
+  (two spaces)
+🍎
 ```
 
 # How to delete strings in a file
 ```shell
-sed "s/unwanted//g" input.txt
+> echo '🍎\n🍊\n🍎' > foo.txt && cat foo.txt
+🍎
+🍊
+🍎
+
+> sed 's/🍎//g' foo.txt
+(blank line)
+🍊
+(blank line)
 
 # in-place
-sed -i "s/unwanted//g" file.txt
+# NB: BSD sed requires '' after -i, while GNU sed does not.
+> sed -i '' 's/🍎//g' foo.txt && cat foo.txt
+(blank line)
+🍊
+(blank line)
 ```
 
 # How to prefix lines
 ```shell
-sed 's/^/prefix/' input.txt
+> echo '🍎\n🍊' > foo.txt && cat foo.txt
+🍎
+🍊
+
+> sed 's/^/🍌/' foo.txt
+🍌🍎
+🍌🍊
 
 # in-place
-sed -i 's/^/prefix/' file.txt
+# NB: BSD sed requires '' after -i, while GNU sed does not.
+sed -i '' 's/^/🍌/' foo.txt && cat foo.txt
 ```
 
 # How to suffix lines
@@ -59,3 +109,9 @@ sed -e 's/.*\([[:digit:]]\{8\}\).*/\1/g' input.txt
 ```shell
 sed -e "s/.*\/\/[[:blank:]]*\([^[:blank:]]*\)[[:blank:]]*/\1/g" input.txt
 ```
+
+# References
+- GNU sed
+  - https://www.gnu.org/software/sed/
+- BSD sed
+  - https://man.freebsd.org/cgi/man.cgi?sed(1)
