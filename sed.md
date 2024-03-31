@@ -1,4 +1,4 @@
-# How to replace strings
+# How to replace strings in a file
 ```shell
 > echo '🍎\n🍊\n🍎' > foo.txt && cat foo.txt
 🍎
@@ -18,7 +18,7 @@
 🍌
 ```
 
-# How to delete blank lines, including whitespace-only lines
+# How to delete blank lines, including whitespace-only lines, in a file
 ```shell
 > echo '🍎\n\n  \n🍎' > foo.txt && cat foo.txt
 🍎
@@ -36,7 +36,7 @@
 🍎
 ```
 
-# How to delete blank lines, excluding whitespace-only lines
+# How to delete blank lines, excluding whitespace-only lines, in a file
 ```shell
 > echo '🍎\n\n  \n🍎' > foo.txt && cat foo.txt
 🍎
@@ -77,7 +77,7 @@
 (blank line)
 ```
 
-# How to prefix lines
+# How to prefix lines in a file
 ```shell
 > echo '🍎\n🍊' > foo.txt && cat foo.txt
 🍎
@@ -92,22 +92,21 @@
 sed -i '' 's/^/🍌/' foo.txt && cat foo.txt
 ```
 
-# How to suffix lines
+# How to suffix lines in a file
 ```shell
-sed "s/$/suffix/" input.txt
+> echo '🍎\n🍊' > foo.txt && cat foo.txt
+🍎
+🍊
+
+> sed 's/$/🍌/' foo.txt
+🍎🍌
+🍊🍌
 
 # in-place
-sed -i "s/$/suffix/" file.txt
-```
-
-# How to show 8 digits such as yyyymmdd
-```shell
-sed -e 's/.*\([[:digit:]]\{8\}\).*/\1/g' input.txt
-```
-
-# How to show double-slash comments
-```shell
-sed -e "s/.*\/\/[[:blank:]]*\([^[:blank:]]*\)[[:blank:]]*/\1/g" input.txt
+# NB: BSD sed requires '' after -i, while GNU sed does not.
+> sed -i '' 's/$/🍌/' foo.txt && cat foo.txt
+🍎🍌
+🍊🍌
 ```
 
 # References
