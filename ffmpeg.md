@@ -28,7 +28,7 @@ ffmpeg -i input.mp4 -vf fps=1 output%02d.jpg
 1. Open MP4 in QuickTime Player
 2. Menu bar > Window > Show Movie Inspector
 
-## How to change the frame rate (fps) of MP4
+### How to change the frame rate (FPS) of MP4
 ```
 # Example of changing fps to 30
 ffmpeg -i input.mp4 -filter:v fps=30 output.mp4
