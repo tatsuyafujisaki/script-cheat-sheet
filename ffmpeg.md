@@ -6,6 +6,11 @@
 ffmpeg -i input.mp4 -c:v copy -an output.mp4
 ```
 
+## How to convert WebM to MP4
+```shell
+ffmpeg -i input.webm output.mp4
+```
+
 ## How to rotate MP4 by 90 degrees clockwise
 ```shell
 # -vf stands for video filter.
