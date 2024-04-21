@@ -1,9 +1,8 @@
 # MP4
 ## How to remove audio from MP4
 ```shell
-# -c:v stands for code:video.
-# -an is to block audio.
-ffmpeg -i input.mp4 -c:v copy -an output.mp4
+# -an is to remove audio.
+ffmpeg -i input.mp4 -an output.mp4
 ```
 
 ## How to convert WebM to MP4
