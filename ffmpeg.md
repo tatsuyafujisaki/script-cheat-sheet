@@ -27,14 +27,25 @@ ffmpeg -i input.mov -ss 00:00:05 -vframes 1 output.jpg
 ffmpeg -i input.mp4 -vf fps=1 output%02d.jpg
 ```
 
-## Frame rate (FPS)
-### How to know the frame rate (FPS) of MP4
+## Bit rate
+### How to find the bit rate of MP4
 1. Open MP4 in QuickTime Player
-2. Menu bar > Window > Show Movie Inspector
+2. Menu bar > Window > Show Movie Inspector > Data Rate
+
+### How to change the bit rate of MP4
+```shell
+# Example of changing the birate to 1 megabit per second [Mbit/s]
+ffmpeg -i input.mp4 -b:v 1m output.mp4
+```
+
+## Frame rate (FPS)
+### How to find the frame rate (FPS) of MP4
+1. Open MP4 in QuickTime Player
+2. Menu bar > Window > Show Movie Inspector > Encoded FPS
 
 ### How to change the frame rate (FPS) of MP4
-```
-# Example of changing fps to 30
+```shell
+# Example of changing FPS to 30
 ffmpeg -i input.mp4 -filter:v fps=30 output.mp4
 ```
 
