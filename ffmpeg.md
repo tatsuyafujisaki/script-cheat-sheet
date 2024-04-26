@@ -34,7 +34,7 @@ ffmpeg -i input.mp4 -vf fps=1 output%02d.jpg
 
 ### How to change the bit rate of MP4
 ```shell
-# Example of changing the birate to 1 megabit per second [Mbit/s]
+# Example of changing the birate to 1 Mbit/s (megabit per second)
 ffmpeg -i input.mp4 -b:v 1m output.mp4
 ```
 
