@@ -1,30 +1,44 @@
-# MP4
-## How to remove audio from MP4
+# MP4 and WebM
+## How to remove audio from MP4 or WebM
 ```shell
 # -an is to remove audio.
 ffmpeg -i input.mp4 -an output.mp4
 ```
+```shell
+ffmpeg -i input.webm -an output.webm
+```
 
-## How to convert WebM to MP4
+## How to convert WebM to MP4 or vice versa
 ```shell
 ffmpeg -i input.webm output.mp4
 ```
-
-## How to rotate MP4 by 90 degrees clockwise
+```shell
+ffmpeg -i input.mp4 output.webm
+```
+## How to rotate MP4 or WebM by 90 degrees clockwise
 ```shell
 # -vf stands for video filter.
 ffmpeg -i input.mp4 -vf "transpose=1" output.mp4
 ```
-
-## How to create JPG from the specific second of MP4
 ```shell
-# creates JPG from the 5th second of MP4.
-ffmpeg -i input.mov -ss 00:00:05 -vframes 1 output.jpg
+ffmpeg -i input.webm -vf "transpose=1" output.webm
 ```
 
-## How to create JPGs from each second of MP4
+## How to create JPG from the specific second of MP4 or WebM
+```shell
+# creates JPG from the 5th second of MP4.
+ffmpeg -i input.mp4 -ss 00:00:05 -vframes 1 output.jpg
+```
+```shell
+ffmpeg -i input.webm -ss 00:00:05 -vframes 1 output.jpg
+```
+
+## How to create JPGs from each second of MP4 or WebM
 ```shell
 ffmpeg -i input.mp4 -vf fps=1 output%02d.jpg
+```
+```shell
+ffmpeg -i input.webm -vf fps=1 output%02d.jpg
 ```
 
 ## Bit rate
@@ -39,14 +53,25 @@ ffmpeg -i input.mp4 -b:v 1m output.mp4
 ```
 
 ## Frame rate (FPS)
-### How to find the frame rate (FPS) of MP4
-1. Open MP4 in QuickTime Player
+### How to find the frame rate (FPS) of MP4 or WebM
+### Option 1
+1. Open MP4 or WebM in QuickTime Player
 2. Menu bar > Window > Show Movie Inspector > Encoded FPS
+### Option 2
+```shell
+ffmpeg -i input.mp4
+```
+```shell
+ffmpeg -i input.webm
+```
 
-### How to change the frame rate (FPS) of MP4
+### How to change the frame rate (FPS) of MP4 or WebM
 ```shell
 # Example of changing FPS to 30
 ffmpeg -i input.mp4 -filter:v fps=30 output.mp4
+```
+```shell
+ffmpeg -i input.webm -filter:v fps=30 output.webm
 ```
 
 # M4A
