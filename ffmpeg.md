@@ -42,11 +42,11 @@ ffmpeg -i input.webm -vf fps=1 output%02d.jpg
 ```
 
 ## Bit rate
-### How to find the bit rate of MP4
+### How to find the bit rate of MP4 or WebM
 1. Open MP4 in QuickTime Player
 2. Menu bar > Window > Show Movie Inspector > Data Rate
 
-### How to change the bit rate of MP4
+### How to change the bit rate of MP4 or WebM
 ```shell
 # Example of changing the birate to 1 Mbit/s (megabit per second)
 ffmpeg -i input.mp4 -b:v 1m output.mp4
