@@ -22,7 +22,7 @@ curl -s -o /dev/null -w "%{http_code}\n" https://example.com
 ```bash
 cd <dir> && { curl -O https://example.com/sample.txt; cd -; }
 
-# Alternatively using a subshell
+# Alternatively using a subshell. (A parenthesized command runs in a subshell.)
 (cd <dir> && curl -O https://example.com/sample.txt )
 ```
 
