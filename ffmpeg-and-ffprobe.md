@@ -1,6 +1,13 @@
 # Note
+## `-filter:v` and `-vf`
 > `-vf`<br>
 > This is an alias for `-filter:v`
+
+https://ffmpeg.org/ffmpeg.html#toc-Video-Options
+
+## `-frames:v` and `-vframes`
+> `-vframes`<br>
+> This is an obsolete alias for `-frames:v`, which you should use instead.
 
 https://ffmpeg.org/ffmpeg.html#toc-Video-Options
 
@@ -33,10 +40,10 @@ ffmpeg -i input.webm -vf "transpose=1" output.webm
 ## How to create JPG from the specific second of MP4 or WebM
 ```shell
 # creates JPG from the 5th second of MP4.
-ffmpeg -i input.mp4 -ss 00:00:05 -vframes 1 output.jpg
+ffmpeg -i input.mp4 -ss 00:00:05 -frames:v 1 output.jpg
 ```
 ```shell
-ffmpeg -i input.webm -ss 00:00:05 -vframes 1 output.jpg
+ffmpeg -i input.webm -ss 00:00:05 -frames:v 1 output.jpg
 ```
 
 ## How to create JPGs from each second of MP4 or WebM
