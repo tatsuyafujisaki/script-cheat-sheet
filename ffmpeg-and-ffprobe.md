@@ -12,6 +12,14 @@ https://ffmpeg.org/ffmpeg.html#toc-Video-Options
 https://ffmpeg.org/ffmpeg.html#toc-Video-Options
 
 # MP4 and WebM
+## How to optimize (downsize) MP4 or WebM
+```shell
+ffmpeg -i input.mp4 output.mp4
+```
+```shell
+ffmpeg -i input.webm output.webm
+```
+
 ## How to remove audio from MP4 or WebM
 ```shell
 # -an is to remove audio.
