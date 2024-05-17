@@ -1,3 +1,9 @@
+# Note
+> `-vf`<br>
+> This is an alias for `-filter:v`
+
+https://ffmpeg.org/ffmpeg.html#toc-Video-Options
+
 # MP4 and WebM
 ## How to remove audio from MP4 or WebM
 ```shell
@@ -69,10 +75,10 @@ ffprobe input.webm
 ### How to change the frame rate (FPS) of MP4 or WebM
 ```shell
 # Example of changing FPS to 30
-ffmpeg -i input.mp4 -filter:v fps=30 output.mp4
+ffmpeg -i input.mp4 -vf fps=30 output.mp4
 ```
 ```shell
-ffmpeg -i input.webm -filter:v fps=30 output.webm
+ffmpeg -i input.webm -vf fps=30 output.webm
 ```
 
 # M4A
