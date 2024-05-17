@@ -58,7 +58,7 @@ ffmpeg -i input.mp4 -b:v 1m output.mp4
 1. Open MP4 or WebM in QuickTime Player
 2. Menu bar > Window > Show Movie Inspector > Encoded FPS
 ### Option 2
-Use `ffprobe` and look for `fps` in the output.
+Use `ffprobe` and find "fps" in the output.
 ```shell
 ffprobe input.mp4
 ```
