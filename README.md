@@ -5,6 +5,21 @@
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 
 # Bash/Zsh
+## How to find the absolute script path in Bash or Zsh
+```shell
+echo $(realpath $0)
+```
+
+## How to find the absolute script directory in Bash or Zsh
+```shell
+echo $(cd ${0%/*} && pwd -P)
+```
+
+## How to find the script's filename extension in Bash or Zsh
+```shell
+echo ${0##*.}
+```
+
 ## Sample function that requires two arguments
 ```
 my_function() {
@@ -198,22 +213,6 @@ stat -c %y ${FILE1} | awk '{print $1}' | tr -d '-'
 
 #Extract file from targz
 tar fvxz foo.tar.gz -C /path/to/destination file_in_targz > /dev/null
-```
-
-# Path cheat sheet
-```shell
-s=/path/to/foo.txt
-
-echo 'directories (#1) :' ${s%/*}
-echo 'directories (#2) :' $(dirname ${s})
-echo 'filename without directories (#1) :' ${s##*/}
-echo 'filename without directories (#2) :' $(basename ${s})
-echo 'filename without extension :' $(basename ${s} .${s##*.})
-echo 'fullpath without extension :' ${s%.*}
-echo 'extension: ' ${s##*.}
-echo 'fullpath: ' $(readlink -f ./../relative/path/to/foo.txt)
-echo 'script dir as relative path: ' ${0%/*}
-echo 'script dir as absolute path: ' $(cd ${0%/*} && pwd && cd - > /dev/null)
 ```
 
 # Array
