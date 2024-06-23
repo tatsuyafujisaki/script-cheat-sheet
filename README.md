@@ -211,9 +211,3 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 1,aa,xx
 2,bb,yy
 ````
-
-# Directory
-[directory.md](shell/markdown/directory.md)
-
-# Regex
-[regex.md](shell/markdown/regex.md)
