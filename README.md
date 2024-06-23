@@ -45,71 +45,81 @@ First argument: foo
 Second argument: bar
 ```
 
-## How to restart the shell
+## How to restart the shell in Bash or Zsh
 ```shell
 exec -l $SHELL
 ```
 
-## How to print date and time in yyyy-mm-dd_hh-mm-ss
+## How to print date and time in yyyy-mm-dd_hh-mm-ss in Bash or Zsh
 ```shell
 date +%Y-%m-%d_%H-%M-%S
 ```
 
-## How to remove the first or the last character from a variable
+## How to remove the first or the last character from a variable in Bash or Zsh
 ```shell
-s=abc
-echo ${s#?} # bc
-echo ${s%?} # ab
+s=🍎🍏🍊
+echo ${s#?} # 🍏🍊
+echo ${s%?} # 🍎🍏
 ```
 
-## How to create a directory if it does not exist
+## How to create a directory if it does not exist in Bash or Zsh
 ```shell
-directory=~/foo
+directory=~/Desktop/foo
 [ -e ${directory} ] || mkdir -p ${directory}
 ```
 
-## How to redirect stdout and/or stderr
+## How to redirect stdout and/or stderr in Bash or Zsh
 ```shell
 echo hello > /dev/null # redirects stdout only.
 echo hello 2> /dev/null # redirects stderr only.
 echo hello &> /dev/null # redirects both stdout and stderr.
 ```
 
-## How to replace or delete substring(s)
+## How to replace or delete substring(s) in Bash or Zsh
 ```shell
-S=old_and_old
-echo ${S/old} # deletes the first "old" and shows "_and_old".
-echo ${S//old} # deletes all the "old" and shows "_and_".
-echo ${S/old/new} # replace the first "old" and shows "new_and_old".
-echo ${S//old/new} # replace all the "old" and shows "new_and_new".
+S=🍎_🍎
+echo ${S/🍎} # _🍎
+echo ${S//🍎} # _
+echo ${S/🍎/🍊} # 🍊_🍎
+echo ${S//🍎/🍊} # 🍊_🍊
 ```
 
-## How to create a file with content
+## How to create a file with content in Bash or Zsh
 ```shell
 cat << EOF > sample.txt
-aa
-bb
-cc
+🍎
+🍏
+🍊
 EOF
 ```
 
-## How to resolve a relative path to the absolute path
+## How to detect the encoding of a file in Bash or Zsh
 ```shell
-realpath <file-or-folder>
+file --brief input.txt
 ```
 
-## How to detect the encoding of a file on both Mac/Linux
+# How to copy a folder into another folder
 ```shell
-file -b sample.txt
+rsync --archive src dst
+```
+
+# How to convert multiple lines to a single line in Bash or Zsh
+```shell
+$ cat input.txt
+🍎
+🍏
+🍊
+
+$ paste -s -d, input.txt
+🍎,🍏,🍊
 ```
 
 # Zsh
-## How to get a basename and an extension
+## How to get the basename and the extension of a file
 ```shell
 s=sample.txt
-
-echo Basename: $s:r # sample
-echo Extension: $s:e # txt
+echo $s:r # sample
+echo $s:e # txt
 ```
 
 ## How to keep a background job running even after Zsh is closed
@@ -117,28 +127,6 @@ echo Extension: $s:e # txt
 <command> &|
 ```
 https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html
-
-# How to copy a folder to another folder as a subfolder
-```shell
-rsync -a src dst # Note that it's not "/src" but "src"
-```
-
-# How to copy only the content of a folder to another folder
-```shell
-# Note "src/", not "src"
-rsync -a src dst
-```
-
-# How to convert multiple lines to a single line
-```shell
-$ cat input.txt
-aa
-bb
-cc
-
-$ paste -s -d, input.txt
-aa,bb,cc
-```
 
 # How to merge files horizontally without using a matching column
 ```shell
