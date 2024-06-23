@@ -195,9 +195,6 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 2,bb,yy
 ````
 
-# Array
-[array.md](shell/markdown/array.md)
-
 # Directory
 [directory.md](shell/markdown/directory.md)
 
