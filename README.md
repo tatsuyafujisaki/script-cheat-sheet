@@ -21,7 +21,7 @@ echo ${0##*.}
 ```
 
 ## Sample function that requires two arguments
-```
+```shell
 my_function() {
   if [ $# -lt 2 ]
   then
