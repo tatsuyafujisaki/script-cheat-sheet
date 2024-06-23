@@ -33,8 +33,6 @@ my_function() {
   echo "Second argument: $2"
 }
 ```
-
-Usage
 ```shell
 $ my_function
 Usage: my_function <first-argument> <second-argument>
@@ -50,11 +48,6 @@ Second argument: bar
 ## How to restart the shell
 ```shell
 exec -l $SHELL
-```
-
-## How to show the definition of an alias
-```shell
-alias <alias-name>
 ```
 
 ## How to print date and time in yyyy-mm-dd_hh-mm-ss
