@@ -20,31 +20,6 @@ echo $(cd ${0%/*} && pwd -P)
 echo ${0##*.}
 ```
 
-## Sample function that requires two arguments
-```shell
-my_function() {
-  if [ $# -lt 2 ]
-  then
-    echo "Usage: $funcstack[1] <first-argument> <second-argument>"
-    return
-  fi
-
-  echo "First argument: $1"
-  echo "Second argument: $2"
-}
-```
-```shell
-$ my_function
-Usage: my_function <first-argument> <second-argument>
-
-$ my_function foo
-Usage: my_function <first-argument> <second-argument>
-
-$ my_function foo bar
-First argument: foo
-Second argument: bar
-```
-
 ## How to restart the shell in Bash or Zsh
 ```shell
 exec -l $SHELL
@@ -114,7 +89,52 @@ $ paste -s -d, input.txt
 🍎,🍏,🍊
 ```
 
+
+# How to merge files horizontally without using a matching column in Bash or Zsh
+```shell
+$ cat left.txt
+🍎
+🍏
+
+$ cat right.txt
+🍊
+🍋
+
+$ paste -d, left.txt right.txt
+🍎,🍊
+🍏,🍋
+
+$ paste -d'\0' left.txt right.txt
+🍎🍊
+🍏🍋
+```
+
 # Zsh
+## Sample function that requires two arguments
+```shell
+my_function() {
+  if [ $# -lt 2 ]
+  then
+    echo "Usage: $funcstack[1] <first-argument> <second-argument>"
+    return
+  fi
+
+  echo "First argument: $1"
+  echo "Second argument: $2"
+}
+```
+```shell
+$ my_function
+Usage: my_function <first-argument> <second-argument>
+
+$ my_function foo
+Usage: my_function <first-argument> <second-argument>
+
+$ my_function foo bar
+First argument: foo
+Second argument: bar
+```
+
 ## How to get the basename and the extension of a file
 ```shell
 s=sample.txt
@@ -127,25 +147,6 @@ echo $s:e # txt
 <command> &|
 ```
 https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html
-
-# How to merge files horizontally without using a matching column
-```shell
-$ cat left.txt
-aa
-bb
-
-$ cat right.txt
-xx
-yy
-
-$ paste -d, left.txt right.txt
-aa,xx
-bb,yy
-
-$ paste -d'\0' left.txt right.txt
-aaxx
-bbyy
-```
 
 # How to concatenate files horizontally excluding unmatched rows without using a matching column
 * `-t` is a separator
@@ -166,35 +167,6 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 1,aa,xx
 2,bb,yy
 ````
-
-# Misc cheet sheet
-```shell
-#kill found processes
-ps aux | grep "my_process_name" | awk '{ print $2 }' | xargs kill
-
-#check if command exists
-command -v foo > /dev/null 2>&1 || echo 'command not found.'
-
-#one liner
-true && { echo 'true1'; echo 'true2'; } || { echo 'false1'; echo 'false2'; }
-false && { echo 'true1'; echo 'true2'; } || { echo 'false1'; echo 'false2'; }
-
-# tee both stdout and stderr
-./foo.sh 2>&1 | tee -a foo.log
-
-# set JAVA_HOME if not set
-[ -z ${JAVA_HOME} ] && export JAVA_HOME=/path/to/javahome
-
-#use DEFAULT_JAVA_HOME if JAVA_HOME not set
-DEFAULT_JAVA_HOME=/path/to/javahome
-${JAVA_HOME=${DEFAULT_JAVA_HOME}} yourclassfile
-
-#get timstamp in yyyyymmdd
-stat -c %y ${FILE1} | awk '{print $1}' | tr -d '-'
-
-#Extract file from targz
-tar fvxz foo.tar.gz -C /path/to/destination file_in_targz > /dev/null
-```
 
 # Array
 [array.md](shell/markdown/array.md)
