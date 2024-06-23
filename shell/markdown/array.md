@@ -1,13 +1,4 @@
-## How to define an array
-```shell
-xs=(aa bb cc)
-```
-```shell
-xs=(aa
-bb
-cc
-)
-```
+
 
 ## How to iterate through an array
 ```shell
