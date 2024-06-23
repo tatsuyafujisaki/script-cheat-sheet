@@ -32,6 +32,23 @@ do
   echo ${x}
 done
 ```
+
+# How to traverse all the direct subdirectories in Bash or Zsh
+```shell
+for dir in */
+do
+  echo $dir
+done
+```
+
+# How to traverse all the direct and indirect subdirectories in Bash or Zsh
+```shell
+for dir in **/
+do
+  echo $dir
+done
+```
+
 ## How to find the absolute script path in Bash or Zsh
 ```shell
 echo $(realpath $0)
