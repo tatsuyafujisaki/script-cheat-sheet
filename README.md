@@ -109,7 +109,19 @@ $ paste -d'\0' left.txt right.txt
 🍏🍋
 ```
 
-# Zsh
+# Zsh only (not work in Bash)
+## How to define an array
+```shell
+xs=(🍎 🍏 🍊)
+```
+```shell
+xs=(
+🍎
+🍏
+🍊
+)
+```
+
 ## Sample function that requires two arguments
 ```shell
 my_function() {
