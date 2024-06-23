@@ -5,7 +5,7 @@
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 
 # Bash/Zsh
-# How to iterate over an array in Bash or Zsh
+# How to define and iterate over an array in Bash or Zsh
 ```shell
 for x in 🍎 🍏 🍊
 do
@@ -14,12 +14,24 @@ done
 ```
 ```shell
 xs=(🍎 🍏 🍊)
+
 for x in "${xs[@]}"
 do
   echo ${x}
 done
 ```
+```shell
+xs=(
+🍎
+🍏
+🍊
+)
 
+for x in "${xs[@]}"
+do
+  echo ${x}
+done
+```
 ## How to find the absolute script path in Bash or Zsh
 ```shell
 echo $(realpath $0)
@@ -125,18 +137,6 @@ $ paste -d'\0' left.txt right.txt
 ```
 
 # Zsh only (not work in Bash)
-## How to define an array
-```shell
-xs=(🍎 🍏 🍊)
-```
-```shell
-xs=(
-🍎
-🍏
-🍊
-)
-```
-
 ## Sample function that requires two arguments
 ```shell
 my_function() {
