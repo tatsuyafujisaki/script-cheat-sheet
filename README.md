@@ -5,6 +5,21 @@
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
 
 # Bash/Zsh
+# How to iterate over an array in Bash or Zsh
+```shell
+for x in 🍎 🍏 🍊
+do
+  echo ${x}
+done
+```
+```shell
+xs=(🍎 🍏 🍊)
+for x in "${xs[@]}"
+do
+  echo ${x}
+done
+```
+
 ## How to find the absolute script path in Bash or Zsh
 ```shell
 echo $(realpath $0)
