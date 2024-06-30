@@ -89,9 +89,9 @@ directory=~/Desktop/foo
 
 ## How to redirect stdout and/or stderr in Bash or Zsh
 ```shell
-echo hello > /dev/null # redirects stdout only.
-echo hello 2> /dev/null # redirects stderr only.
-echo hello &> /dev/null # redirects both stdout and stderr.
+echo 🍎 > /dev/null # redirects stdout only.
+echo 🍎 2> /dev/null # redirects stderr only.
+echo 🍎 &> /dev/null # redirects both stdout and stderr.
 ```
 
 ## How to replace or delete substring(s) in Bash or Zsh
