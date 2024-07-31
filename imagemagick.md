@@ -3,9 +3,9 @@
 magick input.png -resize 320x output.png
 ```
 
-# How to add a red border of 8px width to an image
+# How to add a red border of 4px width to an image
 ```shell
-magick input.png -bordercolor "#ff000000" -border 8 output.png
+magick input.png -bordercolor "#ff000000" -border 4 output.png
 ```
 
 # How to convert transparency to white
