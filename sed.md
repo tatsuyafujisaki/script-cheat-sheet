@@ -5,17 +5,17 @@
 🍊
 🍎
 
-> sed 's/🍎/🍌/' foo.txt
-🍌
+> sed 's/🍎/🍋/' foo.txt
+🍋
 🍊
-🍌
+🍋
 
 # in-place
 # NB: BSD sed requires '' after -i, while GNU sed does not.
-> sed -i '' 's/🍎/🍌/' foo.txt && cat foo.txt
-🍌
+> sed -i '' 's/🍎/🍋/' foo.txt && cat foo.txt
+🍋
 🍊
-🍌
+🍋
 ```
 
 # How to delete blank lines, including whitespace-only lines, in a file
@@ -83,13 +83,13 @@
 🍎
 🍊
 
-> sed 's/^/🍌/' foo.txt
-🍌🍎
-🍌🍊
+> sed 's/^/🍋/' foo.txt
+🍋🍎
+🍋🍊
 
 # in-place
 # NB: BSD sed requires '' after -i, while GNU sed does not.
-sed -i '' 's/^/🍌/' foo.txt && cat foo.txt
+sed -i '' 's/^/🍋/' foo.txt && cat foo.txt
 ```
 
 # How to suffix lines in a file
@@ -98,15 +98,15 @@ sed -i '' 's/^/🍌/' foo.txt && cat foo.txt
 🍎
 🍊
 
-> sed 's/$/🍌/' foo.txt
-🍎🍌
-🍊🍌
+> sed 's/$/🍋/' foo.txt
+🍎🍋
+🍊🍋
 
 # in-place
 # NB: BSD sed requires '' after -i, while GNU sed does not.
-> sed -i '' 's/$/🍌/' foo.txt && cat foo.txt
-🍎🍌
-🍊🍌
+> sed -i '' 's/$/🍋/' foo.txt && cat foo.txt
+🍎🍋
+🍊🍋
 ```
 
 # References
