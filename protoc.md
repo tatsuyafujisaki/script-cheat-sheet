@@ -20,8 +20,22 @@ rm lib/src/generated/*
 ```shell
 # With the grpc option
 protoc --proto_path=protos --dart_out=grpc:lib/src/generated route_guide.proto
+
+ls -1 lib/src/generated
+# Output:
+# route_guide.pb.dart
+# route_guide.pbenum.dart
+# route_guide.pbgrpc.dart
+# route_guide.pbjson.dart
 ```
 ```shell
 # Without the grpc option
 protoc --proto_path=protos --dart_out=lib/src/generated route_guide.proto
+
+ls -1 lib/src/generated
+# Output:
+# route_guide.pb.dart
+# route_guide.pbenum.dart
+# route_guide.pbjson.dart
+# route_guide.pbserver.dart
 ```
