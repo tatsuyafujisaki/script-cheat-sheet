@@ -151,6 +151,3 @@ $ paste -d'\0' left.txt right.txt
 🍎🍊
 🍏🍋
 ```
-
-# Markdown
-[zsh-only-and-not-bash](zsh-only-and-not-bash.md)
