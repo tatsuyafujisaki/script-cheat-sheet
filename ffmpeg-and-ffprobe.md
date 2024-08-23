@@ -12,54 +12,37 @@ https://ffmpeg.org/ffmpeg.html#toc-Video-Options
 https://ffmpeg.org/ffmpeg.html#toc-Video-Options
 
 # MP4 and WebM
-## How to optimize (downsize) MP4 or WebM
+## How to optimize (downsize) `.mp4` or `.webm`
 ```shell
-ffmpeg -i input.mp4 output.mp4
-```
-```shell
-ffmpeg -i input.webm output.webm
+ffmpeg -y -i input.mp4 output.mp4
 ```
 
-## How to remove audio from MP4 or WebM
+## How to remove audio from `.mp4` or `.webm`
 ```shell
 # -an is to remove audio.
-ffmpeg -i input.mp4 -an output.mp4
-```
-```shell
-ffmpeg -i input.webm -an output.webm
+ffmpeg -y -i input.mp4 -an output.mp4
 ```
 
-## How to convert WebM to MP4 or vice versa
+## How to convert `.mp4` to `.webm` or vice versa
 ```shell
-ffmpeg -i input.webm output.mp4
+ffmpeg -y -i input.mp4 output.webm
 ```
-```shell
-ffmpeg -i input.mp4 output.webm
-```
-## How to rotate MP4 or WebM by 90 degrees clockwise
+
+## How to rotate `.mp4` to `.webm` by 90 degrees clockwise
 ```shell
 # -vf stands for video filter.
-ffmpeg -i input.mp4 -vf "transpose=1" output.mp4
-```
-```shell
-ffmpeg -i input.webm -vf "transpose=1" output.webm
+ffmpeg -y -i input.mp4 -vf "transpose=1" output.mp4
 ```
 
-## How to create JPG from the specific second of MP4 or WebM
+## How to create `.jpg` from the specific second of `.mp4` to `.webm`
 ```shell
 # creates JPG from the 5th second of MP4.
-ffmpeg -i input.mp4 -ss 00:00:05 -frames:v 1 output.jpg
-```
-```shell
-ffmpeg -i input.webm -ss 00:00:05 -frames:v 1 output.jpg
+ffmpeg -y -i input.mp4 -ss 00:00:05 -frames:v 1 output.jpg
 ```
 
-## How to create JPGs from each second of MP4 or WebM
+## How to create `.jpg`s from each second of `.mp4` to `.webm`
 ```shell
-ffmpeg -i input.mp4 -vf fps=1 output%02d.jpg
-```
-```shell
-ffmpeg -i input.webm -vf fps=1 output%02d.jpg
+ffmpeg -y -i input.mp4 -vf fps=1 output%02d.jpg
 ```
 
 ## Bit rate
