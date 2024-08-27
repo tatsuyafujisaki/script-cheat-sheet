@@ -2,7 +2,7 @@
 ```shell
 protoc --proto_path=<proto-files-directory> \
        --dart_out=grpc:<output-directory> \
-       <path-to-proto-file>
+       <proto-file>
 ```
 
 # Example of what difference the [grpc option](https://pub.dev/documentation/protoc_plugin/latest/#generating-grpc-headers) to [protoc](https://grpc.io/docs/protoc-installation/) make in the generated Dart files
