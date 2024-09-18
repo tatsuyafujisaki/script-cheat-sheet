@@ -145,7 +145,7 @@ $ paste -d'\0' left.txt right.txt
 🍏🍋
 ```
 
-# How to list the names of files that contain a specific content
+# How to list the names of files that contain a specific content in Bash or Zsh
 ```shell
 grep --ignore-case --recursive -I "🍎" . | cut -d : -f 1
 ```
