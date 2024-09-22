@@ -26,7 +26,7 @@ do
 done
 ```
 
-# How to traverse all the direct subdirectories in Bash or Zsh
+# How to traverse direct subdirectories in Bash or Zsh
 ```shell
 for dir in */
 do
@@ -34,11 +34,22 @@ do
 done
 ```
 
-# How to traverse all the direct and indirect subdirectories in Bash or Zsh
+# How to traverse direct and indirect subdirectories in Bash or Zsh
 ```shell
 for dir in **/
 do
   echo $dir
+done
+```
+
+# How to traverse only files, not directories, in the current directory in Bash or Zsh
+```shell
+for file in *
+do
+  if [ -f $file ]
+  then
+    echo $file
+  fi
 done
 ```
 
