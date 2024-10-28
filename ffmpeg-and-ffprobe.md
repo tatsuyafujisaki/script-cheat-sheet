@@ -45,6 +45,11 @@ ffmpeg -i input.mp4 -ss 00:00:05 -frames:v 1 output.jpg
 ffmpeg -i input.mp4 -vf fps=1 output%02d.jpg
 ```
 
+## How to trim `.mp4` to 5 minutes
+```shell
+ffmpeg -i input.mp4 -t 300 output.mp4
+```
+
 ## Bit rate
 ### How to find the bit rate of MP4 or WebM
 1. Open MP4 in QuickTime Player
