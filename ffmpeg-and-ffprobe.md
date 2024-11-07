@@ -55,6 +55,9 @@ ffmpeg -y -i input.mp4 -vf fps=1 output%02d.jpg
 ```shell
 ffmpeg -y -i input.mp4 -t 300 output.mp4
 ```
+```shell
+ffmpeg -y -ss 0:00:00 -to 0:05:00 -i input.mp4 output.mp4
+```
 
 ## Bit rate
 ### How to find the bit rate of MP4 or WebM
