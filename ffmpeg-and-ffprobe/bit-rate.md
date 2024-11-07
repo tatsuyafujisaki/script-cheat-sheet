@@ -1,7 +1,7 @@
 # How to find the bit rate of MP4
 ## Option 1
 ```shell
-ffprobe -loglevel error -select_streams v:0 -show_entries stream=bit_rate -of default=noprint_wrappers=1 input.mp4
+ffprobe -loglevel error -select_streams v:0 -show_entries stream=bit_rate -of default=noprint_wrappers=1:nokey=1 input.mp4
 ```
 ## Option 2
 Run the following command and find `bitrate:`.
