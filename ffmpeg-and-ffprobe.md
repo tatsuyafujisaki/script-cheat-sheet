@@ -18,7 +18,7 @@ https://ffmpeg.org/ffmpeg.html#toc-Video-Options
 https://ffmpeg.org/ffmpeg.html#toc-Video-Options
 
 # MP4 and WebM
-## How to optimize (downsize) `.mp4` or `.webm`
+## How to downsize `.mp4` or `.webm` by optimizing the bit rate
 ```shell
 ffmpeg -y -i input.mp4 output.mp4
 ```
