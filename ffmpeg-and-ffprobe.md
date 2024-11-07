@@ -61,6 +61,11 @@ ffmpeg -y -ss 00:00:00 -to 00:05:00 -i input.mp4 output.mp4
 
 ## Bit rate
 ### How to find the bit rate of MP4 or WebM
+#### Option 1
+```shell
+ffprobe -loglevel error -select_streams v:0 -show_entries stream=bit_rate -of default=noprint_wrappers=1 input.mp4
+```
+#### Option 2
 1. Open MP4 in QuickTime Player
 2. Menu bar > Window > Show Movie Inspector > Data Rate
 
@@ -73,25 +78,12 @@ ffmpeg -y -i input.mp4 -b:v 1m output.mp4
 ## Frame rate (FPS)
 ### How to find the frame rate (FPS) of MP4 or WebM
 #### Option 1
+```shell
+ffprobe -loglevel error -select_streams v:0 -show_entries stream=r_frame_rate -of default=noprint_wrappers=1:nokey=1 input.mp4
+```
+#### Option 2
 1. Open MP4 or WebM in QuickTime Player
 2. Menu bar > Window > Show Movie Inspector > Encoded FPS
-#### Option 2
-Run the following command and find "\<number> fps" in the output.
-```shell
-ffprobe input.mp4
-```
-```shell
-ffprobe input.webm
-```
-
-### How to determine if MP4 or WebM has a variable frame rate (VFR)
-Run the following command and find "VFR:\<number>" in the output.
-```shell
-ffmpeg -i input.mp4 -vf vfrdet -an -f null -
-```
-```shell
-ffmpeg -i input.webm -vf vfrdet -an -f null -
-```
 
 ### How to change the frame rate (FPS) of MP4 or WebM
 ```shell
