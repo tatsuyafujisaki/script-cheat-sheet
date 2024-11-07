@@ -56,7 +56,7 @@ ffmpeg -y -i input.mp4 -vf fps=1 output%02d.jpg
 ffmpeg -y -i input.mp4 -t 300 output.mp4
 ```
 ```shell
-ffmpeg -y -ss 0:00:00 -to 0:05:00 -i input.mp4 output.mp4
+ffmpeg -y -ss 00:00:00 -to 00:05:00 -i input.mp4 output.mp4
 ```
 
 ## Bit rate
