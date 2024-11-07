@@ -14,6 +14,6 @@ ffprobe input.mp4
 
 # How to change the frame rate (FPS) of MP4 or WebM
 ```shell
-# Example of changing FPS to 30
+# Changes the frame rate (FPS) to 30.
 ffmpeg -y -i input.mp4 -vf fps=30 output.mp4
 ```

@@ -20,6 +20,6 @@ ffprobe -loglevel error -show_entries format=bit_rate -of default=noprint_wrappe
 
 # How to change the bit rate of MP4 or WebM
 ```shell
-# Example of changing the birate to 1 Mbit/s (megabit per second)
+# Changes the birate to 1 Mbit/s (megabit per second)
 ffmpeg -y -i input.mp4 -b:v 1m output.mp4
 ```
