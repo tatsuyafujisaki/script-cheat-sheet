@@ -17,3 +17,4 @@ ffprobe input.mp4
 # Changes the frame rate (FPS) to 30.
 ffmpeg -y -i input.mp4 -vf fps=30 output.mp4
 ```
+https://trac.ffmpeg.org/wiki/ChangingFrameRate
