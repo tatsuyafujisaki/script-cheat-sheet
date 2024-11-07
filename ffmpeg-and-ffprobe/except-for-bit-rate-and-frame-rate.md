@@ -59,51 +59,11 @@ ffmpeg -y -i input.mp4 -t 300 output.mp4
 ffmpeg -y -ss 00:00:00 -to 00:05:00 -i input.mp4 output.mp4
 ```
 
-## Bit rate
-### How to find the bit rate of MP4
-#### Option 1
-```shell
-ffprobe -loglevel error -select_streams v:0 -show_entries stream=bit_rate -of default=noprint_wrappers=1 input.mp4
-```
-#### Option 2
-Run the following command and find `bitrate:`.
-```shell
-ffprobe input.mp4
-```
-#### Option 3
-1. Open MP4 in QuickTime Player
-2. Menu bar > Window > Show Movie Inspector > Data Rate
-
-### How to find the bit rate of WebM
-```shell
-ffprobe -loglevel error -show_entries format=bit_rate -of default=noprint_wrappers=1:nokey=1 input.webm
-```
 
 ### How to change the bit rate of MP4 or WebM
 ```shell
 # Example of changing the birate to 1 Mbit/s (megabit per second)
 ffmpeg -y -i input.mp4 -b:v 1m output.mp4
-```
-
-## Frame rate (FPS)
-### How to find the frame rate (FPS) of MP4 or WebM
-#### Option 1
-```shell
-ffprobe -loglevel error -select_streams v:0 -show_entries stream=r_frame_rate -of default=noprint_wrappers=1:nokey=1 input.mp4
-```
-#### Option 2
-Run the following command and find `fps`.
-```shell
-ffprobe input.mp4
-```
-#### Option 3
-1. Open MP4 or WebM in QuickTime Player
-2. Menu bar > Window > Show Movie Inspector > Encoded FPS
-
-### How to change the frame rate (FPS) of MP4 or WebM
-```shell
-# Example of changing FPS to 30
-ffmpeg -y -i input.mp4 -vf fps=30 output.mp4
 ```
 
 # M4A
