@@ -59,13 +59,6 @@ ffmpeg -y -i input.mp4 -t 300 output.mp4
 ffmpeg -y -ss 00:00:00 -to 00:05:00 -i input.mp4 output.mp4
 ```
 
-
-### How to change the bit rate of MP4 or WebM
-```shell
-# Example of changing the birate to 1 Mbit/s (megabit per second)
-ffmpeg -y -i input.mp4 -b:v 1m output.mp4
-```
-
 # M4A
 ## How to change the bitrate of M4A
 ```shell
