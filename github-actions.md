@@ -1,5 +1,10 @@
 # How to bulk-delete the history of GitHub Actions workflow runs
+## Option 1
+```shell
+gh run list --json databaseId -q '.[].databaseId' | xargs gh run delete
+```
 
+## Option 2
 ```shell
 owner="tatsuyafujisaki"
 repo="my-repository"
