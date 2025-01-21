@@ -1,5 +1,5 @@
 # How to compile a `.proto` file into Dart files
-1.  Install [protoc_plugin](https://pub.dev/packages/protoc_plugin), which includes the `protoc-gen-dart` command.
+1. Install [protoc_plugin](https://pub.dev/packages/protoc_plugin), which includes the `protoc-gen-dart` command.
     ```shell
     dart pub global activate protoc_plugin
     export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -7,7 +7,7 @@
     The same or similar instruction is found below.
     - https://grpc.io/docs/languages/dart/quickstart/
     - https://pub.dev/packages/protoc_plugin#how-to-build
-1. Run `protoc`.
+1. Run `protoc`, which internally uses the `protoc-gen-dart` command to generate Dart files.
     ```shell
     protoc --proto_path=<input-proto-files-directory> \ # or use `-I`, which is the short form of `--proto_path`.
           --dart_out=grpc:<output-dart-files-directory> \
