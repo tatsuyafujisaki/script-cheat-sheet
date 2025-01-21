@@ -9,7 +9,7 @@
     - https://pub.dev/packages/protoc_plugin#how-to-build
 1. Run `protoc`.
     ```shell
-    protoc --proto_path=<input-proto-files-directory> \
+    protoc --proto_path=<input-proto-files-directory> \ # or use `-I`, which is the short form of `--proto_path`.
           --dart_out=grpc:<output-dart-files-directory> \
           <proto-filename>
     ```
