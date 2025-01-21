@@ -1,7 +1,7 @@
 # How to convert a `.proto` file to Dart files
 ```shell
-protoc --proto_path=<proto-files-directory> \
-       --dart_out=grpc:<output-directory> \
+protoc --proto_path=<input-proto-files-directory> \
+       --dart_out=grpc:<output-dart-files-directory> \
        <proto-file>
 ```
 
