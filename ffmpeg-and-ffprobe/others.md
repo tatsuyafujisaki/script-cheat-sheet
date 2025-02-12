@@ -1,11 +1,16 @@
-# Common for various audio and video files.
+# Common for audio and video files
 
-## How to trim the duration of an audio or video file to 3661.001 seconds (= 1 hour + 1 minute + 1 seconds + 1 milliseconds)
+## How to get the duration of an audio or video file in the unit of seconds
 ```shell
-ffmpeg -y -i input.mp4 -t 3661.001 output.mp4
+ffprobe -i input.mp3 -show_entries format=duration -v quiet -of csv="p=0"
+```
+
+## How to trim the duration of an audio or video file to 3723.004 seconds (= 1 hour + 2 minute + 3 seconds + 4 milliseconds = 3600 + 120 + 3 + 0.004 = 3723.004)
+```shell
+ffmpeg -y -i input.mp4 -t 3723.004 output.mp4
 ```
 ```shell
-ffmpeg -y -ss 00:00 -to 01:01:01.001 -i input.mp4 output.mp4
+ffmpeg -y -ss 00:00 -to 01:02:03.004 -i input.mp4 output.mp4
 ```
 https://ffmpeg.org/ffmpeg-utils.html#toc-Time-duration
 
