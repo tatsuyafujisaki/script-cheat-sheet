@@ -1,21 +1,13 @@
-# Note
-## `-y`
-> `-y`<br>
-> Overwrite output files without asking.
+# Common for various audio and video files.
 
-https://ffmpeg.org/ffmpeg.html#toc-Main-options
-
-## `-filter:v` and `-vf`
-> `-vf`<br>
-> This is an alias for `-filter:v`
-
-https://ffmpeg.org/ffmpeg.html#toc-Video-Options
-
-## `-frames:v` and `-vframes`
-> `-vframes`<br>
-> This is an obsolete alias for `-frames:v`, which you should use instead.
-
-https://ffmpeg.org/ffmpeg.html#toc-Video-Options
+## How to trim the duration of an audio or video file to 3661.001 seconds (= 1 hour + 1 minute + 1 seconds + 1 milliseconds)
+```shell
+ffmpeg -y -i input.mp4 -t 3661.001 output.mp4
+```
+```shell
+ffmpeg -y -ss 00:00 -to 01:01:01.001 -i input.mp4 output.mp4
+```
+https://ffmpeg.org/ffmpeg-utils.html#toc-Time-duration
 
 # MP4 and WebM
 ## How to downsize `.mp4` or `.webm` by optimizing the bit rate
@@ -51,14 +43,6 @@ ffmpeg -y -i input.mp4 -ss 00:00:05 -frames:v 1 output.jpg
 ffmpeg -y -i input.mp4 -vf fps=1 output%02d.jpg
 ```
 
-## How to trim `.mp4` to 5 minutes
-```shell
-ffmpeg -y -i input.mp4 -t 300 output.mp4
-```
-```shell
-ffmpeg -y -ss 00:00:00 -to 00:05:00 -i input.mp4 output.mp4
-```
-
 # M4A
 ## How to change the bitrate of M4A
 ```shell
@@ -73,3 +57,23 @@ ffmpeg -y -i input.m4a -q:a 1 output.m4a
 # https://trac.ffmpeg.org/wiki/Encode/AAC
 ffmpeg -y -i input.m4a -ar 44100 output.m4a
 ```
+
+# Note
+## `-y`
+> `-y`<br>
+> Overwrite output files without asking.
+
+https://ffmpeg.org/ffmpeg.html#toc-Main-options
+
+## `-filter:v` and `-vf`
+> `-vf`<br>
+> This is an alias for `-filter:v`
+
+https://ffmpeg.org/ffmpeg.html#toc-Video-Options
+
+## `-frames:v` and `-vframes`
+> `-vframes`<br>
+> This is an obsolete alias for `-frames:v`, which you should use instead.
+
+https://ffmpeg.org/ffmpeg.html#toc-Video-Options
+
