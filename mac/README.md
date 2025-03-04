@@ -1,5 +1,5 @@
 # How to reset Universal Clipboard and get it working again
-1. Run the following command.
+1. Run the following command in Terminal.
    ```shell
    rm ~/Library/Preferences/com.apple.coreservices.useractivityd.plist
    ```
