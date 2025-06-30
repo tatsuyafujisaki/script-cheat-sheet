@@ -2,17 +2,25 @@
 * `<required_argument>`
 * `[optional_argument]`
 
-https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html
+> Option-arguments are shown separated from their options by <blank> characters, except when the option-argument is enclosed in the '[' and ']' notation to indicate that it is optional.
+
+https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap12.html
 
 # Note
 Zsh does not expand the tilde (~) in single or double quotes.
 
 > initial tildes and equals signs are not expanded
+
 http://zsh.sourceforge.net/Guide/zshguide05.html
 
 # Best practices
-## Which of the following combinations of commands is recommended?
-- Combination of `cd <directory>` and `cd -`
-- Combination of `pushd <directory>` and `popd`
+## What is the recommended way to temporarily switch to a different directory?
+- Using a parenthesized command aka subshell
+  - e.g. `(cd <directory> && ls)`
+- Using `cd <directory>` and `cd -`
+- Using `pushd <directory>` and `popd`
 
-To move back in the working directory history to an earlier directory than the previous one, use `pushd <directory>` and `popd`. Otherwise, use `cd <directory>` and `cd -` for simplicity.
+Decision tree
+1. If your command can be written as a one-liner, use a subshell..
+1. If you switch to several different directories in a row, use `pushd <directory>` and `popd`.
+1. Otherwise, use `cd <directory>` and `cd -`.
