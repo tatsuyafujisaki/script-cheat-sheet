@@ -3,9 +3,16 @@
 magick input.png -resize 320x output.png
 ```
 
-# How to add a red border of 4px width to an image
+# How to add a `n`-pixel-wide red border to an image
 ```shell
+# Example of n = 4
 magick input.png -bordercolor "#ff000000" -border 4 output.png
+```
+
+# How to delete the top `n` pixels of an image
+```shell
+# Example of n = 40
+magick input.png -crop +0+40 -gravity North output.png
 ```
 
 # How to convert transparency to white
