@@ -160,3 +160,8 @@ $ paste -d'\0' left.txt right.txt
 ```shell
 grep --ignore-case --recursive -I "🍎" . | cut -d : -f 1
 ```
+
+# How to delete blank lines from a text file
+```shell
+grep . input.txt > output.txt
+```
