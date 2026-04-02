@@ -49,5 +49,5 @@ magick *.png -background none -smush 50 output.png
 # 2480px is the width of the A4 paper size when the PPI (pixels per inch) is 300.
 # 3508px is the height of the A4 paper size when the PPI (pixels per inch) is 300.
 # https://imagemagick.org/script/command-line-processing.php#geometry
-magick input.png -resize 2480 -crop 2480x3508 +repage output.pdf
+magick input.png -resize 2480 -crop 2480x3508 +repage -density 300 output.pdf
 ```
