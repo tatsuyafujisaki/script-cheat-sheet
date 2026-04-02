@@ -33,7 +33,15 @@ magick -density 600 input.pdf -type grayscale output.png
 # How to merge images horizontally (side by side)
 ```shell
 # "-gravity center" vertically center input images.
-magick input1.png input2.png input3.png -gravity center +append output.png
+magick *.png -gravity center +append output.png
+```
+
+# How to merge images vertically
+```shell
+magick *.png -append output.png
+
+# with 50 pixels between images
+magick *.png -background none -smush 50 output.png
 ```
 
 # How to split a long image into A4 PDFs
