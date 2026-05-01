@@ -27,3 +27,12 @@ xcrun simctl list devices
 xcrun xctrace list devices
 ```
 
+### Uninstall user-installed apps on the running simulator
+```shell
+xcrun simctl erase booted
+```
+
+### How to uninstall user-installed apps on all simulators
+```shell
+xcrun simctl erase all
+```
