@@ -1,0 +1,16 @@
+/PageCount 1 def
+<<
+  /EndPage {
+    exch pop 2 ne {
+      gsave
+      /Helvetica 12 selectfont
+      300 20 moveto
+      PageCount 10 string cvs show
+      /PageCount PageCount 1 add def
+      grestore
+      true
+    } {
+      false
+    } ifelse
+  }
+>> setpagedevice
