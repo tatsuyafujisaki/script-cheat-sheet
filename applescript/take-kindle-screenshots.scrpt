@@ -1,0 +1,31 @@
+set totalPages to 3
+set saveFolder to POSIX path of (path to desktop folder) & "kindle-screenshots"
+do shell script "mkdir -p " & quoted form of saveFolder
+tell application "Amazon Kindle" to activate
+delay 1 -- Waits a brief moment for the window to focus
+tell application "System Events"
+    try
+        -- Get the exact position (X, Y) and size (Width, Height) of the Kindle window
+        set {winX, winY} to position of window 1 of process "Kindle"
+        set {winW, winH} to size of window 1 of process "Kindle"
+
+        -- Format the rectangle string (X,Y,Width,Height) for the screenshot tool
+        set captureRect to (winX as string) & "," & (winY as string) & "," & (winW as string) & "," & (winH as string)
+    on error
+        display dialog "Could not find a visible Kindle window. Please make sure Kindle is open." buttons {"OK"} default button "OK"
+        return
+    end try
+
+    repeat with i from 1 to totalPages
+        set fileName to saveFolder & "page" & i & ".png"
+
+        -- Capture just that specific screen rectangle
+        do shell script "screencapture -R " & captureRect & " " & quoted form of fileName
+
+        -- Press the Right Arrow key to turn the page
+        key code 124
+
+        -- Wait 1.5 seconds for the next page to load
+        delay 1.5
+    end repeat
+end tell
