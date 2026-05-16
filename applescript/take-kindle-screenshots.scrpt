@@ -1,4 +1,4 @@
--- Before executing AppleScript, make sure the Kindle app is in full screen.
+-- Before executing AppleScript, make sure the Kindle app is running in full screen.
 
 set totalPages to 3
 set screenshotFolder to POSIX path of (path to desktop folder) & "screenshots/"
