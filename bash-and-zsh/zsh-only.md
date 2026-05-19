@@ -58,3 +58,7 @@ $ join -t, -1 1 -2 2 foo.txt bar.txt
 
 # How to reference the home directory in zsh where the tilde (~) in single-quotes or double-quotes is not expanded
 Use `$HOME`.
+
+> initial tildes and equals signs are not expanded
+
+http://zsh.sourceforge.net/Guide/zshguide05.html

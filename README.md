@@ -6,13 +6,6 @@
 
 https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap12.html
 
-# Note
-Zsh does not expand the tilde (~) in single or double quotes.
-
-> initial tildes and equals signs are not expanded
-
-http://zsh.sourceforge.net/Guide/zshguide05.html
-
 # Best practices
 ## What is the recommended way to temporarily switch to a different directory?
 - Using a parenthesized command aka subshell
