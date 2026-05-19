@@ -1,11 +1,12 @@
 -- Before executing AppleScript, make sure the Kindle app is running in full screen.
 
 set totalPages to 3
+set waitTime to 1.0 -- Adjust this value if screenshots are skipped or duplicated due to slow rendering
 set screenshotFolder to POSIX path of (path to desktop folder) & "screenshots/"
 do shell script "mkdir -p " & quoted form of screenshotFolder
 
 tell application "Amazon Kindle" to activate
-delay 1 -- Wait 1 second for the window to gain focus
+delay waitTime -- Wait for the window to gain focus
 
 tell application "System Events"
 	repeat with i from 1 to totalPages
@@ -19,7 +20,7 @@ tell application "System Events"
 		-- Press the Right Arrow key to turn the page
 		key code 124
 		
-		-- Wait 1 second for the next page to load
-		delay 1
+		-- Wait for the next page to load
+		delay waitTime
 	end repeat
 end tell
