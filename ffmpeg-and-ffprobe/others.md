@@ -43,9 +43,9 @@ ffmpeg -y -i input.mp4 -vf "transpose=1" output.mp4
 ffmpeg -y -i input.mp4 -ss 00:00:05 -frames:v 1 output.jpg
 ```
 
-## How to create `.jpg`s from each second of `.mp4` to `.webm`
+## How to create `.jpg`s from each second of `.mp4`
 ```shell
-ffmpeg -y -i input.mp4 -vf fps=1 output%02d.jpg
+ffmpeg -y -i input.mp4 -vf fps=1 output%05d.jpg
 ```
 
 # M4A
