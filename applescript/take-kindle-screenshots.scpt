@@ -13,13 +13,13 @@ tell application "System Events"
 		-- Zero-pad the number to 3 digits (e.g., 001, 002... 010...)
 		set paddedNum to text -3 thru -1 of ("00" & i)
 		set fileName to screenshotFolder & paddedNum & ".png"
-		
+
 		-- Capture a screenshot of the entire screen
 		do shell script "screencapture " & quoted form of fileName
-		
+
 		-- Press the Right Arrow key to turn the page
 		key code 124
-		
+
 		-- Wait for the next page to load
 		delay waitTime
 	end repeat
