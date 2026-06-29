@@ -15,7 +15,7 @@ tell application "System Events"
 		set fileName to screenshotFolder & paddedNum & ".png"
 
 		-- Capture a screenshot of the entire screen
-		do shell script "screencapture " & quoted form of fileName
+		do shell script "screencapture -D 2 " & quoted form of fileName
 
 		-- Press the Right Arrow key to turn the page
 		key code 124
