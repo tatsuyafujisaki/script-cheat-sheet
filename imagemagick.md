@@ -30,15 +30,16 @@ magick input.png -type grayscale output.png
 magick -density 600 input.pdf -type grayscale output.png
 ```
 
-# How to merge images horizontally (side by side)
+# How to merge images horizontally
 ```shell
-# "-gravity center" vertically center input images.
+# "-gravity center" vertically centers input images.
 magick *.png -gravity center +append output.png
 ```
 
 # How to merge images vertically
 ```shell
-magick *.png -append output.png
+# "-gravity center" vertically centers input images.
+magick *.png -gravity center -append output.png
 
 # with 50 pixels between images
 magick *.png -background none -smush 50 output.png
